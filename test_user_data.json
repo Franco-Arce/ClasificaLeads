@@ -1,0 +1,66 @@
+{
+    "items": [
+        {
+            "id": "MSG_USER_PROVIDED_1",
+            "creationTime": "2025-11-27T22:38:24.927Z",
+            "from": "user",
+            "queueId": "uees-admisiones",
+            "content": {
+                "type": "text",
+                "text": "Que precio tiene el diplomado ?"
+            },
+            "chat": {
+                "chatId": "SQ6S4ZLJ3KCMGCUH4Y56"
+            }
+        },
+        {
+            "id": "MSG_AGENT_PROVIDED_1",
+            "creationTime": "2025-11-27T22:40:13.842Z",
+            "from": "agent",
+            "agentId": "6Yl7ECAhf9N6ZDMkuwihjm8xyWl1",
+            "content": {
+                "type": "text",
+                "text": "Inicia el 2 de Febrero..."
+            },
+            "chat": {
+                "chatId": "SQ6S4ZLJ3KCMGCUH4Y56"
+            }
+        },
+        {
+            "id": "MSG_AGENT_PROVIDED_2",
+            "creationTime": "2025-11-18T23:29:36.963Z",
+            "from": "agent",
+            "content": {
+                "type": "text",
+                "text": "👋🏻Hola,  ¿Cómo está?\n\nMi nombre es Melany Párraga, Asesora Educativa de Universidad de Especialidades Espíritu Santo UEES.\n\nComénteme, ¿Con quién tengo el gusto? Tenemos registrado su interés en el Diplomado de: *Ética y Privacidad en el Derecho Digital*. Le comparto la información a continuación.😊"
+            },
+            "chat": {
+                "chatId": "WAKSYFF2GVNTULGLG0AF"
+            }
+        },
+        {
+            "id": "MSG_BOT_ASK_NAME",
+            "creationTime": "2025-11-28T10:00:00.000Z",
+            "from": "bot",
+            "content": {
+                "type": "text",
+                "text": "Hola, ¿Con quién tengo el gusto?"
+            },
+            "chat": {
+                "chatId": "CHAT_CONTEXT_TEST"
+            }
+        },
+        {
+            "id": "MSG_USER_NAME_REPLY",
+            "creationTime": "2025-11-28T10:01:00.000Z",
+            "from": "user",
+            "content": {
+                "type": "text",
+                "text": "Juan Perez"
+            },
+            "chat": {
+                "chatId": "CHAT_CONTEXT_TEST"
+            }
+        }
+    ]
+}
