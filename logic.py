@@ -29,6 +29,7 @@ def analyze_conversation(chat_id, messages):
     # Flags for SQL criteria
     has_validation = False
     has_intent = False
+    has_strong_intent = False
     has_motivation = False
     
     # Helper to check text content
@@ -76,19 +77,23 @@ def analyze_conversation(chat_id, messages):
     # 1. Identify Actors & Extract Info
     user_messages = [m for m in messages if m.get('from') == 'user']
     
+    # Extract Phone Number from the first message's chat info (it's consistent across the chat)
+    # The structure is item['chat']['contactId'] based on the JSON check
+    telefono = ""
+    if messages:
+        telefono = messages[0].get('chat', {}).get('contactId', "")
+
     # Basic State
     if not user_messages:
         return {
             "chat_id": chat_id,
-            "nombre_detectado": "Desconocido",
+            "telefono": telefono,
             "clasificacion": "MQL",
             "razon_principal": "Lead Silencioso (Sin respuesta del usuario).",
             "señales_clave": ["Solo habló el bot/agente"],
             "estado_conversacion": "Sin respuesta inicial"
         }
 
-    # Name Detection Variable
-    nombre = "Desconocido"
     last_bot_text = ""
 
     # 2. Analyze All Messages for Context & Signals
@@ -104,37 +109,8 @@ def analyze_conversation(chat_id, messages):
             
         # --- User Message Analysis ---
         
-        # Name Detection Logic
-        if nombre == "Desconocido":
-            # 1. Try Regex first (Explicit: "Me llamo X")
-            extracted = extract_name(text)
-            if extracted:
-                nombre = extracted
-                has_validation = True
-                signals.append(f"Nombre detectado (Regex): {nombre}")
-            
-            # 2. Contextual Heuristic (Implicit: Answer to "Con quien tengo el gusto?")
-            # Check if previous bot message asked for name
-            elif any(q in last_bot_text for q in ["con quién tengo el gusto", "con quien tengo el gusto", "su nombre", "tu nombre", "cómo se llama"]):
-                # Check if response looks like a name (short, mostly letters)
-                # Heuristic: < 6 words, mostly alphabetic
-                words = text.split()
-                if 0 < len(words) <= 5:
-                    # Assume it's a name
-                    # Clean up punctuation
-                    clean_name = text.strip().title()
-                    # Basic filter: don't capture "Hola", "Buenos dias" as names if they are alone, 
-                    # but "Hola soy Juan" is caught by Regex. 
-                    # If user says "Juan Perez", we capture it.
-                    nombre = clean_name
-                    has_validation = True
-                    signals.append(f"Nombre detectado (Contexto): {nombre}")
-
-        # A. Validation of Identity
-        # Keywords: cédula, dni, id, mi nombre es, soy, ciudad
-        if any(kw in text for kw in ["cédula", "dni", "identidad", "cedula", "ciudad"]):
-            has_validation = True
-            signals.append("Mencionó documento/ubicación (Identity)")
+        # A. Validation of Identity - REMOVED as per user request
+        # We no longer require name or identity validation.
         
         # Image/File sent by user -> Strong signal for payment proof or ID
         if content_type in ['image', 'file']:
@@ -142,40 +118,70 @@ def analyze_conversation(chat_id, messages):
             signals.append(f"Envió archivo/imagen ({content_type})")
 
         # B. Purchase Intent / Budget
-        # Keywords: pago, precio, costo, valor, cuenta, deposito, transferencia, link
-        if any(kw in text for kw in ["link de pago", "cuenta", "depósito", "transferencia", "pagar", "precio", "costo", "valor"]):
-            has_intent = True
-            signals.append(f"Palabra clave de intención: '{text[:20]}...'")
+        # Split into Strong (Payment) and Weak (Price)
         
-        if "ya pagué" in text or "listo el pago" in text or "comprobante" in text:
+        # Strong Intent: Payment, Transfer, Account, Link
+        if any(kw in text for kw in ["link de pago", "cuenta", "depósito", "transferencia", "pagar", "comprobante"]):
             has_intent = True
-            signals.append("Confirmación de pago detectada")
+            has_strong_intent = True
+            signals.append(f"Intención de PAGO detectada: '{text[:20]}...'")
+            
+        if "ya pagué" in text or "listo el pago" in text:
+            has_intent = True
+            has_strong_intent = True
+            signals.append("Confirmación de pago explícita")
+
+        # Weak Intent: Price, Cost, Value (Interest but not commitment)
+        if any(kw in text for kw in ["precio", "costo", "valor", "info", "información"]):
+            has_intent = True
+            # Do not set has_strong_intent
+            signals.append(f"Consulta de precio/info: '{text[:20]}...'")
 
         # C. Professional Motivation
-        if any(kw in text for kw in ["trabajo", "ascenso", "profesional", "laboral", "cv", "curriculum", "mejorar"]):
+        # Keywords: trabajo, ascenso, profesional, laboral, cv, curriculum, mejorar, crecimiento
+        motivation_keywords = [
+            "trabajo", "ascenso", "profesional", "laboral", "cv", "curriculum", "mejorar", 
+            "crecimiento", "personal", "aprender", "actualizado", "requerimiento",
+            "empleo", "puesto", "cargo", "superación", "conocimiento", "carrera", "estudio"
+        ]
+        
+        # Specific phrases provided by user
+        motivation_phrases = [
+            "mejorar perfil profesional",
+            "crecimiento personal",
+            "mantenerme actualizado",
+            "requerimiento laboral",
+            "mejorar en mi trabajo"
+        ]
+
+        # 1. Explicit keywords/phrases in text
+        if any(phrase in text for phrase in motivation_phrases) or any(kw in text for kw in motivation_keywords):
             has_motivation = True
-            signals.append("Motivación profesional detectada")
+            signals.append("Motivación profesional detectada (Keywords)")
+            
+        # 2. Contextual: Answer to "Principal motivación"
+        elif any(q in last_bot_text for q in ["motivación", "motivo", "interés", "por qué", "por que"]):
+             if len(text.split()) > 2: # meaningful response
+                 has_motivation = True
+                 signals.append("Motivación detectada (Respuesta a pregunta)")
             
     # 3. Determine Classification
-    # SQL Requirement: At least 2 of [Validation, Intent, Motivation]
+    # New Rules (User Request):
+    # - Identity (Name) is NOT required.
+    # - Motivation ALONE is sufficient for SQL.
+    # - Strong Intent (Payment) ALONE is sufficient for SQL.
     
-    score = sum([has_validation, has_intent, has_motivation])
     classification = "MQL"
-    reason = "No cumple criterios suficientes para SQL."
+    reason = "Consulta estándar o falta de señales fuertes."
     
-    if score >= 2:
-        if has_validation:
-            classification = "SQL"
-            reason = "Cumple con Validación de Identidad + otra señal fuerte."
-        else:
-            # Score is 2 but missing validation (e.g. Intent + Motivation only)
-            classification = "MQL" 
-            reason = "Tiene señales de interés pero falta Validación de Identidad obligatoria."
-            signals.append("Falta Validación de Identidad")
+    if has_motivation:
+        classification = "SQL"
+        reason = "Motivación profesional/personal detectada (Criterio Fuerte)."
+    elif has_strong_intent:
+        classification = "SQL"
+        reason = "Intención de PAGO detectada (Criterio Fuerte)."
     else:
         # Specific MQL Sub-cases
-        if any(kw in get_text(m) for m in user_messages for kw in ["precio", "info", "hola"]):
-             reason = "Consulta básica."
         if any(kw in get_text(m) for m in user_messages for kw in ["caro", "no me interesa", "lo pensaré"]):
              reason = "Objeción detectada."
              signals.append("Objeción explícita")
@@ -189,7 +195,7 @@ def analyze_conversation(chat_id, messages):
     
     return {
         "chat_id": chat_id,
-        "nombre_detectado": nombre,
+        "telefono": telefono,
         "clasificacion": classification,
         "razon_principal": reason,
         "señales_clave": list(set(signals)), # Dedupe

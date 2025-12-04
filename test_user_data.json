@@ -10,7 +10,8 @@
                 "text": "Que precio tiene el diplomado ?"
             },
             "chat": {
-                "chatId": "SQ6S4ZLJ3KCMGCUH4Y56"
+                "chatId": "SQ6S4ZLJ3KCMGCUH4Y56",
+                "contactId": "593987654321"
             }
         },
         {
@@ -23,31 +24,21 @@
                 "text": "Inicia el 2 de Febrero..."
             },
             "chat": {
-                "chatId": "SQ6S4ZLJ3KCMGCUH4Y56"
+                "chatId": "SQ6S4ZLJ3KCMGCUH4Y56",
+                "contactId": "593987654321"
             }
         },
         {
             "id": "MSG_AGENT_PROVIDED_2",
-            "creationTime": "2025-11-18T23:29:36.963Z",
-            "from": "agent",
-            "content": {
-                "type": "text",
-                "text": "👋🏻Hola,  ¿Cómo está?\n\nMi nombre es Melany Párraga, Asesora Educativa de Universidad de Especialidades Espíritu Santo UEES.\n\nComénteme, ¿Con quién tengo el gusto? Tenemos registrado su interés en el Diplomado de: *Ética y Privacidad en el Derecho Digital*. Le comparto la información a continuación.😊"
-            },
-            "chat": {
-                "chatId": "WAKSYFF2GVNTULGLG0AF"
-            }
-        },
-        {
-            "id": "MSG_BOT_ASK_NAME",
             "creationTime": "2025-11-28T10:00:00.000Z",
-            "from": "bot",
+            "from": "agent",
             "content": {
                 "type": "text",
                 "text": "Hola, ¿Con quién tengo el gusto?"
             },
             "chat": {
-                "chatId": "CHAT_CONTEXT_TEST"
+                "chatId": "CHAT_CONTEXT_TEST",
+                "contactId": "593999999999"
             }
         },
         {
@@ -59,7 +50,21 @@
                 "text": "Juan Perez"
             },
             "chat": {
-                "chatId": "CHAT_CONTEXT_TEST"
+                "chatId": "CHAT_CONTEXT_TEST",
+                "contactId": "593999999999"
+            }
+        },
+        {
+            "id": "MSG_USER_MOTIVATION",
+            "creationTime": "2025-11-28T12:00:00.000Z",
+            "from": "user",
+            "content": {
+                "type": "text",
+                "text": "Quiero mejorar mi perfil profesional para un ascenso"
+            },
+            "chat": {
+                "chatId": "CHAT_SQL_TEST",
+                "contactId": "593911111111"
             }
         }
     ]
