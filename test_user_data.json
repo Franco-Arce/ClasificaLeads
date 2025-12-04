@@ -66,6 +66,32 @@
                 "chatId": "CHAT_SQL_TEST",
                 "contactId": "593911111111"
             }
+        },
+        {
+            "id": "MSG_BOT_EXCEPTION",
+            "creationTime": "2025-11-28T13:00:00.000Z",
+            "from": "bot",
+            "content": {
+                "type": "text",
+                "text": "Con respecto al programa que consulta, le comento que por esta vía no estamos ofreciendo ese tipo de programas."
+            },
+            "chat": {
+                "chatId": "CHAT_EXCEPTION_TEST",
+                "contactId": "593900000000"
+            }
+        },
+        {
+            "id": "MSG_USER_MOTIVATION_EXCEPTION",
+            "creationTime": "2025-11-28T13:01:00.000Z",
+            "from": "user",
+            "content": {
+                "type": "text",
+                "text": "Entiendo, pero necesito el titulo para mi trabajo"
+            },
+            "chat": {
+                "chatId": "CHAT_EXCEPTION_TEST",
+                "contactId": "593900000000"
+            }
         }
     ]
 }

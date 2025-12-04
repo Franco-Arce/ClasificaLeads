@@ -31,6 +31,7 @@ def analyze_conversation(chat_id, messages):
     has_intent = False
     has_strong_intent = False
     has_motivation = False
+    program_not_offered = False
     
     # Helper to check text content
     def get_text(msg):
@@ -104,6 +105,9 @@ def analyze_conversation(chat_id, messages):
         content_type = msg.get('content', {}).get('type')
         
         if role in ['bot', 'agent']:
+            if "no estamos ofreciendo ese tipo de programas" in text:
+                program_not_offered = True
+                signals.append("Bot indicó programa no ofrecido")
             last_bot_text = text.lower()
             continue
             
@@ -174,7 +178,10 @@ def analyze_conversation(chat_id, messages):
     classification = "MQL"
     reason = "Consulta estándar o falta de señales fuertes."
     
-    if has_motivation:
+    if program_not_offered:
+        classification = "MQL"
+        reason = "Programa no ofrecido (Excepción)."
+    elif has_motivation:
         classification = "SQL"
         reason = "Motivación profesional/personal detectada (Criterio Fuerte)."
     elif has_strong_intent:
