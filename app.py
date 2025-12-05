@@ -12,7 +12,8 @@ Sube tu archivo JSON (o .docx con JSON) de logs de chat para procesarlo y clasif
 basado en las reglas de negocio definidas.
 """)
 
-uploaded_file = st.file_uploader("Cargar archivo", type=["json", "docx"])
+uploaded_file = st.file_uploader("Cargar archivo de Chat Logs (JSON/DOCX)", type=["json", "docx"])
+neotel_file = st.file_uploader("Cargar base Neotel (Excel) - Opcional", type=["xls", "xlsx"])
 
 if uploaded_file is not None:
     try:
@@ -35,12 +36,20 @@ if uploaded_file is not None:
         elif "items" not in data:
             st.error("El JSON no tiene el formato correcto (falta la clave 'items').")
         else:
-            st.success(f"Archivo cargado correctamente. {len(data['items'])} mensajes encontrados.")
+            st.success(f"Archivo de logs cargado correctamente. {len(data['items'])} mensajes encontrados.")
             
+            neotel_df = None
+            if neotel_file is not None:
+                try:
+                    neotel_df = pd.read_excel(neotel_file)
+                    st.success(f"Base Neotel cargada correctamente. {len(neotel_df)} registros.")
+                except Exception as e:
+                    st.error(f"Error al leer el archivo Excel de Neotel: {e}")
+
             if st.button("Procesar Leads"):
                 with st.spinner("Procesando conversaciones..."):
                     # Process data
-                    results = process_data(data)
+                    results = process_data(data, neotel_df)
                     
                     # Convert to DataFrame for display
                     df = pd.DataFrame(results)
@@ -72,7 +81,10 @@ if uploaded_file is not None:
                             ),
                             "razon_principal": "Razón",
                             "señales_clave": "Señales",
-                            "estado_conversacion": "Estado"
+                            "estado_conversacion": "Estado",
+                            "utm_source": "UTM Source",
+                            "utm_medium": "UTM Medium",
+                            "utm_origen": "UTM Origen"
                         }
                     )
                     

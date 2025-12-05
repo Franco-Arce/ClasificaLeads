@@ -1,6 +1,118 @@
 import json
-from datetime import datetime
+from datetime import datetime, timedelta
 from collections import defaultdict
+import pandas as pd
+import re
+
+def normalize_phone(phone):
+    """
+    Normalizes phone number by removing non-digit characters.
+    """
+    if not phone:
+        return ""
+    return re.sub(r'\D', '', str(phone))
+
+def match_neotel_data(chat_phone, chat_date_str, neotel_df):
+    """
+    Finds the best match in Neotel data for a given phone and date.
+    Returns a dictionary with UTM data.
+    """
+    if neotel_df is None or neotel_df.empty or not chat_phone:
+        return {}
+
+    norm_chat_phone = normalize_phone(chat_phone)
+    if not norm_chat_phone:
+        return {}
+        
+    # Filter by phone (assuming 'TELWHATSAPP' or 'TELTELEFONO' contains the number)
+    # We'll check both just in case, or prioritize one. User mentioned TELWHATSAPP.
+    # Let's try to match against a normalized version of the column if possible, 
+    # but for performance, let's just iterate or use apply if dataset is small.
+    # Given it's likely not huge, we can filter.
+    
+    # Create a copy to avoid SettingWithCopy warnings if we modify
+    # But to be efficient, let's just look for matches.
+    
+    # We need to identify the phone column. Let's assume 'TELWHATSAPP' based on context.
+    # If not found, try 'TELTELEFONO'.
+    phone_col = 'TELWHATSAPP'
+    if phone_col not in neotel_df.columns:
+        if 'TELTELEFONO' in neotel_df.columns:
+            phone_col = 'TELTELEFONO'
+        else:
+            return {} # Can't match without phone column
+            
+    # Normalize Neotel phones for comparison (this might be slow for huge DFs, but fine for typical use)
+    # To optimize, we could pre-calculate this in process_data, but let's keep it simple first.
+    # We'll do a string contains match or exact match on normalized.
+    
+    # Let's try exact match on normalized string
+    # It's better to pre-process the DF in process_data, but here we can do it row by row for the filtered set?
+    # No, filtering is the hard part.
+    
+    # Let's assume the user wants us to handle this efficiently.
+    # But since I can't change the signature of this function easily without changing callers...
+    # Wait, I am defining this function now.
+    
+    # Actually, let's do the normalization inside process_data ONCE, and pass the normalized DF.
+    # That's better. So here we assume neotel_df has a 'normalized_phone' column.
+    
+    matches = neotel_df[neotel_df['normalized_phone'] == norm_chat_phone]
+    
+    if matches.empty:
+        return {}
+        
+    # If multiple matches, use date proximity
+    if len(matches) == 1:
+        best_match = matches.iloc[0]
+    else:
+        # Parse chat date
+        try:
+            chat_dt = datetime.fromisoformat(chat_date_str.replace('Z', '+00:00'))
+        except:
+            return {} # Can't compare dates
+            
+        # Find closest date
+        # Column: 'Fecha Inserción Leads'
+        date_col = 'Fecha Inserción Leads'
+        if date_col not in matches.columns:
+             # Fallback or return first
+             return matches.iloc[0].to_dict()
+             
+        min_diff = timedelta(days=365*10)
+        best_match = None
+        
+        for idx, row in matches.iterrows():
+            try:
+                # Neotel date format might vary. Assuming standard pandas parsing or specific format.
+                # If it's already datetime (pandas read_excel might have done it), great.
+                neotel_dt = row[date_col]
+                if not isinstance(neotel_dt, datetime):
+                    neotel_dt = pd.to_datetime(neotel_dt)
+                
+                # Ensure timezone awareness compatibility
+                if chat_dt.tzinfo and neotel_dt.tzinfo is None:
+                    neotel_dt = neotel_dt.replace(tzinfo=chat_dt.tzinfo) # Assume same TZ
+                elif chat_dt.tzinfo is None and neotel_dt.tzinfo:
+                    neotel_dt = neotel_dt.replace(tzinfo=None)
+                    
+                diff = abs(chat_dt - neotel_dt)
+                if diff < min_diff:
+                    min_diff = diff
+                    best_match = row
+            except Exception as e:
+                continue
+                
+        if best_match is None:
+            best_match = matches.iloc[0] # Fallback
+            
+    # Extract UTMs
+    return {
+        "utm_source": best_match.get('UTM Source', ''),
+        "utm_medium": best_match.get('UTM Medium', ''),
+        "utm_origen": best_match.get('UTM Origen', '')
+    }
+
 
 def group_and_sort(items):
     """
@@ -241,16 +353,53 @@ def analyze_conversation(chat_id, messages):
         "mensajes_usuario": mensajes_usuario
     }
 
-def process_data(json_data):
+def process_data(json_data, neotel_df=None):
     """
     Main processing function.
     """
     items = json_data.get('items', [])
     grouped_chats = group_and_sort(items)
     
+    # Pre-process Neotel DF if provided
+    if neotel_df is not None and not neotel_df.empty:
+        # Identify phone column
+        phone_col = 'TELWHATSAPP'
+        if phone_col not in neotel_df.columns and 'TELTELEFONO' in neotel_df.columns:
+            phone_col = 'TELTELEFONO'
+            
+        if phone_col in neotel_df.columns:
+            # Normalize phones once
+            neotel_df['normalized_phone'] = neotel_df[phone_col].apply(normalize_phone)
+            
+            # Ensure date column is datetime
+            date_col = 'Fecha Inserción Leads'
+            if date_col in neotel_df.columns:
+                neotel_df[date_col] = pd.to_datetime(neotel_df[date_col], errors='coerce')
+    
     results = []
     for chat_id, messages in grouped_chats.items():
         result = analyze_conversation(chat_id, messages)
+        
+        # Enrich with Neotel Data
+        if neotel_df is not None and not neotel_df.empty:
+            # Get phone and start time from result/messages
+            # Phone is already in result['telefono']
+            # Start time: we need to get it from messages again or pass it out.
+            # Let's get it from messages[0] as in analyze_conversation
+            start_time_str = ""
+            if messages:
+                # Sort to be sure we get the start
+                sorted_msgs = sorted(messages, key=lambda x: x.get('creationTime', ''))
+                start_time_str = sorted_msgs[0].get('creationTime', '')
+                
+            utm_data = match_neotel_data(result.get('telefono'), start_time_str, neotel_df)
+            result.update(utm_data)
+            
+        # Ensure keys exist (if match failed or no neotel_df)
+        for key in ['utm_source', 'utm_medium', 'utm_origen']:
+            if key not in result:
+                result[key] = ""
+            
         results.append(result)
         
     return results
