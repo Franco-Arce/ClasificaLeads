@@ -215,12 +215,17 @@ def analyze_conversation(chat_id, messages):
                 start_dt = datetime.fromisoformat(start_time_str)
                 end_dt = datetime.fromisoformat(end_time_str)
                 duration = end_dt - start_dt
-                # Format as H:MM:SS
-                total_seconds = int(duration.total_seconds())
-                hours = total_seconds // 3600
-                minutes = (total_seconds % 3600) // 60
-                seconds = total_seconds % 60
-                duracion_chat = f"{hours}:{minutes:02}:{seconds:02}"
+                # Format as Days, HH:MM:SS
+                days = duration.days
+                seconds_in_day = duration.seconds
+                hours = seconds_in_day // 3600
+                minutes = (seconds_in_day % 3600) // 60
+                seconds = seconds_in_day % 60
+                
+                if days > 0:
+                    duracion_chat = f"{days} días, {hours:02}:{minutes:02}:{seconds:02}"
+                else:
+                    duracion_chat = f"{hours:02}:{minutes:02}:{seconds:02}"
         except Exception as e:
             print(f"Error calculating duration for chat {chat_id}: {e}")
             pass
