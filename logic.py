@@ -199,14 +199,41 @@ def analyze_conversation(chat_id, messages):
         estado = "Sin respuesta inicial"
     elif "gracias" in get_text(user_messages[-1]) or "adios" in get_text(user_messages[-1]):
         estado = "Abandonada por usuario" # Or closed? Let's stick to simple logic
+
+    # Calculate metrics
+    mensajes_usuario = len(user_messages)
     
+    duracion_chat = "0:00:00"
+    if messages:
+        try:
+            # Sort just in case, though group_and_sort should have done it
+            sorted_msgs = sorted(messages, key=lambda x: x.get('creationTime', ''))
+            start_time_str = sorted_msgs[0].get('creationTime', '').replace('Z', '+00:00')
+            end_time_str = sorted_msgs[-1].get('creationTime', '').replace('Z', '+00:00')
+            
+            if start_time_str and end_time_str:
+                start_dt = datetime.fromisoformat(start_time_str)
+                end_dt = datetime.fromisoformat(end_time_str)
+                duration = end_dt - start_dt
+                # Format as H:MM:SS
+                total_seconds = int(duration.total_seconds())
+                hours = total_seconds // 3600
+                minutes = (total_seconds % 3600) // 60
+                seconds = total_seconds % 60
+                duracion_chat = f"{hours}:{minutes:02}:{seconds:02}"
+        except Exception as e:
+            print(f"Error calculating duration for chat {chat_id}: {e}")
+            pass
+
     return {
         "chat_id": chat_id,
         "telefono": telefono,
         "clasificacion": classification,
         "razon_principal": reason,
         "señales_clave": list(set(signals)), # Dedupe
-        "estado_conversacion": estado
+        "estado_conversacion": estado,
+        "duracion_chat": duracion_chat,
+        "mensajes_usuario": mensajes_usuario
     }
 
 def process_data(json_data):
