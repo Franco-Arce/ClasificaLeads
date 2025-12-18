@@ -24,39 +24,32 @@ def match_neotel_data(chat_phone, chat_date_str, neotel_df):
     if not norm_chat_phone:
         return {}
         
-    # Filter by phone (assuming 'TELWHATSAPP' or 'TELTELEFONO' contains the number)
-    # We'll check both just in case, or prioritize one. User mentioned TELWHATSAPP.
-    # Let's try to match against a normalized version of the column if possible, 
-    # but for performance, let's just iterate or use apply if dataset is small.
-    # Given it's likely not huge, we can filter.
+    # Filter by phone
+    # Columns found in file: 'teltelefono'
+    # Possible variations: 'TELWHATSAPP', 'TELTELEFONO', 'teltelefono'
+    phone_col = None
+    possible_cols = ['TELWHATSAPP', 'teltelefono', 'TELTELEFONO', 'num_telefono']
     
-    # Create a copy to avoid SettingWithCopy warnings if we modify
-    # But to be efficient, let's just look for matches.
-    
-    # We need to identify the phone column. Let's assume 'TELWHATSAPP' based on context.
-    # If not found, try 'TELTELEFONO'.
-    phone_col = 'TELWHATSAPP'
-    if phone_col not in neotel_df.columns:
-        if 'TELTELEFONO' in neotel_df.columns:
-            phone_col = 'TELTELEFONO'
-        else:
-            return {} # Can't match without phone column
+    for col in possible_cols:
+        if col in neotel_df.columns:
+            phone_col = col
+            break
             
-    # Normalize Neotel phones for comparison (this might be slow for huge DFs, but fine for typical use)
-    # To optimize, we could pre-calculate this in process_data, but let's keep it simple first.
-    # We'll do a string contains match or exact match on normalized.
-    
-    # Let's try exact match on normalized string
-    # It's better to pre-process the DF in process_data, but here we can do it row by row for the filtered set?
-    # No, filtering is the hard part.
-    
-    # Let's assume the user wants us to handle this efficiently.
-    # But since I can't change the signature of this function easily without changing callers...
-    # Wait, I am defining this function now.
-    
-    # Actually, let's do the normalization inside process_data ONCE, and pass the normalized DF.
-    # That's better. So here we assume neotel_df has a 'normalized_phone' column.
-    
+    if not phone_col:
+        # Fallback: check case-insensitive match for 'telefono'
+        for col in neotel_df.columns:
+            if 'telefono' in col.lower():
+                phone_col = col
+                break
+                
+    if not phone_col:
+        return {} # Can't match without phone column
+
+    # Match against normalized phone
+    # Assuming neotel_df['normalized_phone'] is already created in process_data
+    if 'normalized_phone' not in neotel_df.columns:
+         neotel_df['normalized_phone'] = neotel_df[phone_col].apply(normalize_phone)
+
     matches = neotel_df[neotel_df['normalized_phone'] == norm_chat_phone]
     
     if matches.empty:
@@ -68,33 +61,34 @@ def match_neotel_data(chat_phone, chat_date_str, neotel_df):
     else:
         # Parse chat date
         try:
-            chat_dt = datetime.fromisoformat(chat_date_str.replace('Z', '+00:00'))
+            # Ensure proper format handling
+            chat_dt = pd.to_datetime(chat_date_str)
+            if chat_dt.tzinfo:
+                chat_dt = chat_dt.tz_convert(None) # Compare timezone-naive if possible
         except:
-            return {} # Can't compare dates
+            return matches.iloc[0].to_dict() # Fallback
             
         # Find closest date
-        # Column: 'Fecha Inserción Leads'
-        date_col = 'Fecha Inserción Leads'
+        # Column found: 'Fecha Insert Lead'
+        date_col = 'Fecha Insert Lead'
         if date_col not in matches.columns:
-             # Fallback or return first
-             return matches.iloc[0].to_dict()
+             if 'Fecha Inserción Leads' in matches.columns:
+                 date_col = 'Fecha Inserción Leads'
+             else:
+                 # Fallback to any 'fecha' column?
+                 return matches.iloc[0].to_dict()
              
         min_diff = timedelta(days=365*10)
         best_match = None
         
         for idx, row in matches.iterrows():
             try:
-                # Neotel date format might vary. Assuming standard pandas parsing or specific format.
-                # If it's already datetime (pandas read_excel might have done it), great.
                 neotel_dt = row[date_col]
                 if not isinstance(neotel_dt, datetime):
                     neotel_dt = pd.to_datetime(neotel_dt)
                 
-                # Ensure timezone awareness compatibility
-                if chat_dt.tzinfo and neotel_dt.tzinfo is None:
-                    neotel_dt = neotel_dt.replace(tzinfo=chat_dt.tzinfo) # Assume same TZ
-                elif chat_dt.tzinfo is None and neotel_dt.tzinfo:
-                    neotel_dt = neotel_dt.replace(tzinfo=None)
+                if neotel_dt.tzinfo:
+                    neotel_dt = neotel_dt.tz_convert(None)
                     
                 diff = abs(chat_dt - neotel_dt)
                 if diff < min_diff:
@@ -107,10 +101,12 @@ def match_neotel_data(chat_phone, chat_date_str, neotel_df):
             best_match = matches.iloc[0] # Fallback
             
     # Extract UTMs
+    # Columns found: 'UTM Medium'
+    # Missing explicit Source/Origen in sample, but maybe 'Canal' or 'Medio' are useful
     return {
-        "utm_source": best_match.get('UTM Source', ''),
+        "utm_source": best_match.get('UTM Source', best_match.get('Canal', '')),
         "utm_medium": best_match.get('UTM Medium', ''),
-        "utm_origen": best_match.get('UTM Origen', '')
+        "utm_origen": best_match.get('UTM Origen', best_match.get('Medio', ''))
     }
 
 
@@ -363,16 +359,31 @@ def process_data(json_data, neotel_df=None):
     # Pre-process Neotel DF if provided
     if neotel_df is not None and not neotel_df.empty:
         # Identify phone column
-        phone_col = 'TELWHATSAPP'
-        if phone_col not in neotel_df.columns and 'TELTELEFONO' in neotel_df.columns:
-            phone_col = 'TELTELEFONO'
-            
-        if phone_col in neotel_df.columns:
+        phone_col = None
+        possible_cols = ['TELWHATSAPP', 'teltelefono', 'TELTELEFONO', 'num_telefono']
+        
+        for col in possible_cols:
+            if col in neotel_df.columns:
+                phone_col = col
+                break
+
+        if not phone_col:
+            # Fallback: check case-insensitive match for 'telefono'
+            for col in neotel_df.columns:
+                if 'telefono' in col.lower():
+                    phone_col = col
+                    break
+
+        if phone_col:
             # Normalize phones once
             neotel_df['normalized_phone'] = neotel_df[phone_col].apply(normalize_phone)
             
             # Ensure date column is datetime
-            date_col = 'Fecha Inserción Leads'
+            date_col = 'Fecha Insert Lead'
+            if date_col not in neotel_df.columns:
+                if 'Fecha Inserción Leads' in neotel_df.columns:
+                    date_col = 'Fecha Inserción Leads'
+            
             if date_col in neotel_df.columns:
                 neotel_df[date_col] = pd.to_datetime(neotel_df[date_col], errors='coerce')
     
