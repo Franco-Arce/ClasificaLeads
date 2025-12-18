@@ -100,13 +100,19 @@ def match_neotel_data(chat_phone, chat_date_str, neotel_df):
         if best_match is None:
             best_match = matches.iloc[0] # Fallback
             
+    # Helper to clean values (handle NaT/NaN)
+    def clean_val(val):
+        if pd.isna(val) or val is pd.NaT:
+            return ""
+        return str(val)
+
     # Extract UTMs
     # Columns found: 'UTM Medium'
     # Missing explicit Source/Origen in sample, but maybe 'Canal' or 'Medio' are useful
     return {
-        "utm_source": best_match.get('UTM Source', best_match.get('Canal', '')),
-        "utm_medium": best_match.get('UTM Medium', ''),
-        "utm_origen": best_match.get('UTM Origen', best_match.get('Medio', ''))
+        "utm_source": clean_val(best_match.get('UTM Source', best_match.get('Canal', ''))),
+        "utm_medium": clean_val(best_match.get('UTM Medium', '')),
+        "utm_origen": clean_val(best_match.get('UTM Origen', best_match.get('Medio', '')))
     }
 
 
