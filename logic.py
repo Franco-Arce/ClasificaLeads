@@ -66,7 +66,7 @@ def match_neotel_data(chat_phone, chat_date_str, neotel_df):
             if chat_dt.tzinfo:
                 chat_dt = chat_dt.tz_convert(None) # Compare timezone-naive if possible
         except:
-            return matches.iloc[0].to_dict() # Fallback
+            best_match = matches.iloc[0] # Fallback
             
         # Find closest date
         # Column found: 'Fecha Insert Lead'
@@ -76,29 +76,30 @@ def match_neotel_data(chat_phone, chat_date_str, neotel_df):
                  date_col = 'Fecha Inserción Leads'
              else:
                  # Fallback to any 'fecha' column?
-                 return matches.iloc[0].to_dict()
-             
-        min_diff = timedelta(days=365*10)
-        best_match = None
+                 best_match = matches.iloc[0]
         
-        for idx, row in matches.iterrows():
-            try:
-                neotel_dt = row[date_col]
-                if not isinstance(neotel_dt, datetime):
-                    neotel_dt = pd.to_datetime(neotel_dt)
-                
-                if neotel_dt.tzinfo:
-                    neotel_dt = neotel_dt.tz_convert(None)
+        # Only proceed with date comparison if we haven't already fallen back
+        if best_match is None:     
+            min_diff = timedelta(days=365*10)
+            
+            for idx, row in matches.iterrows():
+                try:
+                    neotel_dt = row[date_col]
+                    if not isinstance(neotel_dt, datetime):
+                        neotel_dt = pd.to_datetime(neotel_dt)
                     
-                diff = abs(chat_dt - neotel_dt)
-                if diff < min_diff:
-                    min_diff = diff
-                    best_match = row
-            except Exception as e:
-                continue
-                
-        if best_match is None:
-            best_match = matches.iloc[0] # Fallback
+                    if neotel_dt.tzinfo:
+                        neotel_dt = neotel_dt.tz_convert(None)
+                        
+                    diff = abs(chat_dt - neotel_dt)
+                    if diff < min_diff:
+                        min_diff = diff
+                        best_match = row
+                except Exception as e:
+                    continue
+                    
+            if best_match is None:
+                best_match = matches.iloc[0] # Fallback
             
     # Helper to clean values (handle NaT/NaN)
     def clean_val(val):
