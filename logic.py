@@ -59,6 +59,7 @@ def match_neotel_data(chat_phone, chat_date_str, neotel_df):
     if len(matches) == 1:
         best_match = matches.iloc[0]
     else:
+        best_match = None
         # Parse chat date
         try:
             # Ensure proper format handling
