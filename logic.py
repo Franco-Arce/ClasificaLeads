@@ -112,7 +112,8 @@ def match_neotel_data(chat_phone, chat_date_str, neotel_df):
     return {
         "utm_source": clean_val(best_match.get('UTM Source', best_match.get('Canal', ''))),
         "utm_medium": clean_val(best_match.get('UTM Medium', '')),
-        "utm_origen": clean_val(best_match.get('UTM Origen', best_match.get('Medio', '')))
+        "utm_origen": clean_val(best_match.get('UTM Origen', best_match.get('Medio', ''))),
+        "programa_interes": clean_val(best_match.get('Program aInteres', ''))
     }
 
 
@@ -413,7 +414,7 @@ def process_data(json_data, neotel_df=None):
             result.update(utm_data)
             
         # Ensure keys exist (if match failed or no neotel_df)
-        for key in ['utm_source', 'utm_medium', 'utm_origen']:
+        for key in ['utm_source', 'utm_medium', 'utm_origen', 'programa_interes']:
             if key not in result:
                 result[key] = ""
             
