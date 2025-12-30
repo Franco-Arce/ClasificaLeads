@@ -107,15 +107,29 @@ def match_neotel_data(chat_phone, chat_date_str, neotel_df):
         if pd.isna(val) or val is pd.NaT:
             return ""
         return str(val)
+    
+    # Helper to safely get value from Series
+    def safe_get(series_row, col_name, default=''):
+        try:
+            if col_name in series_row.index:
+                return series_row[col_name]
+            return default
+        except:
+            return default
 
     # Extract UTMs
     # Columns found: 'UTM Medium'
     # Missing explicit Source/Origen in sample, but maybe 'Canal' or 'Medio' are useful
+    utm_source = safe_get(best_match, 'UTM Source', safe_get(best_match, 'Canal', ''))
+    utm_medium = safe_get(best_match, 'UTM Medium', '')
+    utm_origen = safe_get(best_match, 'UTM Origen', safe_get(best_match, 'Medio', ''))
+    programa_interes = safe_get(best_match, 'Program aInteres', '')
+    
     return {
-        "utm_source": clean_val(best_match.get('UTM Source', best_match.get('Canal', ''))),
-        "utm_medium": clean_val(best_match.get('UTM Medium', '')),
-        "utm_origen": clean_val(best_match.get('UTM Origen', best_match.get('Medio', ''))),
-        "programa_interes": clean_val(best_match.get('Program aInteres', ''))
+        "utm_source": clean_val(utm_source),
+        "utm_medium": clean_val(utm_medium),
+        "utm_origen": clean_val(utm_origen),
+        "programa_interes": clean_val(programa_interes)
     }
 
 
