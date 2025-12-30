@@ -7,9 +7,23 @@ import re
 def normalize_phone(phone):
     """
     Normalizes phone number by removing non-digit characters.
+    Handles float values (e.g., 593993575726.0) by converting to int first.
     """
     if not phone:
         return ""
+    
+    # Handle pandas NaN/NaT
+    if pd.isna(phone):
+        return ""
+    
+    # If it's a float, convert to int first to remove .0
+    try:
+        if isinstance(phone, float):
+            phone = int(phone)
+    except (ValueError, OverflowError):
+        pass
+    
+    # Remove all non-digit characters
     return re.sub(r'\D', '', str(phone))
 
 def match_neotel_data(chat_phone, chat_date_str, neotel_df):
