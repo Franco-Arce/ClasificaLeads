@@ -104,8 +104,19 @@ if uploaded_file is not None:
                             })
                             st.dataframe(score_data, hide_index=True)
                     
-                    # Display Data
-                    st.subheader("📋 Resultados Detallados")
+                    # Filters FIRST (before the table)
+                    st.subheader("🔍 Filtrar Resultados")
+                    filter_col1, filter_col2 = st.columns(2)
+                    
+                    with filter_col1:
+                        selected_class = st.multiselect(
+                            "Filtrar por Clasificación:",
+                            options=['SQL', 'MQL', 'SPAM'],
+                            default=['SQL', 'MQL', 'SPAM']
+                        )
+                    
+                    with filter_col2:
+                        min_score = st.slider("Score mínimo:", 0, 100, 0)
                     
                     # Reorder columns for better display
                     display_columns = [
@@ -118,11 +129,19 @@ if uploaded_file is not None:
                     
                     # Only show columns that exist
                     available_columns = [col for col in display_columns if col in df.columns]
-                    df_display = df[available_columns]
+                    
+                    # Apply filters
+                    filtered_df = df[
+                        (df['clasificacion'].isin(selected_class)) & 
+                        (df['score_total'] >= min_score)
+                    ][available_columns]
+                    
+                    # Display filtered results
+                    st.subheader(f"📋 Resultados ({len(filtered_df)} de {len(df)} leads)")
                     
                     # Interactive Table with Column Config
                     st.dataframe(
-                        df_display, 
+                        filtered_df, 
                         use_container_width=True,
                         column_config={
                             "chat_id": "Chat ID",
@@ -165,29 +184,6 @@ if uploaded_file is not None:
                             "programa_interes": "Programa Interés"
                         }
                     )
-                    
-                    # Filters
-                    st.subheader("🔍 Filtrar Resultados")
-                    filter_col1, filter_col2 = st.columns(2)
-                    
-                    with filter_col1:
-                        selected_class = st.multiselect(
-                            "Filtrar por Clasificación:",
-                            options=['SQL', 'MQL', 'SPAM'],
-                            default=['SQL', 'MQL', 'SPAM']
-                        )
-                    
-                    with filter_col2:
-                        min_score = st.slider("Score mínimo:", 0, 100, 0)
-                    
-                    filtered_df = df_display[
-                        (df['clasificacion'].isin(selected_class)) & 
-                        (df['score_total'] >= min_score)
-                    ]
-                    
-                    if len(filtered_df) != len(df_display):
-                        st.write(f"**Mostrando {len(filtered_df)} de {len(df_display)} leads**")
-                        st.dataframe(filtered_df, use_container_width=True)
                     
                     # Download Buttons
                     st.subheader("📥 Descargar Resultados")
