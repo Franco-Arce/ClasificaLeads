@@ -1,0 +1,102 @@
+{
+  "items": [
+    {
+      "id": "8N14BCI715VLWEBUNUIW",
+      "creationTime": "2025-11-14T20:07:37.696Z",
+      "from": "bot",
+      "content": {
+        "type": "text",
+        "text": "Template:\n\nBienvenido a UEES ✨\nYa recibimos tu solicitud.\n\n📞 En los próximos minutos te estaremos llamando para darte más detalles sobre el programa.\n👉 Si prefieres que no te llamemos, respóndenos a este mensaje y te pondremos en contacto con un asesor por WhatsApp.\n\n📩 Además, en breve recibirás un correo con toda la información completa del programa.\n",
+        "whatsAppTemplateName": "uees_mensaje_automatico_llamada"
+      },
+      "sessionCreationTime": "2025-11-14T20:07:36.033Z",
+      "chat": {
+        "chatId": "WAKSYFF2GVNTULGLG0AF",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593981620732"
+      },
+      "sessionId": "WAKSYFF2GVNTULGLG0AF_2025-11-14T20:07:36.033Z"
+    },
+    {
+      "id": "WU2U4RTF2B8EJEGYGYUK",
+      "creationTime": "2025-11-17T00:04:26.826Z",
+      "from": "bot",
+      "content": {
+        "type": "text",
+        "text": "Template:\n\nBienvenido a UEES ✨\nYa recibimos tu solicitud.\n\n📞 En los próximos minutos te estaremos llamando para darte más detalles sobre el programa.\n👉 Si prefieres que no te llamemos, respóndenos a este mensaje y te pondremos en contacto con un asesor por WhatsApp.\n\n📩 Además, en breve recibirás un correo con toda la información completa del programa.\n",
+        "whatsAppTemplateName": "uees_mensaje_automatico_llamada"
+      },
+      "sessionCreationTime": "2025-11-17T00:04:26.783Z",
+      "chat": {
+        "chatId": "WAKSYFF2GVNTULGLG0AF",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593981620732"
+      },
+      "sessionId": "WAKSYFF2GVNTULGLG0AF_2025-11-17T00:04:26.783Z"
+    },
+    {
+      "id": "QCIIADRDP6MM7O2UZBXP",
+      "creationTime": "2025-11-18T23:01:26.679Z",
+      "from": "bot",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Template:\n\nBuenas tardes.\nLe contacto nuevamente porque nuestros programas comienzan muy pronto y aún no hemos logrado comunicarnos con usted.\nSi continúa interesado, puedo enviarle la información actualizada y orientarle con los pasos para avanzar.\n\n¿Desea que le comparta todo por este medio?\n",
+        "whatsAppTemplateName": "uee165_s46nocontesta"
+      },
+      "sessionCreationTime": "2025-11-18T23:01:26.632Z",
+      "chat": {
+        "chatId": "WAKSYFF2GVNTULGLG0AF",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593981620732"
+      },
+      "sessionId": "WAKSYFF2GVNTULGLG0AF_2025-11-18T23:01:26.632Z"
+    },
+    {
+      "id": "TUSR2OL8YRBFY5EYAEDO",
+      "creationTime": "2025-11-18T23:08:32.801Z",
+      "from": "user",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Si por favor ñel estw medio"
+      },
+      "sessionCreationTime": "2025-11-18T23:01:26.632Z",
+      "chat": {
+        "chatId": "WAKSYFF2GVNTULGLG0AF",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593981620732"
+      },
+      "sessionId": "WAKSYFF2GVNTULGLG0AF_2025-11-18T23:01:26.632Z"
+    },
+    {
+      "id": "Y04RJB6E58DVMGUIVH42",
+      "creationTime": "2025-11-18T23:29:36.963Z",
+      "from": "agent",
+      "agentId": "C5kuq3SXfmcuc3vzfCACc9VLZAg1",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "👋🏻Hola,  ¿Cómo está?\n\nMi nombre es Melany Párraga, Asesora Educativa de Universidad de Especialidades Espíritu Santo UEES.\n\nComénteme, ¿Con quién tengo el gusto? Tenemos registrado su interés en el Diplomado de: *Ética y Privacidad en el Derecho Digital*. Le comparto la información a continuación.😊"
+      },
+      "sessionCreationTime": "2025-11-18T23:01:26.632Z",
+      "chat": {
+        "chatId": "WAKSYFF2GVNTULGLG0AF",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593981620732"
+      },
+      "sessionId": "WAKSYFF2GVNTULGLG0AF_2025-11-18T23:01:26.632Z"
+    },
+    {
+      "id": "2ALA7L6G30ZFMJ2SMRQU",
+      "creationTime": "2025-11-18T23:29:40.949Z",
+      "from": "agent",
+      "agentId": "C5kuq3SXfmcuc3vzfCACc9VLZAg1",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Le adjunto el Brochure con todos los detalles del Diplomado, le comento que el mismo tiene una duración de 3 meses.-*Inicio 02 de Febrero*"
+      }
+    }
+  ]
+}

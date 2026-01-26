@@ -1,0 +1,97 @@
+{
+    "items": [
+        {
+            "id": "MSG_USER_PROVIDED_1",
+            "creationTime": "2025-11-27T22:38:24.927Z",
+            "from": "user",
+            "queueId": "uees-admisiones",
+            "content": {
+                "type": "text",
+                "text": "Que precio tiene el diplomado ?"
+            },
+            "chat": {
+                "chatId": "SQ6S4ZLJ3KCMGCUH4Y56",
+                "contactId": "593987654321"
+            }
+        },
+        {
+            "id": "MSG_AGENT_PROVIDED_1",
+            "creationTime": "2025-11-27T22:40:13.842Z",
+            "from": "agent",
+            "agentId": "6Yl7ECAhf9N6ZDMkuwihjm8xyWl1",
+            "content": {
+                "type": "text",
+                "text": "Inicia el 2 de Febrero..."
+            },
+            "chat": {
+                "chatId": "SQ6S4ZLJ3KCMGCUH4Y56",
+                "contactId": "593987654321"
+            }
+        },
+        {
+            "id": "MSG_AGENT_PROVIDED_2",
+            "creationTime": "2025-11-28T10:00:00.000Z",
+            "from": "agent",
+            "content": {
+                "type": "text",
+                "text": "Hola, ¿Con quién tengo el gusto?"
+            },
+            "chat": {
+                "chatId": "CHAT_CONTEXT_TEST",
+                "contactId": "593999999999"
+            }
+        },
+        {
+            "id": "MSG_USER_NAME_REPLY",
+            "creationTime": "2025-11-28T10:01:00.000Z",
+            "from": "user",
+            "content": {
+                "type": "text",
+                "text": "Juan Perez"
+            },
+            "chat": {
+                "chatId": "CHAT_CONTEXT_TEST",
+                "contactId": "593999999999"
+            }
+        },
+        {
+            "id": "MSG_USER_MOTIVATION",
+            "creationTime": "2025-11-28T12:00:00.000Z",
+            "from": "user",
+            "content": {
+                "type": "text",
+                "text": "Quiero mejorar mi perfil profesional para un ascenso"
+            },
+            "chat": {
+                "chatId": "CHAT_SQL_TEST",
+                "contactId": "593911111111"
+            }
+        },
+        {
+            "id": "MSG_BOT_EXCEPTION",
+            "creationTime": "2025-11-28T13:00:00.000Z",
+            "from": "bot",
+            "content": {
+                "type": "text",
+                "text": "Con respecto al programa que consulta, le comento que por esta vía no estamos ofreciendo ese tipo de programas."
+            },
+            "chat": {
+                "chatId": "CHAT_EXCEPTION_TEST",
+                "contactId": "593900000000"
+            }
+        },
+        {
+            "id": "MSG_USER_MOTIVATION_EXCEPTION",
+            "creationTime": "2025-11-28T13:01:00.000Z",
+            "from": "user",
+            "content": {
+                "type": "text",
+                "text": "Entiendo, pero necesito el titulo para mi trabajo"
+            },
+            "chat": {
+                "chatId": "CHAT_EXCEPTION_TEST",
+                "contactId": "593900000000"
+            }
+        }
+    ]
+}
