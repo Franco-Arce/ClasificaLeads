@@ -104,20 +104,6 @@ if uploaded_file is not None:
                             })
                             st.dataframe(score_data, hide_index=True)
                     
-                    # Filters FIRST (before the table)
-                    st.subheader("🔍 Filtrar Resultados")
-                    filter_col1, filter_col2 = st.columns(2)
-                    
-                    with filter_col1:
-                        selected_class = st.multiselect(
-                            "Filtrar por Clasificación:",
-                            options=['SQL', 'MQL', 'SPAM'],
-                            default=['SQL', 'MQL', 'SPAM']
-                        )
-                    
-                    with filter_col2:
-                        min_score = st.slider("Score mínimo:", 0, 100, 0)
-                    
                     # Reorder columns for better display
                     display_columns = [
                         'chat_id', 'telefono', 'clasificacion', 'score_total',
@@ -129,19 +115,14 @@ if uploaded_file is not None:
                     
                     # Only show columns that exist
                     available_columns = [col for col in display_columns if col in df.columns]
+                    df_display = df[available_columns]
                     
-                    # Apply filters
-                    filtered_df = df[
-                        (df['clasificacion'].isin(selected_class)) & 
-                        (df['score_total'] >= min_score)
-                    ][available_columns]
-                    
-                    # Display filtered results
-                    st.subheader(f"📋 Resultados ({len(filtered_df)} de {len(df)} leads)")
+                    # Display results
+                    st.subheader(f"📋 Resultados ({len(df)} leads)")
                     
                     # Interactive Table with Column Config
                     st.dataframe(
-                        filtered_df, 
+                        df_display, 
                         use_container_width=True,
                         column_config={
                             "chat_id": "Chat ID",
