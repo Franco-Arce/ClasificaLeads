@@ -524,19 +524,19 @@ def analyze_conversation(chat_id, messages):
     if messages:
         telefono = messages[0].get('chat', {}).get('contactId', "")
     
-    # Si no hay mensajes del usuario, es MQL silencioso
+    # Si no hay mensajes del usuario, es SPAM (ghosting = score 0 = SPAM)
     if not user_messages:
         return {
             "chat_id": chat_id,
             "telefono": telefono,
-            "clasificacion": "MQL",
+            "clasificacion": "SPAM",
             "score_total": 0,
             "score_motivacion": 0,
             "score_pago": 0,
-            "score_comportamiento": -10,
-            "razon_principal": "Lead Silencioso (Sin respuesta del usuario).",
-            "señales_clave": ["Solo habló el bot/agente", "Ghosting detectado"],
-            "estado_conversacion": "Sin respuesta inicial"
+            "score_comportamiento": 0,
+            "razon_principal": "Lead sin respuesta (Ghosting) - Score 0",
+            "señales_clave": ["Solo habló el bot/agente", "Sin respuesta del usuario"],
+            "estado_conversacion": "Sin respuesta"
         }
     
     # 1. VERIFICAR SPAM (Regla excluyente)

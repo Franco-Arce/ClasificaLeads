@@ -202,19 +202,135 @@ if uploaded_file is not None:
                         mime="application/json"
                     )
                     
-                    # Excel Download
+                    # Excel Download with styling
                     import io
+                    from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
+                    from openpyxl.utils.dataframe import dataframe_to_rows
+                    from openpyxl.utils import get_column_letter
+                    
                     output = io.BytesIO()
                     with pd.ExcelWriter(output, engine='openpyxl') as writer:
                         df.to_excel(writer, index=False, sheet_name='Leads')
                         
-                        # Add summary sheet
+                        # Get the workbook and worksheet
+                        workbook = writer.book
+                        ws_leads = writer.sheets['Leads']
+                        
+                        # Define styles
+                        header_font = Font(bold=True, color="FFFFFF", size=11)
+                        header_fill = PatternFill(start_color="2E86AB", end_color="2E86AB", fill_type="solid")
+                        header_alignment = Alignment(horizontal="center", vertical="center", wrap_text=True)
+                        
+                        # Classification colors
+                        sql_fill = PatternFill(start_color="A8E6CF", end_color="A8E6CF", fill_type="solid")  # Green
+                        mql_fill = PatternFill(start_color="FFE066", end_color="FFE066", fill_type="solid")  # Yellow
+                        spam_fill = PatternFill(start_color="FF6B6B", end_color="FF6B6B", fill_type="solid")  # Red
+                        
+                        thin_border = Border(
+                            left=Side(style='thin', color='CCCCCC'),
+                            right=Side(style='thin', color='CCCCCC'),
+                            top=Side(style='thin', color='CCCCCC'),
+                            bottom=Side(style='thin', color='CCCCCC')
+                        )
+                        
+                        # Style headers
+                        for col_num, cell in enumerate(ws_leads[1], 1):
+                            cell.font = header_font
+                            cell.fill = header_fill
+                            cell.alignment = header_alignment
+                            cell.border = thin_border
+                        
+                        # Find classification column
+                        clasif_col = None
+                        for col_num, cell in enumerate(ws_leads[1], 1):
+                            if cell.value == 'clasificacion':
+                                clasif_col = col_num
+                                break
+                        
+                        # Style data rows
+                        for row_num in range(2, ws_leads.max_row + 1):
+                            for col_num in range(1, ws_leads.max_column + 1):
+                                cell = ws_leads.cell(row=row_num, column=col_num)
+                                cell.border = thin_border
+                                cell.alignment = Alignment(vertical="center")
+                            
+                            # Color row based on classification
+                            if clasif_col:
+                                clasif_value = ws_leads.cell(row=row_num, column=clasif_col).value
+                                if clasif_value == 'SQL':
+                                    for col_num in range(1, ws_leads.max_column + 1):
+                                        ws_leads.cell(row=row_num, column=col_num).fill = sql_fill
+                                elif clasif_value == 'MQL':
+                                    for col_num in range(1, ws_leads.max_column + 1):
+                                        ws_leads.cell(row=row_num, column=col_num).fill = mql_fill
+                                elif clasif_value == 'SPAM':
+                                    for col_num in range(1, ws_leads.max_column + 1):
+                                        ws_leads.cell(row=row_num, column=col_num).fill = spam_fill
+                        
+                        # Auto-fit column widths
+                        for col_num in range(1, ws_leads.max_column + 1):
+                            max_length = 0
+                            column_letter = get_column_letter(col_num)
+                            for row in ws_leads.iter_rows(min_col=col_num, max_col=col_num):
+                                for cell in row:
+                                    try:
+                                        if cell.value:
+                                            max_length = max(max_length, len(str(cell.value)))
+                                    except:
+                                        pass
+                            adjusted_width = min(max_length + 2, 50)
+                            ws_leads.column_dimensions[column_letter].width = adjusted_width
+                        
+                        # Freeze header row
+                        ws_leads.freeze_panes = 'A2'
+                        
+                        # Create Summary sheet with styling
                         summary_data = {
                             'Métrica': ['Total Leads', 'SPAM', 'MQL', 'SQL', 'Score Promedio'],
-                            'Valor': [total_leads, spam_leads, mql_leads, sql_leads, f"{avg_score:.1f}"]
+                            'Valor': [total_leads, spam_leads, mql_leads, sql_leads, f"{avg_score:.1f}"],
+                            'Porcentaje': [
+                                '100%',
+                                f"{(spam_leads/total_leads*100):.1f}%" if total_leads > 0 else "0%",
+                                f"{(mql_leads/total_leads*100):.1f}%" if total_leads > 0 else "0%",
+                                f"{(sql_leads/total_leads*100):.1f}%" if total_leads > 0 else "0%",
+                                '-'
+                            ]
                         }
                         summary_df = pd.DataFrame(summary_data)
                         summary_df.to_excel(writer, index=False, sheet_name='Resumen')
+                        
+                        ws_summary = writer.sheets['Resumen']
+                        
+                        # Style summary headers
+                        for cell in ws_summary[1]:
+                            cell.font = header_font
+                            cell.fill = header_fill
+                            cell.alignment = header_alignment
+                            cell.border = thin_border
+                        
+                        # Style summary data
+                        summary_colors = {
+                            'Total Leads': PatternFill(start_color="E8E8E8", end_color="E8E8E8", fill_type="solid"),
+                            'SPAM': spam_fill,
+                            'MQL': mql_fill,
+                            'SQL': sql_fill,
+                            'Score Promedio': PatternFill(start_color="B8D4E3", end_color="B8D4E3", fill_type="solid")
+                        }
+                        
+                        for row_num in range(2, ws_summary.max_row + 1):
+                            metric_name = ws_summary.cell(row=row_num, column=1).value
+                            fill_color = summary_colors.get(metric_name)
+                            for col_num in range(1, ws_summary.max_column + 1):
+                                cell = ws_summary.cell(row=row_num, column=col_num)
+                                cell.border = thin_border
+                                cell.alignment = Alignment(horizontal="center", vertical="center")
+                                if fill_color:
+                                    cell.fill = fill_color
+                        
+                        # Auto-fit summary columns
+                        ws_summary.column_dimensions['A'].width = 20
+                        ws_summary.column_dimensions['B'].width = 15
+                        ws_summary.column_dimensions['C'].width = 15
                         
                     excel_data = output.getvalue()
                     
