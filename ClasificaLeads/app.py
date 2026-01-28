@@ -188,7 +188,7 @@ if uploaded_file is not None:
                     
                     output = io.BytesIO()
                     with pd.ExcelWriter(output, engine='openpyxl') as writer:
-                        df.to_excel(writer, index=False, sheet_name='Leads')
+                        df_display.to_excel(writer, index=False, sheet_name='Leads')
                         
                         # Get the workbook and worksheet
                         workbook = writer.book
