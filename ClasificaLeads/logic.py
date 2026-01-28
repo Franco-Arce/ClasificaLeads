@@ -244,7 +244,11 @@ def calculate_motivation_score(messages, user_messages):
         "mejorar perfil", "mejorar profesional",
         "superación", "carrera profesional",
         "brochure", "me interesa mucho", "muy interesado",
-        "necesito capacitarme", "quiero especializarme"
+        "necesito capacitarme", "quiero especializarme",
+        # Nuevas variantes agregadas
+        "capacitarme", "capacitación", "capacitacion", 
+        "formarme", "formación", "formacion",
+        "entrenamiento", "entrenarme"
     ]
     
     # Keywords de impacto laboral concreto (+15)
@@ -341,7 +345,11 @@ def calculate_payment_score(messages, user_messages):
         "ya pagué", "ya pague", "listo el pago",
         "voy a pagar", "quiero pagar", "cómo pago", "como pago",
         "envié el pago", "envie el pago",
-        "link de pago", "enlace de pago"
+        "link de pago", "enlace de pago",
+        # Nuevas variantes de inscripción (implica pago)
+        "inscribirme", "inscripción", "inscripcion", 
+        "matricularme", "matrícula", "matricula",
+        "reservar cupo", "reserva de cupo"
     ]
     
     # Keywords de consulta de formas de pago (+20)
