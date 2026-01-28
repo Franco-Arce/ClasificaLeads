@@ -121,12 +121,14 @@ def match_neotel_data(chat_phone, chat_date_str, neotel_df):
     utm_medium = safe_get(best_match, 'UTM Medium', '')
     utm_origen = safe_get(best_match, 'UTM Origen', safe_get(best_match, 'Medio', ''))
     programa_interes = safe_get(best_match, 'Program aInteres', '')
+    resolucion = safe_get(best_match, 'Resolución', safe_get(best_match, 'Resolucion', ''))
     
     return {
         "utm_source": clean_val(utm_source),
         "utm_medium": clean_val(utm_medium),
         "utm_origen": clean_val(utm_origen),
-        "programa_interes": clean_val(programa_interes)
+        "programa_interes": clean_val(programa_interes),
+        "resolucion": clean_val(resolucion)
     }
 
 
@@ -691,7 +693,7 @@ def process_data(json_data, neotel_df=None):
             result.update(utm_data)
             
         # Ensure keys exist
-        for key in ['utm_source', 'utm_medium', 'utm_origen', 'programa_interes']:
+        for key in ['utm_source', 'utm_medium', 'utm_origen', 'programa_interes', 'resolucion']:
             if key not in result:
                 result[key] = ""
             
