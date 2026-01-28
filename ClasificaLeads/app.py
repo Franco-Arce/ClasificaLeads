@@ -198,10 +198,10 @@ if uploaded_file is not None:
                         header_fill = PatternFill(start_color="2E86AB", end_color="2E86AB", fill_type="solid")
                         header_alignment = Alignment(horizontal="center", vertical="center", wrap_text=True)
                         
-                        # Classification colors
-                        sql_fill = PatternFill(start_color="A8E6CF", end_color="A8E6CF", fill_type="solid")  # Green
-                        mql_fill = PatternFill(start_color="FFE066", end_color="FFE066", fill_type="solid")  # Yellow
-                        spam_fill = PatternFill(start_color="FF6B6B", end_color="FF6B6B", fill_type="solid")  # Red
+                        # Classification colors (pastel/light tones)
+                        sql_fill = PatternFill(start_color="D4EDDA", end_color="D4EDDA", fill_type="solid")  # Light mint green
+                        mql_fill = PatternFill(start_color="FFF3CD", end_color="FFF3CD", fill_type="solid")  # Light vanilla yellow
+                        spam_fill = PatternFill(start_color="F8D7DA", end_color="F8D7DA", fill_type="solid")  # Light salmon pink
                         
                         thin_border = Border(
                             left=Side(style='thin', color='CCCCCC'),
