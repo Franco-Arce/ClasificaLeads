@@ -121,7 +121,10 @@ def match_neotel_data(chat_phone, chat_date_str, neotel_df):
     utm_medium = safe_get(best_match, 'UTM Medium', '')
     utm_origen = safe_get(best_match, 'UTM Origen', safe_get(best_match, 'Medio', ''))
     programa_interes = safe_get(best_match, 'Program aInteres', '')
-    resolucion = safe_get(best_match, 'Resolución', safe_get(best_match, 'Resolucion', ''))
+    resolucion = safe_get(best_match, 'Resolución', 
+                  safe_get(best_match, 'Resolucion', 
+                  safe_get(best_match, 'Resolución',  # Encoding issue variant
+                  '')))
     
     return {
         "utm_source": clean_val(utm_source),
