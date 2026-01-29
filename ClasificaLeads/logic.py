@@ -264,7 +264,11 @@ def calculate_motivation_score(messages, user_messages):
     vague_motivation_keywords = [
         "me interesa aprender", "quiero aprender",
         "me gustaría saber", "me gustaria saber",
-        "por curiosidad", "solo información", "solo informacion"
+        "por curiosidad", "solo información", "solo informacion",
+        # Consultas activas (muestran interés)
+        "consultar por", "quisiera consultar", "quiero consultar",
+        "información sobre", "informacion sobre",
+        "me interesa", "estoy interesado", "estoy interesada"
     ]
     
     # Keywords de objeciones tempranas (-10)
@@ -358,7 +362,11 @@ def calculate_payment_score(messages, user_messages):
         "formas de pago", "métodos de pago", "metodos de pago",
         "pago en cuotas", "a plazos", "plazo",
         "pueden financiar", "hay descuento", "descuentos",
-        "beca", "becas", "ayuda financiera"
+        "beca", "becas", "ayuda financiera",
+        # Preguntas sobre inicio (indica planificación de inscripción)
+        "cuando inicia", "cuándo inicia", "cuando empieza", "cuándo empieza",
+        "fecha de inicio", "próximo inicio", "proximo inicio",
+        "inicio de clases", "inicio del programa", "inicio del diplomado", "inicio de diplomados", "inicio del curso", "inicio de"
     ]
     
     # Keywords de consulta de precio (+5)
