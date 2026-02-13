@@ -233,9 +233,10 @@ def calculate_motivation_score(messages, user_messages):
         "trabajo", "ascenso", "profesional", "laboral",
         "crecer", "crecimiento", "reconvertir", "reconversión",
         "actualización", "actualizarme", "actualizado",
-        "mejorar perfil", "mejorar profesional",
+        "mejorar perfil", "mejorar profesional", "mejorar",
         "superación", "carrera profesional",
         "brochure", "me interesa mucho", "muy interesado",
+        "me interesa", "necesito",
         "necesito capacitarme", "quiero especializarme"
     ]
     
@@ -252,16 +253,27 @@ def calculate_motivation_score(messages, user_messages):
     vague_motivation_keywords = [
         "me interesa aprender", "quiero aprender",
         "me gustaría saber", "me gustaria saber",
-        "por curiosidad", "solo información", "solo informacion"
+        "por curiosidad", "solo información", "solo informacion",
+        "ampliar conocimientos", "adquirir conocimientos", "conocimientos"
     ]
     
     # Keywords de objeciones tempranas (-10)
     early_objection_keywords = [
         "no me interesa", "solo miro", "solo mirando",
         "no estoy interesado", "no estoy seguro",
+        "no estoy buscando"
+    ]
+    
+    # Keywords de objeciones suaves (-5)
+    soft_objection_keywords = [
+        "la consideraré", "la considerare",
+        "lo consideraré", "lo considerare",
+        "lo voy a pensar", "lo pensaré", "lo pensare",
+        "tengo que pensar", "tengo que pensarlo",
         "tal vez después", "tal vez despues",
         "quizás más adelante", "quizas mas adelante",
-        "no sé", "no se", "no estoy buscando"
+        "no sé", "no se", "después veo", "despues veo",
+        "otro momento"
     ]
     
     all_user_text = " ".join([get_message_text(msg).lower() for msg in user_messages])
@@ -305,6 +317,13 @@ def calculate_motivation_score(messages, user_messages):
             signals.append(f"Objeción temprana: '{kw}'")
             break
     
+    # Verificar objeciones suaves (-5)
+    for kw in soft_objection_keywords:
+        if kw in all_user_text:
+            score -= 5
+            signals.append(f"Objeción suave: '{kw}'")
+            break
+    
     # Cap score at 40
     score = min(score, 40)
     
@@ -342,7 +361,10 @@ def calculate_payment_score(messages, user_messages):
         "formas de pago", "métodos de pago", "metodos de pago",
         "pago en cuotas", "a plazos", "plazo",
         "pueden financiar", "hay descuento", "descuentos",
-        "beca", "becas", "ayuda financiera"
+        "beca", "becas", "ayuda financiera",
+        "requisitos", "desde cuando comienza", "desde cuándo comienza",
+        "cuándo inicia", "cuando inicia", "cuándo empieza", "cuando empieza",
+        "cómo me inscribo", "como me inscribo", "inscribirme", "matricularme"
     ]
     
     # Keywords de consulta de precio (+5)
@@ -414,6 +436,52 @@ def calculate_payment_score(messages, user_messages):
                 signals.append(f"Objeción de precio: '{kw}'")
                 break
     
+    
+
+    # Verificar si el usuario envió una imagen o archivo POSTERIOR a un link/instrucciones de pago del bot
+    has_image_or_file = False
+    payment_link_sent_by_bot = False
+    
+    # Keywords que indican que el bot envió instrucciones de pago
+    bot_payment_keywords = [
+        "link", "enlace", "pago", "pagar", "cuenta", "transferencia", 
+        "cbu", "alias", "banco", "depósito", "deposito",
+        "aquí tienes", "aqui tienes", "pasos para", "instrucciones"
+    ]
+
+    # Iterar cronológicamente para ver el flujo
+    # Asumimos que 'messages' está ordenado cronológicamente
+    if messages:
+        sorted_msgs = sorted(messages, key=lambda x: x.get('creationTime', ''))
+        
+        for msg in sorted_msgs:
+            role = msg.get('from')
+            content = msg.get('content', {})
+            text = ""
+            if content.get('type') == 'text':
+                text = content.get('text', '').lower()
+            
+            if role in ['bot', 'agent']:
+                # Chequear si el bot envió info de pago
+                if any(kw in text for kw in bot_payment_keywords):
+                    payment_link_sent_by_bot = True
+            
+            elif role == 'user':
+                # Chequear si el usuario envía imagen
+                content_type = content.get('type')
+                if content_type in ['image', 'document', 'file']:
+                    # Solo cuenta si el bot YA envió info de pago
+                    if payment_link_sent_by_bot:
+                        has_image_or_file = True
+                        break # Ya encontramos la prueba, no necesitamos seguir buscando
+
+    if has_image_or_file:
+        # Si envía imagen DESPUÉS del link, asumimos que es comprobante
+        if score < 30:
+            score += 25
+            has_payment_intent = True
+            signals.append("Envío de archivo/imagen tras link de pago")
+
     # Cap score at 30 (can be negative)
     score = min(score, 30)
     
