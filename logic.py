@@ -218,26 +218,32 @@ def calculate_motivation_score(messages, user_messages):
     """
     Calcula el puntaje de motivación del lead (hasta 40 puntos).
     
-    +25: Motivación profesional clara
-    +15: Impacto laboral concreto
+    +25: Motivación profesional fuerte
+    +15: Motivación profesional moderada / Impacto laboral
     +5:  Motivación vaga
     0:   Sin motivación declarada
-    -10: Objeciones tempranas
+    -10: Objeciones fuertes
+    -5:  Objeciones suaves
     """
     score = 0
     signals = []
     has_professional_motivation = False
     
-    # Keywords de motivación profesional clara (+25)
-    professional_motivation_keywords = [
+    # Keywords de motivación profesional fuerte (+25)
+    strong_motivation_keywords = [
         "trabajo", "ascenso", "profesional", "laboral",
         "crecer", "crecimiento", "reconvertir", "reconversión",
         "actualización", "actualizarme", "actualizado",
         "mejorar perfil", "mejorar profesional", "mejorar",
         "superación", "carrera profesional",
         "brochure", "me interesa mucho", "muy interesado",
-        "me interesa", "necesito",
-        "necesito capacitarme", "quiero especializarme"
+        "necesito capacitarme", "quiero especializarme",
+        "necesito"
+    ]
+    
+    # Fix #5: Keywords de motivación profesional moderada (+15)
+    moderate_motivation_keywords = [
+        "me interesa"
     ]
     
     # Keywords de impacto laboral concreto (+15)
@@ -257,7 +263,7 @@ def calculate_motivation_score(messages, user_messages):
         "ampliar conocimientos", "adquirir conocimientos", "conocimientos"
     ]
     
-    # Keywords de objeciones tempranas (-10)
+    # Keywords de objeciones fuertes (-10)
     early_objection_keywords = [
         "no me interesa", "solo miro", "solo mirando",
         "no estoy interesado", "no estoy seguro",
@@ -276,53 +282,76 @@ def calculate_motivation_score(messages, user_messages):
         "otro momento"
     ]
     
+    # Fix #1: Frases de negación para filtrar antes de buscar motivación
+    negation_phrases = [
+        "no me interesa", "no necesito", "no me importa",
+        "no quiero", "no busco", "no estoy interesado"
+    ]
+    
     all_user_text = " ".join([get_message_text(msg).lower() for msg in user_messages])
     
-    # Verificar motivación profesional clara (+25)
-    for kw in professional_motivation_keywords:
+    # Fix #1: Crear texto limpio sin negaciones para buscar motivación
+    clean_text = all_user_text
+    for neg in negation_phrases:
+        clean_text = clean_text.replace(neg, "")
+    
+    # Verificar objeciones PRIMERO (Fix #1: antes de motivación)
+    has_strong_objection = False
+    for kw in early_objection_keywords:
         if kw in all_user_text:
+            score -= 10
+            has_strong_objection = True
+            signals.append(f"Objeción fuerte: '{kw}'")
+            break
+    
+    # Verificar objeciones suaves (-5)
+    if not has_strong_objection:
+        for kw in soft_objection_keywords:
+            if kw in all_user_text:
+                score -= 5
+                signals.append(f"Objeción suave: '{kw}'")
+                break
+    
+    # Verificar motivación profesional fuerte (+25) usando texto limpio
+    for kw in strong_motivation_keywords:
+        if kw in clean_text:
             if not has_professional_motivation:
                 score += 25
                 has_professional_motivation = True
-                signals.append(f"Motivación profesional clara: '{kw}'")
+                signals.append(f"Motivación profesional fuerte: '{kw}'")
             break
     
-    # Verificar impacto laboral concreto (+15) - Solo si no tiene motivación profesional
+    # Fix #5: Verificar motivación moderada (+15) - solo si no tiene fuerte
+    if not has_professional_motivation:
+        for kw in moderate_motivation_keywords:
+            if kw in clean_text:
+                score += 15
+                has_professional_motivation = True
+                signals.append(f"Motivación profesional moderada: '{kw}'")
+                break
+    
+    # Verificar impacto laboral concreto (+15)
     if not has_professional_motivation:
         for kw in labor_impact_keywords:
-            if kw in all_user_text:
+            if kw in clean_text:
                 score += 15
                 signals.append(f"Impacto laboral concreto: '{kw}'")
                 break
     else:
-        # Si ya tiene motivación profesional, agregar +15 si también menciona impacto laboral
+        # Si ya tiene motivación, agregar +15 si también menciona impacto laboral
         for kw in labor_impact_keywords:
-            if kw in all_user_text:
+            if kw in clean_text:
                 score += 15
                 signals.append(f"Impacto laboral adicional: '{kw}'")
                 break
     
-    # Verificar motivación vaga (+5) - Solo si no tiene otras motivaciones
-    if score == 0:
+    # Verificar motivación vaga (+5) - Solo si no tiene otras motivaciones positivas
+    if score <= 0:
         for kw in vague_motivation_keywords:
-            if kw in all_user_text:
+            if kw in clean_text:
                 score += 5
                 signals.append(f"Motivación vaga: '{kw}'")
                 break
-    
-    # Verificar objeciones tempranas (-10)
-    for kw in early_objection_keywords:
-        if kw in all_user_text:
-            score -= 10
-            signals.append(f"Objeción temprana: '{kw}'")
-            break
-    
-    # Verificar objeciones suaves (-5)
-    for kw in soft_objection_keywords:
-        if kw in all_user_text:
-            score -= 5
-            signals.append(f"Objeción suave: '{kw}'")
-            break
     
     # Cap score at 40
     score = min(score, 40)
@@ -344,18 +373,18 @@ def calculate_payment_score(messages, user_messages):
     signals = []
     has_payment_intent = False
     
-    # Keywords de intención de pago (+30)
+    # Fix #2: Keywords de intención de pago (+30) - Solo frases con acción, sin "pago" suelto
     payment_intent_keywords = [
-        "pago", "pagar", "transferencia", "comprobante",
-        "cuenta", "depósito", "deposito", "depositar",
+        "pagar", "transferencia", "comprobante",
+        "depósito", "deposito", "depositar",
         "tarjeta", "cupón", "cupon",
         "ya pagué", "ya pague", "listo el pago",
         "voy a pagar", "quiero pagar", "cómo pago", "como pago",
         "envié el pago", "envie el pago",
-        "link de pago", "enlace de pago"
+        "link de pago", "enlace de pago", "ya está", "ya esta"
     ]
     
-    # Keywords de consulta de formas de pago (+20)
+    # Keywords de consulta de formas de pago / inscripción (+20)
     payment_forms_keywords = [
         "cuotas", "financiamiento", "financiar",
         "formas de pago", "métodos de pago", "metodos de pago",
@@ -371,17 +400,15 @@ def calculate_payment_score(messages, user_messages):
     price_inquiry_keywords = [
         "precio", "costo", "valor", "cuánto cuesta", "cuanto cuesta",
         "cuánto vale", "cuanto vale", "inversión", "inversion",
-        "qué precio", "que precio"
+        "qué precio", "que precio", "qué cuesta", "que cuesta"
     ]
     
-    # Keywords de objeción de precio (-15)
+    # Fix #3: Keywords de objeción de precio (-15) - Solo las específicas de precio
     price_objection_keywords = [
         "caro", "muy caro", "costoso", "no puedo pagar",
         "no tengo dinero", "no tengo plata",
-        "no me interesa", "por ahora no", "más adelante", "mas adelante",
-        "lo pensaré", "lo pensare", "tengo que pensar",
-        "no es para mí", "no es para mi",
-        "otro momento", "después veo", "despues veo"
+        "por ahora no",
+        "no es para mí", "no es para mi"
     ]
     
     # Keywords de declaración de no pagar (-30)
@@ -482,6 +509,24 @@ def calculate_payment_score(messages, user_messages):
             has_payment_intent = True
             signals.append("Envío de archivo/imagen tras link de pago")
 
+    # Fix #6: Detectar envío de datos personales (email, cédula)
+    for msg in user_messages:
+        text = get_message_text(msg)
+        # Detectar email
+        if re.search(r'[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}', text):
+            if score < 30:
+                score += 20
+                has_payment_intent = True
+                signals.append("Envío de datos personales (email)")
+            break
+        # Detectar cédula (10+ dígitos seguidos)
+        if re.search(r'\b\d{10,13}\b', text):
+            if score < 30:
+                score += 20
+                has_payment_intent = True
+                signals.append("Envío de datos personales (cédula/ID)")
+            break
+
     # Cap score at 30 (can be negative)
     score = min(score, 30)
     
@@ -558,6 +603,22 @@ def calculate_behavior_score(messages, user_messages):
         if "Usuario inició la conversación" not in signals:
             score += 10
             signals.append("Usuario inició la conversación")
+    
+    # Fix #4: Detectar ghosting parcial (último mensaje es del bot/agente)
+    if messages and user_messages:
+        sorted_msgs = sorted(messages, key=lambda x: x.get('creationTime', ''))
+        last_msg = sorted_msgs[-1]
+        if last_msg.get('from') in ['bot', 'agent']:
+            score -= 5
+            signals.append("Ghosting parcial (último mensaje del agente sin respuesta)")
+    
+    # Fix #7: Detectar envío de audio/video como señal de engagement
+    for msg in user_messages:
+        content_type = msg.get('content', {}).get('type')
+        if content_type in ['audio', 'video', 'ptt']:
+            score += 5
+            signals.append("Engagement: envío de audio/video")
+            break
     
     # Cap score at 30
     score = min(score, 30)
