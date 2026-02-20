@@ -8,7 +8,7 @@ st.set_page_config(page_title="Lead Classifier", layout="wide")
 
 st.title("📊 Lead Classifier & Analyzer")
 st.markdown("""
-Sube tu archivo JSON (o .docx con JSON) de logs de chat para procesarlo y clasificar los leads en **SPAM**, **MQL** o **SQL** 
+Sube tu archivo JSON (o .docx con JSON) de logs de chat para procesarlo y clasificar los leads en **No Contactado**, **MQL** o **SQL** 
 basado en el sistema de scoring definido.
 
 ### Sistema de Scoring
@@ -18,7 +18,7 @@ basado en el sistema de scoring definido.
 | Intención de Pago | 30 pts |
 | Comportamiento/Timing | 30 pts |
 
-**Clasificación:** SPAM (0 pts) | MQL (1-49 pts) | SQL (50-100 pts)
+**Clasificación:** No Contactado (0 pts) | MQL (1-49 pts) | SQL (50-100 pts)
 """)
 
 uploaded_file = st.file_uploader("Cargar archivo de Chat Logs (JSON/DOCX)", type=["json", "docx"])
@@ -63,19 +63,19 @@ if uploaded_file is not None:
                     
                     # Metrics
                     total_leads = len(df)
-                    spam_leads = len(df[df['clasificacion'] == 'SPAM'])
+                    spam_leads = len(df[df['clasificacion'] == 'No Contactado'])
                     sql_leads = len(df[df['clasificacion'] == 'SQL'])
                     mql_leads = len(df[df['clasificacion'] == 'MQL'])
                     
-                    # Calculate average score for non-SPAM leads
-                    non_spam_df = df[df['clasificacion'] != 'SPAM']
+                    # Calculate average score for non-No Contactado leads
+                    non_spam_df = df[df['clasificacion'] != 'No Contactado']
                     avg_score = non_spam_df['score_total'].mean() if len(non_spam_df) > 0 else 0
                     
                     # Display metrics in columns
                     st.subheader("📈 Resumen")
                     col1, col2, col3, col4, col5 = st.columns(5)
                     col1.metric("Total Leads", total_leads)
-                    col2.metric("🚫 SPAM", spam_leads, delta=None)
+                    col2.metric("🚫 No Contactado", spam_leads, delta=None)
                     col3.metric("📧 MQL", mql_leads)
                     col4.metric("🎯 SQL", sql_leads)
                     col5.metric("📊 Score Promedio", f"{avg_score:.1f}")
@@ -110,7 +110,7 @@ if uploaded_file is not None:
                         'score_motivacion', 'score_pago', 'score_comportamiento',
                         'razon_principal', 'señales_clave', 'estado_conversacion',
                         'duracion_chat', 'mensajes_usuario',
-                        'utm_source', 'utm_medium', 'utm_origen', 'programa_interes', 'resolucion'
+                        'utm_source', 'utm_medium', 'utm_origen', 'programa_interes'
                     ]
                     
                     # Only show columns that exist
@@ -129,7 +129,7 @@ if uploaded_file is not None:
                             "telefono": "Teléfono",
                             "clasificacion": st.column_config.TextColumn(
                                 "Clasificación",
-                                help="SPAM: Descartado, SQL: Sales Qualified Lead, MQL: Marketing Qualified Lead",
+                                help="No Contactado: Descartado, SQL: Sales Qualified Lead, MQL: Marketing Qualified Lead",
                                 width="medium"
                             ),
                             "score_total": st.column_config.ProgressColumn(
@@ -162,8 +162,7 @@ if uploaded_file is not None:
                             "utm_source": "UTM Source",
                             "utm_medium": "UTM Medium",
                             "utm_origen": "UTM Origen",
-                            "programa_interes": "Programa Interés",
-                            "resolucion": "Resolución"
+                            "programa_interes": "Programa Interés"
                         }
                     )
                     
@@ -188,7 +187,7 @@ if uploaded_file is not None:
                     
                     output = io.BytesIO()
                     with pd.ExcelWriter(output, engine='openpyxl') as writer:
-                        df_display.to_excel(writer, index=False, sheet_name='Leads')
+                        df.to_excel(writer, index=False, sheet_name='Leads')
                         
                         # Get the workbook and worksheet
                         workbook = writer.book
@@ -199,10 +198,10 @@ if uploaded_file is not None:
                         header_fill = PatternFill(start_color="2E86AB", end_color="2E86AB", fill_type="solid")
                         header_alignment = Alignment(horizontal="center", vertical="center", wrap_text=True)
                         
-                        # Classification colors (pastel/light tones)
-                        sql_fill = PatternFill(start_color="D4EDDA", end_color="D4EDDA", fill_type="solid")  # Light mint green
-                        mql_fill = PatternFill(start_color="FFF3CD", end_color="FFF3CD", fill_type="solid")  # Light vanilla yellow
-                        spam_fill = PatternFill(start_color="F8D7DA", end_color="F8D7DA", fill_type="solid")  # Light salmon pink
+                        # Classification colors
+                        sql_fill = PatternFill(start_color="A8E6CF", end_color="A8E6CF", fill_type="solid")  # Green
+                        mql_fill = PatternFill(start_color="FFE066", end_color="FFE066", fill_type="solid")  # Yellow
+                        spam_fill = PatternFill(start_color="FF6B6B", end_color="FF6B6B", fill_type="solid")  # Red
                         
                         thin_border = Border(
                             left=Side(style='thin', color='CCCCCC'),
@@ -241,7 +240,7 @@ if uploaded_file is not None:
                                 elif clasif_value == 'MQL':
                                     for col_num in range(1, ws_leads.max_column + 1):
                                         ws_leads.cell(row=row_num, column=col_num).fill = mql_fill
-                                elif clasif_value == 'SPAM':
+                                elif clasif_value == 'No Contactado':
                                     for col_num in range(1, ws_leads.max_column + 1):
                                         ws_leads.cell(row=row_num, column=col_num).fill = spam_fill
                         
@@ -264,7 +263,7 @@ if uploaded_file is not None:
                         
                         # Create Summary sheet with styling
                         summary_data = {
-                            'Métrica': ['Total Leads', 'SPAM', 'MQL', 'SQL', 'Score Promedio'],
+                            'Métrica': ['Total Leads', 'No Contactado', 'MQL', 'SQL', 'Score Promedio'],
                             'Valor': [total_leads, spam_leads, mql_leads, sql_leads, f"{avg_score:.1f}"],
                             'Porcentaje': [
                                 '100%',
@@ -289,7 +288,7 @@ if uploaded_file is not None:
                         # Style summary data
                         summary_colors = {
                             'Total Leads': PatternFill(start_color="E8E8E8", end_color="E8E8E8", fill_type="solid"),
-                            'SPAM': spam_fill,
+                            'No Contactado': spam_fill,
                             'MQL': mql_fill,
                             'SQL': sql_fill,
                             'Score Promedio': PatternFill(start_color="B8D4E3", end_color="B8D4E3", fill_type="solid")

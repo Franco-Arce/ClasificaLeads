@@ -121,20 +121,12 @@ def match_neotel_data(chat_phone, chat_date_str, neotel_df):
     utm_medium = safe_get(best_match, 'UTM Medium', '')
     utm_origen = safe_get(best_match, 'UTM Origen', safe_get(best_match, 'Medio', ''))
     programa_interes = safe_get(best_match, 'Program aInteres', '')
-    # Try multiple column name variants for Resolución (encoding issues)
-    resolucion = ''
-    resolucion_cols = ['Resolución', 'Resolucion', 'Resolución', 'RESOLUCION']
-    for col in resolucion_cols:
-        if col in best_match.index:
-            resolucion = best_match[col]
-            break
     
     return {
         "utm_source": clean_val(utm_source),
         "utm_medium": clean_val(utm_medium),
         "utm_origen": clean_val(utm_origen),
-        "programa_interes": clean_val(programa_interes),
-        "resolucion": clean_val(resolucion)
+        "programa_interes": clean_val(programa_interes)
     }
 
 
@@ -160,10 +152,10 @@ def group_and_sort(items):
 
 def check_spam(messages, user_messages):
     """
-    Verifica si el lead debe clasificarse como SPAM.
-    Retorna (is_spam, razon) si es SPAM, (False, None) si no lo es.
+    Verifica si el lead debe clasificarse como NO CONTACTADO.
+    Retorna (is_spam, razon) si es NO CONTACTADO, (False, None) si no lo es.
     
-    Condiciones SPAM:
+    Condiciones NO CONTACTADO:
     - Lead declara no haber dejado sus datos
     - Datos de contacto inválidos
     - Respuesta hostil, incoherente o sin sentido
@@ -226,29 +218,33 @@ def calculate_motivation_score(messages, user_messages):
     """
     Calcula el puntaje de motivación del lead (hasta 40 puntos).
     
-    +25: Motivación profesional clara
-    +15: Impacto laboral concreto
+    +25: Motivación profesional fuerte
+    +15: Motivación profesional moderada / Impacto laboral
     +5:  Motivación vaga
     0:   Sin motivación declarada
-    -10: Objeciones tempranas
+    -10: Objeciones fuertes
+    -5:  Objeciones suaves
     """
     score = 0
     signals = []
     has_professional_motivation = False
     
-    # Keywords de motivación profesional clara (+25)
-    professional_motivation_keywords = [
+    # Keywords de motivación profesional fuerte (+25)
+    strong_motivation_keywords = [
         "trabajo", "ascenso", "profesional", "laboral",
         "crecer", "crecimiento", "reconvertir", "reconversión",
         "actualización", "actualizarme", "actualizado",
-        "mejorar perfil", "mejorar profesional",
+        "mejorar perfil", "mejorar profesional", "mejorar",
         "superación", "carrera profesional",
         "brochure", "me interesa mucho", "muy interesado",
         "necesito capacitarme", "quiero especializarme",
-        # Nuevas variantes agregadas
-        "capacitarme", "capacitación", "capacitacion", 
-        "formarme", "formación", "formacion",
-        "entrenamiento", "entrenarme"
+        "necesito", "especialista", "especialización"
+    ]
+    
+    # NEW: Keywords de motivación profesional moderada (+15)
+    moderate_motivation_keywords = [
+        "me interesa", "herramientas", "destrezas", "competencias",
+        "pacientes", "atención", "formación", "entrenamiento"
     ]
     
     # Keywords de impacto laboral concreto (+15)
@@ -265,61 +261,103 @@ def calculate_motivation_score(messages, user_messages):
         "me interesa aprender", "quiero aprender",
         "me gustaría saber", "me gustaria saber",
         "por curiosidad", "solo información", "solo informacion",
-        # Consultas activas (muestran interés)
-        "consultar por", "quisiera consultar", "quiero consultar",
-        "información sobre", "informacion sobre",
-        "me interesa", "estoy interesado", "estoy interesada"
+        "ampliar conocimientos", "adquirir conocimientos", "conocimientos"
     ]
     
-    # Keywords de objeciones tempranas (-10)
+    # Keywords de objeciones fuertes (-10)
     early_objection_keywords = [
         "no me interesa", "solo miro", "solo mirando",
         "no estoy interesado", "no estoy seguro",
+        "no estoy buscando"
+    ]
+    
+    # Keywords de objeciones suaves (-5)
+    soft_objection_keywords = [
+        "la consideraré", "la considerare",
+        "lo consideraré", "lo considerare",
+        "lo voy a pensar", "lo pensaré", "lo pensare",
+        "tengo que pensar", "tengo que pensarlo",
         "tal vez después", "tal vez despues",
         "quizás más adelante", "quizas mas adelante",
-        "no sé", "no se", "no estoy buscando"
+        "no sé", "no se", "después veo", "despues veo",
+        "otro momento", "presupuesto"
+    ]
+    
+    # Fix #1: Frases de negación para filtrar antes de buscar motivación
+    negation_phrases = [
+        "no me interesa", "no necesito", "no me importa",
+        "no quiero", "no busco", "no estoy interesado"
     ]
     
     all_user_text = " ".join([get_message_text(msg).lower() for msg in user_messages])
     
-    # Verificar motivación profesional clara (+25)
-    for kw in professional_motivation_keywords:
-        if kw in all_user_text:
+    # Fix #1: Crear texto limpio sin negaciones para buscar motivación
+    clean_text = all_user_text
+    for neg in negation_phrases:
+        clean_text = clean_text.replace(neg, "")
+    
+    # Helper para buscar keywords como palabras completas para evitar falsos positivos (ej: presupuesto -> puesto)
+    def contains_word(text, word):
+        pattern = r'\b' + re.escape(word) + r'\b'
+        return re.search(pattern, text) is not None
+
+    # Verificar objeciones PRIMERO (Fix #1: antes de motivación)
+    has_strong_objection = False
+    for kw in early_objection_keywords:
+        if contains_word(all_user_text, kw):
+            score -= 10
+            has_strong_objection = True
+            signals.append(f"Objeción fuerte: '{kw}'")
+            break
+    
+    # Verificar objeciones suaves (-5)
+    if not has_strong_objection:
+        for kw in soft_objection_keywords:
+            if contains_word(all_user_text, kw):
+                score -= 5
+                signals.append(f"Objeción suave: '{kw}'")
+                break
+    
+    # Verificar motivación profesional fuerte (+25) usando texto limpio
+    for kw in strong_motivation_keywords:
+        if contains_word(clean_text, kw):
             if not has_professional_motivation:
                 score += 25
                 has_professional_motivation = True
-                signals.append(f"Motivación profesional clara: '{kw}'")
+                signals.append(f"Motivación profesional fuerte: '{kw}'")
             break
     
-    # Verificar impacto laboral concreto (+15) - Solo si no tiene motivación profesional
+    # Fix #5: Verificar motivación moderada (+15) - solo si no tiene fuerte
+    if not has_professional_motivation:
+        for kw in moderate_motivation_keywords:
+            if contains_word(clean_text, kw):
+                score += 15
+                has_professional_motivation = True
+                signals.append(f"Motivación profesional moderada: '{kw}'")
+                break
+    
+    # Verificar impacto laboral concreto (+15)
     if not has_professional_motivation:
         for kw in labor_impact_keywords:
-            if kw in all_user_text:
+            if contains_word(clean_text, kw):
                 score += 15
                 signals.append(f"Impacto laboral concreto: '{kw}'")
                 break
     else:
-        # Si ya tiene motivación profesional, agregar +15 si también menciona impacto laboral
+        # Si ya tiene motivación, agregar +15 si también menciona impacto laboral
         for kw in labor_impact_keywords:
-            if kw in all_user_text:
+            if contains_word(clean_text, kw):
                 score += 15
                 signals.append(f"Impacto laboral adicional: '{kw}'")
-                break
+                break # Solo sumar una vez
     
-    # Verificar motivación vaga (+5) - Solo si no tiene otras motivaciones
-    if score == 0:
+    # Verificar motivación vaga (+5) - Solo si no tiene otras motivaciones positivas
+    if score <= 0:
         for kw in vague_motivation_keywords:
-            if kw in all_user_text:
+            if contains_word(clean_text, kw):
                 score += 5
                 signals.append(f"Motivación vaga: '{kw}'")
                 break
-    
-    # Verificar objeciones tempranas (-10)
-    for kw in early_objection_keywords:
-        if kw in all_user_text:
-            score -= 10
-            signals.append(f"Objeción temprana: '{kw}'")
-            break
     
     # Cap score at 40
     score = min(score, 40)
@@ -341,49 +379,42 @@ def calculate_payment_score(messages, user_messages):
     signals = []
     has_payment_intent = False
     
-    # Keywords de intención de pago (+30)
+    # Fix #2: Keywords de intención de pago (+30) - Solo frases con acción, sin "pago" suelto
     payment_intent_keywords = [
-        "pago", "pagar", "transferencia", "comprobante",
-        "cuenta", "depósito", "deposito", "depositar",
+        "pagar", "transferencia", "comprobante",
+        "depósito", "deposito", "depositar",
         "tarjeta", "cupón", "cupon",
         "ya pagué", "ya pague", "listo el pago",
         "voy a pagar", "quiero pagar", "cómo pago", "como pago",
         "envié el pago", "envie el pago",
-        "link de pago", "enlace de pago",
-        # Nuevas variantes de inscripción (implica pago)
-        "inscribirme", "inscripción", "inscripcion", 
-        "matricularme", "matrícula", "matricula",
-        "reservar cupo", "reserva de cupo"
+        "link de pago", "enlace de pago", "ya está", "ya esta"
     ]
     
-    # Keywords de consulta de formas de pago (+20)
+    # Keywords de consulta de formas de pago / inscripción (+20)
     payment_forms_keywords = [
         "cuotas", "financiamiento", "financiar",
         "formas de pago", "métodos de pago", "metodos de pago",
         "pago en cuotas", "a plazos", "plazo",
         "pueden financiar", "hay descuento", "descuentos",
         "beca", "becas", "ayuda financiera",
-        # Preguntas sobre inicio (indica planificación de inscripción)
-        "cuando inicia", "cuándo inicia", "cuando empieza", "cuándo empieza",
-        "fecha de inicio", "próximo inicio", "proximo inicio",
-        "inicio de clases", "inicio del programa", "inicio del diplomado", "inicio de diplomados", "inicio del curso", "inicio de"
+        "requisitos", "desde cuando comienza", "desde cuándo comienza",
+        "cuándo inicia", "cuando inicia", "cuándo empieza", "cuando empieza",
+        "cómo me inscribo", "como me inscribo", "inscribirme", "matricularme"
     ]
     
     # Keywords de consulta de precio (+5)
     price_inquiry_keywords = [
         "precio", "costo", "valor", "cuánto cuesta", "cuanto cuesta",
         "cuánto vale", "cuanto vale", "inversión", "inversion",
-        "qué precio", "que precio"
+        "qué precio", "que precio", "qué cuesta", "que cuesta"
     ]
     
-    # Keywords de objeción de precio (-15)
+    # Fix #3: Keywords de objeción de precio (-15) - Solo las específicas de precio
     price_objection_keywords = [
         "caro", "muy caro", "costoso", "no puedo pagar",
         "no tengo dinero", "no tengo plata",
-        "no me interesa", "por ahora no", "más adelante", "mas adelante",
-        "lo pensaré", "lo pensare", "tengo que pensar",
-        "no es para mí", "no es para mi",
-        "otro momento", "después veo", "despues veo"
+        "por ahora no",
+        "no es para mí", "no es para mi"
     ]
     
     # Keywords de declaración de no pagar (-30)
@@ -396,9 +427,14 @@ def calculate_payment_score(messages, user_messages):
     
     all_user_text = " ".join([get_message_text(msg).lower() for msg in user_messages])
     
+    # Helper para buscar keywords como palabras completas
+    def contains_word(text, word):
+        pattern = r'\b' + re.escape(word) + r'\b'
+        return re.search(pattern, text) is not None
+
     # Verificar intención de pago (+30)
     for kw in payment_intent_keywords:
-        if kw in all_user_text:
+        if contains_word(all_user_text, kw):
             score += 30
             has_payment_intent = True
             signals.append(f"Intención de pago: '{kw}'")
@@ -407,7 +443,7 @@ def calculate_payment_score(messages, user_messages):
     # Verificar consulta de formas de pago (+20) - Solo si no tiene intención de pago directa
     if not has_payment_intent:
         for kw in payment_forms_keywords:
-            if kw in all_user_text:
+            if contains_word(all_user_text, kw):
                 score += 20
                 has_payment_intent = True
                 signals.append(f"Consulta formas de pago: '{kw}'")
@@ -416,7 +452,7 @@ def calculate_payment_score(messages, user_messages):
     # Verificar consulta de precio (+5) - Solo si no tiene otras señales positivas
     if score == 0:
         for kw in price_inquiry_keywords:
-            if kw in all_user_text:
+            if contains_word(all_user_text, kw):
                 score += 5
                 signals.append(f"Consulta de precio: '{kw}'")
                 break
@@ -424,7 +460,7 @@ def calculate_payment_score(messages, user_messages):
     # Verificar declaración de no pagar (-30) - Tiene prioridad sobre objeción
     no_pay_found = False
     for kw in no_pay_keywords:
-        if kw in all_user_text:
+        if contains_word(all_user_text, kw):
             score -= 30
             no_pay_found = True
             signals.append(f"Declara no pagar: '{kw}'")
@@ -433,11 +469,75 @@ def calculate_payment_score(messages, user_messages):
     # Verificar objeción de precio (-15) - Solo si no declaró que no pagará
     if not no_pay_found:
         for kw in price_objection_keywords:
-            if kw in all_user_text:
+            if contains_word(all_user_text, kw):
                 score -= 15
                 signals.append(f"Objeción de precio: '{kw}'")
                 break
     
+    
+
+    # Verificar si el usuario envió una imagen o archivo POSTERIOR a un link/instrucciones de pago del bot
+    has_image_or_file = False
+    payment_link_sent_by_bot = False
+    
+    # Keywords que indican que el bot envió instrucciones de pago
+    bot_payment_keywords = [
+        "link", "enlace", "pago", "pagar", "cuenta", "transferencia", 
+        "cbu", "alias", "banco", "depósito", "deposito",
+        "aquí tienes", "aqui tienes", "pasos para", "instrucciones"
+    ]
+
+    # Iterar cronológicamente para ver el flujo
+    # Asumimos que 'messages' está ordenado cronológicamente
+    if messages:
+        sorted_msgs = sorted(messages, key=lambda x: x.get('creationTime', ''))
+        
+        for msg in sorted_msgs:
+            role = msg.get('from')
+            content = msg.get('content', {})
+            text = ""
+            if content.get('type') == 'text':
+                text = content.get('text', '').lower()
+            
+            if role in ['bot', 'agent']:
+                # Chequear si el bot envió info de pago
+                if any(kw in text for kw in bot_payment_keywords):
+                    payment_link_sent_by_bot = True
+            
+            elif role == 'user':
+                # Chequear si el usuario envía imagen
+                content_type = content.get('type')
+                if content_type in ['image', 'document', 'file']:
+                    # Solo cuenta si el bot YA envió info de pago
+                    if payment_link_sent_by_bot:
+                        has_image_or_file = True
+                        break # Ya encontramos la prueba, no necesitamos seguir buscando
+    
+    if has_image_or_file:
+        # Si envía imagen DESPUÉS del link, asumimos que es comprobante
+        if score < 30:
+            score += 25
+            has_payment_intent = True
+            signals.append("Envío de archivo/imagen tras link de pago")
+
+    # Fix #6: Detectar envío de datos personales (email, cédula)
+    for msg in user_messages:
+        text = get_message_text(msg)
+        # Detectar email
+        if re.search(r'[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}', text):
+            if score < 30:
+                score += 20
+                has_payment_intent = True
+                signals.append("Envío de datos personales (email)")
+            break
+        # Detectar cédula (10+ dígitos seguidos)
+        if re.search(r'\b\d{10,13}\b', text):
+            if score < 30:
+                score += 20
+                has_payment_intent = True
+                signals.append("Envío de datos personales (cédula/ID)")
+            break
+
     # Cap score at 30 (can be negative)
     score = min(score, 30)
     
@@ -515,6 +615,22 @@ def calculate_behavior_score(messages, user_messages):
             score += 10
             signals.append("Usuario inició la conversación")
     
+    # Fix #4: Detectar ghosting parcial (último mensaje es del bot/agente)
+    if messages and user_messages:
+        sorted_msgs = sorted(messages, key=lambda x: x.get('creationTime', ''))
+        last_msg = sorted_msgs[-1]
+        if last_msg.get('from') in ['bot', 'agent']:
+            score -= 5
+            signals.append("Ghosting parcial (último mensaje del agente sin respuesta)")
+    
+    # Fix #7: Detectar envío de audio/video como señal de engagement
+    for msg in user_messages:
+        content_type = msg.get('content', {}).get('type')
+        if content_type in ['audio', 'video', 'ptt']:
+            score += 5
+            signals.append("Engagement: envío de audio/video")
+            break
+    
     # Cap score at 30
     score = min(score, 30)
     
@@ -534,7 +650,7 @@ def analyze_conversation(chat_id, messages):
     Analiza una conversación para clasificar el lead usando el nuevo sistema de scoring.
     
     Sistema:
-    - SPAM: Score = 0 (reglas excluyentes)
+    - NO CONTACTADO: Score = 0 (reglas excluyentes)
     - MQL: Score 1-49
     - SQL: Score 50-100
     
@@ -548,12 +664,12 @@ def analyze_conversation(chat_id, messages):
     if messages:
         telefono = messages[0].get('chat', {}).get('contactId', "")
     
-    # Si no hay mensajes del usuario, es SPAM (ghosting = score 0 = SPAM)
+    # Si no hay mensajes del usuario, es NO CONTACTADO (ghosting = score 0 = NO CONTACTADO)
     if not user_messages:
         return {
             "chat_id": chat_id,
             "telefono": telefono,
-            "clasificacion": "SPAM",
+            "clasificacion": "No Contactado",
             "score_total": 0,
             "score_motivacion": 0,
             "score_pago": 0,
@@ -563,19 +679,19 @@ def analyze_conversation(chat_id, messages):
             "estado_conversacion": "Sin respuesta"
         }
     
-    # 1. VERIFICAR SPAM (Regla excluyente)
+    # 1. VERIFICAR NO CONTACTADO (Regla excluyente)
     is_spam, spam_reason = check_spam(messages, user_messages)
     if is_spam:
         return {
             "chat_id": chat_id,
             "telefono": telefono,
-            "clasificacion": "SPAM",
+            "clasificacion": "No Contactado",
             "score_total": 0,
             "score_motivacion": 0,
             "score_pago": 0,
             "score_comportamiento": 0,
             "razon_principal": spam_reason,
-            "señales_clave": ["SPAM detectado"],
+            "señales_clave": ["No Contactado detectado"],
             "estado_conversacion": "Descartado"
         }
     
@@ -597,7 +713,7 @@ def analyze_conversation(chat_id, messages):
     # 3. CALCULAR SCORE TOTAL
     total_score = motivation_score + payment_score + behavior_score
     
-    # Asegurar que el score esté entre 1 y 100 (no 0, porque 0 = SPAM)
+    # Asegurar que el score esté entre 1 y 100 (no 0, porque 0 = NO CONTACTADO)
     total_score = max(1, min(total_score, 100))
     
     # 4. APLICAR REGLA PRIORITARIA
@@ -682,43 +798,30 @@ def process_data(json_data, neotel_df=None):
             if col in neotel_df.columns:
                 phone_col = col
                 break
-
+                
         if not phone_col:
             for col in neotel_df.columns:
                 if 'telefono' in col.lower():
                     phone_col = col
                     break
-
+        
         if phone_col:
-            neotel_df['normalized_phone'] = neotel_df[phone_col].apply(normalize_phone)
-            
-            date_col = 'Fecha Insert Lead'
-            if date_col not in neotel_df.columns:
-                if 'Fecha Inserción Leads' in neotel_df.columns:
-                    date_col = 'Fecha Inserción Leads'
-            
-            if date_col in neotel_df.columns:
-                neotel_df[date_col] = pd.to_datetime(neotel_df[date_col], errors='coerce')
+            if 'normalized_phone' not in neotel_df.columns:
+                neotel_df['normalized_phone'] = neotel_df[phone_col].apply(normalize_phone)
     
     results = []
     for chat_id, messages in grouped_chats.items():
-        result = analyze_conversation(chat_id, messages)
+        # Clasificar lead
+        analysis = analyze_conversation(chat_id, messages)
         
-        # Enrich with Neotel Data
+        # Enriquecer con UTM si hay Neotel
+        utm_data = {}
         if neotel_df is not None and not neotel_df.empty:
-            start_time_str = ""
-            if messages:
-                sorted_msgs = sorted(messages, key=lambda x: x.get('creationTime', ''))
-                start_time_str = sorted_msgs[0].get('creationTime', '')
-                
-            utm_data = match_neotel_data(result.get('telefono'), start_time_str, neotel_df)
-            result.update(utm_data)
-            
-        # Ensure keys exist
-        for key in ['utm_source', 'utm_medium', 'utm_origen', 'programa_interes', 'resolucion']:
-            if key not in result:
-                result[key] = ""
-            
-        results.append(result)
+            first_msg_date = messages[0].get('creationTime', '') if messages else ''
+            utm_data = match_neotel_data(analysis['telefono'], first_msg_date, neotel_df)
+        
+        # Combinar datos
+        final_row = {**analysis, **utm_data}
+        results.append(final_row)
         
     return results
