@@ -1,0 +1,130 @@
+
+================================================================================
+TELEFONO: 593997090163
+ARCHIVO: bulk_export_nodslabsas-whatsapp-593998348706_2026-02-12.json
+TOTAL MENSAJES: 31
+================================================================================
+
+[2026-02-09T18:35:52] [BOT   ] Template:
+
+¡Bienvenido a la UEES! ✨ Nos hace mucha ilusión saludarte.
+
+Mantente atento a tu celular, que en unos minutos te llamaremos para contarte todo sobre el programa. 📞
+
+👉 Si prefieres que te escribamos, solo responde este mensaje y te atenderemos por WhatsApp
+
+[2026-02-09T18:36:04] [USER  ] Hola, quisiera consultar por GMP
+[2026-02-09T18:45:54] [AGENT ] Saludos, soy Christopher Portilla Asesor Educativo de la Universidad Espíritu Santo. Es un gusto atenderte🤗. 
+Desea el Diplomado en *Riesgos, Seguridad y Cumplimiento en la Gestión Organizacional*. ¿Correcto?. 
+[2026-02-09T18:46:58] [USER  ] Como es eso de gestión organizacional ?
+[2026-02-09T18:50:08] [AGENT ] El Diplomado del que solicito información se llama *Diplomado en Riesgos, Seguridad y Cumplimiento en la Gestión Organizacional.*
+[2026-02-09T18:50:21] [AGENT ] ¿Fue así?, ¿buscaba esta formación?. 
+[2026-02-09T20:05:12] [USER  ] Si
+[2026-02-09T20:11:16] [AGENT ] Claro es la mejor oferta en formación continua diseñado por *Mentes brillantes*, es de *Alto Nivel y de aplicación desde la semana 1,online*, pero también cuéntenos un poco más. ¿Qué le llamo a usted más la atención? ¿O donde lo desea aplicarlo?.  
+
+[2026-02-09T20:14:49] [USER  ] Me interesa tener más conocimiento respecto a seguridad en gestión
+[2026-02-09T20:15:01] [USER  ] Por eso quiero
+[2026-02-09T20:15:24] [AGENT ] Muy bien le felicito que tenga en mente su desarrollo en esta área, claro, las formaciones en *Global Minds Programs*, son  #1 en el Ecuador, al ser diseñadas por expertos internacionales y su enfoque práctico, así puede llevar su gestión a otro nivel. Le envió para que pueda revisar:  
+
+[2026-02-09T20:15:45] [AGENT ] [file]
+[2026-02-09T20:16:03] [AGENT ] Es formación de Alto Nivel de 3 meses con un diplomado especializado, es 100% virtual con clases de hasta 2 horas los martes a las 7 pm. 😄 
+ 
+[2026-02-09T20:16:26] [AGENT ] Estamos cerrando inscripciones para el Programa, nos confirma a lo que revise para avanzar a los valores y descuentos disponibles. ¿Si son los temas y formación que buscaba?.
+
+[2026-02-09T20:18:27] [USER  ] Otro temas de diplomados ?
+[2026-02-09T20:18:46] [USER  ] Ese no va muy directo con lo que estoy buscando
+[2026-02-09T20:19:05] [AGENT ] Hay muchos, pero en otra área. ¿Qué temas en particular buscaba?. 
+[2026-02-09T20:20:16] [USER  ] necesito en el tema de la facultad de derecho
+[2026-02-09T20:20:59] [AGENT ] Entiendo, en esta área contamos con este programa y sus 3 Diplomados. Solo el tercero esta disponible para desarrollarlo de manera individual. 
+[2026-02-09T20:21:09] [AGENT ] [file]
+[2026-02-09T20:32:22] [USER  ] [IMAGEN: sin url...]
+[2026-02-09T20:33:15] [USER  ] [IMAGEN: sin url...]
+[2026-02-09T20:33:20] [USER  ] Qué cuesta ?
+[2026-02-09T20:33:24] [USER  ] Y que tiempo dura
+[2026-02-09T20:33:51] [AGENT ] Dura 3 meses 🤗
+[2026-02-09T20:33:53] [AGENT ] El valor de inversión esta acorde a lo que la formación le permitirá desarrollar y el peso en su perfil profesional con el respaldo de la mejor Universidad del Ecuador y #1 en Iberoamérica. En *$1200 o 3 pagos de $400* ¿Buscaba desarrollarlo al contado o mensuales con nosotros?.
+
+[2026-02-09T20:35:26] [USER  ] Desde cuando comienza ?
+[2026-02-09T20:37:49] [AGENT ] Inicia el 27/04 de marzo. per se la avisa que se agotan rápidos las plazas disponibles. Por ello los anteriores no están disponibles. E inician una vez al año. En este caso se le da la opción de reservar su plaza con un mensual o los otros dos desde mayo. Se le puede extender un 20% para esta opción en *$960 o 3 pagos de $320*.  
+[2026-02-09T20:54:52] [AGENT ] ¿Tomará la opción, para considerarla para la formación con los demás profesionales?. 
+[2026-02-09T20:58:58] [USER  ] La consideraré
+[2026-02-09T21:01:31] [AGENT ] Estará disponible para hoy y mañana el cupón correspondiente. ¿Desea que le aclaremos alguna aspecto para su decisión?. En todo caso, ¿Mañana a mas tardar a que hora nos confirmaría la opción?.  
+
+
+================================================================================
+TELEFONO: 593968409232
+ARCHIVO: bulk_export_nodslabsas-whatsapp-593998348706_2026-02-12 (1).json
+TOTAL MENSAJES: 16
+================================================================================
+
+[2026-02-04T05:45:45] [BOT   ] Template:
+
+¡Bienvenido a la UEES! ✨ Nos hace mucha ilusión saludarte.
+
+Mantente atento a tu celular, que en unos minutos te llamaremos para contarte todo sobre el programa. 📞
+
+👉 Si prefieres que te escribamos, solo responde este mensaje y te atenderemos por WhatsApp
+
+[2026-02-04T15:08:23] [AGENT ] Template:
+
+¡Hola! 🚀
+Estás muy cerca de formar parte de los Global Mind Programs de la Universidad Espíritu Santo, reconocida como la #1 de Ecuador. 🇪🇨
+
+Las clases comienzan en pocos días y aún quedan muy pocos lugares.
+
+¿Desea que le ayude a asegurar tu cupo ahora o prefiere que le comparta los medios de pago disponibles?
+
+[2026-02-04T15:11:39] [USER  ] Hola
+[2026-02-04T15:33:46] [AGENT ] Buen día *Williams Herrera*
+Le saluda Mariuxi Martinez .
+Asesora Educativa de la *Universidad Espíritu Santo (UEES)*.
+Me comunico con usted en atención a su interés en uno de nuestros programas. DIPLOMADO - Derecho Penal y Seguridad en el Ciberespacio*.
+Será un gusto acompañarle en este proceso. Para brindarle una mejor asesoría.
+*¿Cuál es su objetivo al cursar el programa Global Minds?*
+
+[2026-02-04T15:35:47] [USER  ] Mejorar y ampliar mi aserto de conocimientos
+[2026-02-04T15:38:31] [AGENT ] Si su objetivo es mejorar y ampliar su acervo de conocimientos, el Diplomado en Derecho Penal y Seguridad en el Ciberespacio – UEES es una excelente opción para fortalecer su ejercicio profesional frente a los nuevos delitos digitales.
+
+⚖️ ¿Qué le aporta este diplomado?
+✔️ Actualización en ciberdelitos y derecho penal informático
+✔️ Análisis de evidencia digital y seguridad en el ciberespacio
+✔️ Marco legal aplicado a entornos tecnológicos
+✔️ Enfoque práctico para la litigación y asesoría legal
+✔️ Certificación universitaria con respaldo UEES
+
+📚 Modalidad 100 % online, flexible y compatible con su práctica jurídica.
+[2026-02-04T15:38:37] [AGENT ] [file]
+[2026-02-04T15:41:32] [AGENT ] Le gusto el brochure , *EXCELENTE VERDAD* ¿considera que este programa responde a sus expectativas y se alinea con sus objetivos profesionales, para que podamos avanzar con el siguiente paso del proceso?
+
+
+[2026-02-04T15:53:06] [USER  ] Cuál es el valor del programa ?
+[2026-02-04T15:53:11] [USER  ] Y cuáles son los requisitos ?
+[2026-02-04T15:55:07] [AGENT ] Tenemos 2 inicios este mes, uno que se puede matricular hasta hoy y tiene un descuento increible.
+[2026-02-04T15:55:15] [AGENT ] Precio regular: 3.125 USD al contado, o 9 cuotas de 347 USD, financiadas directamente por la universidad y sin intereses.
+*Descuento ESPECIAL 40%*
+Con este beneficio, la inversión queda en:
+Al contado: 1.875,00 USD
+*En 9 cuotas: 208,33 USD* por mes (sin intereses), financiadas directamente por la universidad o con tarjeta de credito.
+
+[2026-02-04T15:56:01] [AGENT ] Y otro con inicio el 23 de febrero del 2026.
+El programa incluye las *4 certificaciones otorgadas por el GMP*.
+
+Precio regular: 3.125 USD al contado, o 9 cuotas de 347 USD, financiadas directamente por la universidad y sin intereses.
+El programa incluye las *4 certificaciones otorgadas por el GMP*.
+*Descuento especial  20%* *Le daré este beneficio especial como bienvenida .*
+Con este beneficio, la inversión queda en:
+Al contado: 2.500 USD
+En 9 cuotas: 277,77 USD por mes  financiadas directamente por la universidad
+No generan intereses o tarjeta de crédito.
+
+[2026-02-04T15:56:45] [AGENT ] 
+Para inscribirse por favor envíeme los siguientes datos:
+Nombre completo  
+Número de cédula
+Fecha de nacimiento
+Correo electrónico
+
+[2026-02-04T15:57:03] [AGENT ] Por cual de los dos inicios se decidió ?
+[2026-02-04T21:14:57] [AGENT ] ¿Esta  usted disponible?, para poder avanzar con la asesoría.👨‍🎓 Si no esta disponible ¿En que franja horaria podemos coordinar una llamada?
+
+

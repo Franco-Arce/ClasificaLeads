@@ -1,0 +1,3684 @@
+{
+  "items": [
+    {
+      "id": "T53UQEXI3JA7F2EOW7YM",
+      "creationTime": "2026-01-21T23:01:26.695Z",
+      "from": "bot",
+      "content": {
+        "type": "buttons",
+        "text": "Template:\n\nHola, ¿cómo estás?\nDesde UEES estamos organizando el próximo ingreso para el diplomado por el que habías consultado y quería saber deseas que avancemos con tu inscripción. Esta semana tenemos beneficios en tu matrícula.\n\n¿Quieres que profundicemos en las opciones de financiación?\n",
+        "buttons": [
+          "Más información",
+          "No me interesa"
+        ],
+        "whatsAppTemplateName": "uee274_pushdiplos"
+      },
+      "sessionCreationTime": "2026-01-21T23:01:26.646Z",
+      "chat": {
+        "chatId": "3VCPBAQFNJYILJHHVPIW",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593984770357"
+      },
+      "sessionId": "3VCPBAQFNJYILJHHVPIW_2026-01-21T23:01:26.646Z"
+    },
+    {
+      "id": "VNH7PQCMUW5JA07CTBIU",
+      "creationTime": "2026-01-12T18:16:05.530Z",
+      "from": "bot",
+      "content": {
+        "type": "text",
+        "text": "Template:\n\n¡Bienvenido a la UEES! ✨ Nos hace mucha ilusión saludarte.\n\nMantente atento a tu celular, que en unos minutos te llamaremos para contarte todo sobre el programa. 📞\n\n👉 Si prefieres que te escribamos, solo responde este mensaje y te atenderemos por WhatsApp\n",
+        "whatsAppTemplateName": "uees_envio_automatico2026"
+      },
+      "sessionCreationTime": "2026-01-12T18:16:05.496Z",
+      "chat": {
+        "chatId": "3VCPBAQFNJYILJHHVPIW",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593984770357"
+      },
+      "sessionId": "3VCPBAQFNJYILJHHVPIW_2026-01-12T18:16:05.496Z"
+    },
+    {
+      "id": "2X1M1XTCJX40NFELOZH0",
+      "creationTime": "2026-01-17T17:19:09.525Z",
+      "from": "bot",
+      "content": {
+        "type": "text",
+        "text": "Template:\n\n¡Bienvenido a la UEES! ✨ Nos hace mucha ilusión saludarte.\n\nMantente atento a tu celular, que en unos minutos te llamaremos para contarte todo sobre el programa. 📞\n\n👉 Si prefieres que te escribamos, solo responde este mensaje y te atenderemos por WhatsApp\n",
+        "whatsAppTemplateName": "uees_envio_automatico2026"
+      },
+      "sessionCreationTime": "2026-01-17T17:19:09.512Z",
+      "chat": {
+        "chatId": "L1Z5A2JIP7EW5EKNSLC1",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593969620829"
+      },
+      "sessionId": "L1Z5A2JIP7EW5EKNSLC1_2026-01-17T17:19:09.512Z"
+    },
+    {
+      "id": "7RXSS7Z8HS3M8TWIZO0N",
+      "creationTime": "2026-01-19T13:55:53.184Z",
+      "from": "agent",
+      "agentId": "SIS5ucZKrkNxBReBUAhmE0NmAlF3",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "buttons",
+        "text": "Template:\nUEES\n¡Bienvenido a UEES! 🎓✨\n\nYa recibimos tu solicitud. Contamos con programas académicos diseñados para tu futuro y beneficios exclusivos si inicias el proceso de inscripción este mes.\n\nPara avanzar ahora, responde a este mensaje y un asesor educativo se comunicará contigo por este medio.\n",
+        "buttons": [
+          "Estoy interesado"
+        ],
+        "whatsAppTemplateName": "uees_envio_automatico2"
+      },
+      "sessionCreationTime": "2026-01-19T13:55:53.136Z",
+      "chat": {
+        "chatId": "L1Z5A2JIP7EW5EKNSLC1",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593969620829"
+      },
+      "sessionId": "L1Z5A2JIP7EW5EKNSLC1_2026-01-19T13:55:53.136Z"
+    },
+    {
+      "id": "Y65GE13QDRESV2DZDZNX",
+      "creationTime": "2026-01-20T11:27:54.061Z",
+      "from": "bot",
+      "content": {
+        "type": "text",
+        "text": "Template:\n\n¡Bienvenido a la UEES! ✨ Nos hace mucha ilusión saludarte.\n\nMantente atento a tu celular, que en unos minutos te llamaremos para contarte todo sobre el programa. 📞\n\n👉 Si prefieres que te escribamos, solo responde este mensaje y te atenderemos por WhatsApp\n",
+        "whatsAppTemplateName": "uees_envio_automatico2026"
+      },
+      "sessionCreationTime": "2026-01-20T11:27:53.868Z",
+      "chat": {
+        "chatId": "RAA6CKBSG7GP3PFCDASY",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593997486939"
+      },
+      "sessionId": "RAA6CKBSG7GP3PFCDASY_2026-01-20T11:27:53.868Z"
+    },
+    {
+      "id": "TPG6WNPT4LUJEGHTO0GV",
+      "creationTime": "2026-01-21T03:55:55.342Z",
+      "from": "bot",
+      "content": {
+        "type": "text",
+        "text": "Template:\n\n¡Bienvenido a la UEES! ✨ Nos hace mucha ilusión saludarte.\n\nMantente atento a tu celular, que en unos minutos te llamaremos para contarte todo sobre el programa. 📞\n\n👉 Si prefieres que te escribamos, solo responde este mensaje y te atenderemos por WhatsApp\n",
+        "whatsAppTemplateName": "uees_envio_automatico2026"
+      },
+      "sessionCreationTime": "2026-01-21T03:55:55.330Z",
+      "chat": {
+        "chatId": "R6UOMZ1IR2P505RJNAUY",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593980295615"
+      },
+      "sessionId": "R6UOMZ1IR2P505RJNAUY_2026-01-21T03:55:55.330Z"
+    },
+    {
+      "id": "5SX7BC71Q63I6P8SUKC3",
+      "creationTime": "2026-01-21T15:09:01.718Z",
+      "from": "agent",
+      "agentId": "4CNtRN2Lgpfut1mxBXYiGbLUxGk1",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Template:\n\n¡Hola! 🚀\nEstás muy cerca de formar parte de los Global Mind Programs de la Universidad Espíritu Santo, reconocida como la #1 de Ecuador. 🇪🇨\n\nLas clases comienzan en pocos días y aún quedan muy pocos lugares.\n\n¿Desea que le ayude a asegurar tu cupo ahora o prefiere que le comparta los medios de pago disponibles?\n",
+        "whatsAppTemplateName": "uee138_opventa"
+      },
+      "sessionCreationTime": "2026-01-21T03:55:55.330Z",
+      "chat": {
+        "chatId": "R6UOMZ1IR2P505RJNAUY",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593980295615"
+      },
+      "sessionId": "R6UOMZ1IR2P505RJNAUY_2026-01-21T03:55:55.330Z"
+    },
+    {
+      "id": "CQF7DDDG8P34O4AJOQ18",
+      "creationTime": "2026-01-21T15:38:40.927Z",
+      "from": "user",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Buenos días cómo están"
+      },
+      "sessionCreationTime": "2026-01-21T03:55:55.330Z",
+      "chat": {
+        "chatId": "R6UOMZ1IR2P505RJNAUY",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593980295615"
+      },
+      "sessionId": "R6UOMZ1IR2P505RJNAUY_2026-01-21T03:55:55.330Z"
+    },
+    {
+      "id": "H7JCXHH6L5IYZAPIC0AZ",
+      "creationTime": "2026-01-21T15:39:13.872Z",
+      "from": "user",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Ayúdenme por favor con el Brochure"
+      },
+      "sessionCreationTime": "2026-01-21T03:55:55.330Z",
+      "chat": {
+        "chatId": "R6UOMZ1IR2P505RJNAUY",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593980295615"
+      },
+      "sessionId": "R6UOMZ1IR2P505RJNAUY_2026-01-21T03:55:55.330Z"
+    },
+    {
+      "id": "QN76FNQHFNI3ZIJNWD40",
+      "creationTime": "2026-01-21T15:39:19.157Z",
+      "from": "user",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Y perdón por no contestar"
+      },
+      "sessionCreationTime": "2026-01-21T03:55:55.330Z",
+      "chat": {
+        "chatId": "R6UOMZ1IR2P505RJNAUY",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593980295615"
+      },
+      "sessionId": "R6UOMZ1IR2P505RJNAUY_2026-01-21T03:55:55.330Z"
+    },
+    {
+      "id": "BLVWQIB5TRKE4M3F8K57",
+      "creationTime": "2026-01-21T15:40:12.199Z",
+      "from": "agent",
+      "agentId": "4CNtRN2Lgpfut1mxBXYiGbLUxGk1",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Buen dia Juan David Galarza.\nLe saluda Mariuxi Martínez, Asesora Educativa de la *Universidad Espíritu Santo (UEES)*.\n\nMe comunico con usted en atención a su interés en uno de nuestros programas. *DIPLOMADO - Derecho Penal y Seguridad en el Ciberespacio*\nSerá un gusto acompañarle en este proceso. Para brindarle una mejor asesoría.\n*¿Cuál es su objetivo al cursar el programa Global Minds?* .\n"
+      },
+      "sessionCreationTime": "2026-01-21T03:55:55.330Z",
+      "chat": {
+        "chatId": "R6UOMZ1IR2P505RJNAUY",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593980295615"
+      },
+      "sessionId": "R6UOMZ1IR2P505RJNAUY_2026-01-21T03:55:55.330Z"
+    },
+    {
+      "id": "R2HS2O0XVP68WOZUAC1Q",
+      "creationTime": "2026-01-21T15:40:35.773Z",
+      "from": "agent",
+      "agentId": "4CNtRN2Lgpfut1mxBXYiGbLUxGk1",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Descuide estoy para servirle Juan David."
+      },
+      "sessionCreationTime": "2026-01-21T03:55:55.330Z",
+      "chat": {
+        "chatId": "R6UOMZ1IR2P505RJNAUY",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593980295615"
+      },
+      "sessionId": "R6UOMZ1IR2P505RJNAUY_2026-01-21T03:55:55.330Z"
+    },
+    {
+      "id": "IDQIJWRKEJLQAUAUFJYZ",
+      "creationTime": "2026-01-21T15:41:10.453Z",
+      "from": "agent",
+      "agentId": "4CNtRN2Lgpfut1mxBXYiGbLUxGk1",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "¿Es usted abogado ?"
+      },
+      "sessionCreationTime": "2026-01-21T03:55:55.330Z",
+      "chat": {
+        "chatId": "R6UOMZ1IR2P505RJNAUY",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593980295615"
+      },
+      "sessionId": "R6UOMZ1IR2P505RJNAUY_2026-01-21T03:55:55.330Z"
+    },
+    {
+      "id": "6YUOS4V6I23CFNZVLA7E",
+      "creationTime": "2026-01-21T15:42:06.165Z",
+      "from": "user",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Actualmente estoy cursando séptimo ciclo de derecho \nEs inconveniente?"
+      },
+      "sessionCreationTime": "2026-01-21T03:55:55.330Z",
+      "chat": {
+        "chatId": "R6UOMZ1IR2P505RJNAUY",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593980295615"
+      },
+      "sessionId": "R6UOMZ1IR2P505RJNAUY_2026-01-21T03:55:55.330Z"
+    },
+    {
+      "id": "D4GMNLZ6KY3SXB63M4NW",
+      "creationTime": "2026-01-21T15:42:59.506Z",
+      "from": "agent",
+      "agentId": "4CNtRN2Lgpfut1mxBXYiGbLUxGk1",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Felicitaciones ! Claro que no ! Es usted bienvenido😀"
+      },
+      "sessionCreationTime": "2026-01-21T03:55:55.330Z",
+      "chat": {
+        "chatId": "R6UOMZ1IR2P505RJNAUY",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593980295615"
+      },
+      "sessionId": "R6UOMZ1IR2P505RJNAUY_2026-01-21T03:55:55.330Z"
+    },
+    {
+      "id": "2D1Y0FVXORUKJSRSL5PV",
+      "creationTime": "2026-01-21T15:43:22.605Z",
+      "from": "agent",
+      "agentId": "4CNtRN2Lgpfut1mxBXYiGbLUxGk1",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Le comparto el brochure para su gentil análisis."
+      },
+      "sessionCreationTime": "2026-01-21T03:55:55.330Z",
+      "chat": {
+        "chatId": "R6UOMZ1IR2P505RJNAUY",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593980295615"
+      },
+      "sessionId": "R6UOMZ1IR2P505RJNAUY_2026-01-21T03:55:55.330Z"
+    },
+    {
+      "id": "OL80XR1AQO1342IF0B0Z",
+      "creationTime": "2026-01-21T15:45:44.374Z",
+      "from": "agent",
+      "agentId": "4CNtRN2Lgpfut1mxBXYiGbLUxGk1",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "El Diplomado en Derecho Penal y Seguridad en el Ciberespacio está diseñado para formar profesionales capaces de comprender, prevenir y enfrentar los delitos cometidos en entornos digitales, integrando el análisis jurídico penal con los riesgos tecnológicos actuales.\n\nA lo largo del programa, se abordarán temas como ciberdelitos, protección de la información, evidencia digital, responsabilidad penal en el uso de tecnologías, ciberseguridad y cumplimiento normativo, con un enfoque práctico y actualizado.\n\nEste diplomado fortalece la toma de decisiones jurídicas, el pensamiento crítico y la actuación profesional frente a los desafíos legales del mundo digital, siendo una formación clave para abogados, profesionales del sector público y privado, y personas interesadas en el derecho penal aplicado a la tecnología."
+      },
+      "sessionCreationTime": "2026-01-21T03:55:55.330Z",
+      "chat": {
+        "chatId": "R6UOMZ1IR2P505RJNAUY",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593980295615"
+      },
+      "sessionId": "R6UOMZ1IR2P505RJNAUY_2026-01-21T03:55:55.330Z"
+    },
+    {
+      "id": "U4NEULF0Z8GLLASU3GY2",
+      "creationTime": "2026-01-21T15:46:21.541Z",
+      "from": "agent",
+      "agentId": "4CNtRN2Lgpfut1mxBXYiGbLUxGk1",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Estos son nuestros creadores .\n"
+      },
+      "sessionCreationTime": "2026-01-21T03:55:55.330Z",
+      "chat": {
+        "chatId": "R6UOMZ1IR2P505RJNAUY",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593980295615"
+      },
+      "sessionId": "R6UOMZ1IR2P505RJNAUY_2026-01-21T03:55:55.330Z"
+    },
+    {
+      "id": "EW2V5WUXH7JW5LRE4IMM",
+      "creationTime": "2026-01-21T15:46:26.691Z",
+      "from": "agent",
+      "agentId": "4CNtRN2Lgpfut1mxBXYiGbLUxGk1",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "image",
+        "media": {
+          "url": "https://storage.googleapis.com/storage.botmaker.com/public/res/nodslabsas/agents/20260121-4CNtRN2Lgpfut1mxBXYiGbLUxGk1-QI0LO-aW1hZ2U=.png"
+        }
+      },
+      "sessionCreationTime": "2026-01-21T03:55:55.330Z",
+      "chat": {
+        "chatId": "R6UOMZ1IR2P505RJNAUY",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593980295615"
+      },
+      "sessionId": "R6UOMZ1IR2P505RJNAUY_2026-01-21T03:55:55.330Z"
+    },
+    {
+      "id": "GL1GNREZSWPFM0O7KBHB",
+      "creationTime": "2026-01-21T15:47:34.828Z",
+      "from": "agent",
+      "agentId": "4CNtRN2Lgpfut1mxBXYiGbLUxGk1",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Perfil del egresado\n\nProfesional del Derecho capacitado para comprender, analizar y actuar estratégicamente ante los desafíos legales de la era digital.\n\nEstará preparado para intervenir en ciberseguridad, contratos inteligentes, privacidad y protección de datos, así como en litigios tecnológicos, integrando un enfoque ético, técnico y estratégico que responda a las exigencias del entorno jurídico actual."
+      },
+      "sessionCreationTime": "2026-01-21T03:55:55.330Z",
+      "chat": {
+        "chatId": "R6UOMZ1IR2P505RJNAUY",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593980295615"
+      },
+      "sessionId": "R6UOMZ1IR2P505RJNAUY_2026-01-21T03:55:55.330Z"
+    },
+    {
+      "id": "RZU0O3M1A3J62PKAK3NO",
+      "creationTime": "2026-01-21T15:54:09.451Z",
+      "from": "user",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Tal vez tienen más diplomados relacionados con el derecho penal?"
+      },
+      "sessionCreationTime": "2026-01-21T03:55:55.330Z",
+      "chat": {
+        "chatId": "R6UOMZ1IR2P505RJNAUY",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593980295615"
+      },
+      "sessionId": "R6UOMZ1IR2P505RJNAUY_2026-01-21T03:55:55.330Z"
+    },
+    {
+      "id": "B7IUXC4XJGNBQNSHOAPC",
+      "creationTime": "2026-01-21T15:54:14.439Z",
+      "from": "user",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "O solo este por ahora"
+      },
+      "sessionCreationTime": "2026-01-21T03:55:55.330Z",
+      "chat": {
+        "chatId": "R6UOMZ1IR2P505RJNAUY",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593980295615"
+      },
+      "sessionId": "R6UOMZ1IR2P505RJNAUY_2026-01-21T03:55:55.330Z"
+    },
+    {
+      "id": "N5XV13SA8MCAPJ4L44BO",
+      "creationTime": "2026-01-21T15:56:29.266Z",
+      "from": "agent",
+      "agentId": "4CNtRN2Lgpfut1mxBXYiGbLUxGk1",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "file",
+        "media": {
+          "url": "https://storage.googleapis.com/storage.botmaker.com/public/res/nodslabsas/agents/20260121-4CNtRN2Lgpfut1mxBXYiGbLUxGk1-W52B6-RGVyZWNoby00LjAtRGVyZWNoby1EaWdpdGFsLVByb3RlY2Npb24tZGUtRGF0b3MteS1DaWJlcnNlZ3VyaWRhZC0=.pdf"
+        }
+      },
+      "sessionCreationTime": "2026-01-21T03:55:55.330Z",
+      "chat": {
+        "chatId": "R6UOMZ1IR2P505RJNAUY",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593980295615"
+      },
+      "sessionId": "R6UOMZ1IR2P505RJNAUY_2026-01-21T03:55:55.330Z"
+    },
+    {
+      "id": "4OXEH8YW3KDQASTK7VKV",
+      "creationTime": "2026-01-21T15:57:09.888Z",
+      "from": "agent",
+      "agentId": "4CNtRN2Lgpfut1mxBXYiGbLUxGk1",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "file",
+        "media": {
+          "url": "https://storage.googleapis.com/storage.botmaker.com/public/res/nodslabsas/agents/20260121-4CNtRN2Lgpfut1mxBXYiGbLUxGk1-8J4ZV-MjEtRGlwbG9tYWRvLWVuLUV0aWNhLXktUHJpdmFjaWRhZC1lbi1lbC1EZXJlY2hvLURpZ2l0YWxfICgxKQ==.pdf"
+        }
+      },
+      "sessionCreationTime": "2026-01-21T03:55:55.330Z",
+      "chat": {
+        "chatId": "R6UOMZ1IR2P505RJNAUY",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593980295615"
+      },
+      "sessionId": "R6UOMZ1IR2P505RJNAUY_2026-01-21T03:55:55.330Z"
+    },
+    {
+      "id": "K8BW25Y06VTFP6QF0WQE",
+      "creationTime": "2026-01-21T15:57:40.594Z",
+      "from": "agent",
+      "agentId": "4CNtRN2Lgpfut1mxBXYiGbLUxGk1",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Estas son 2 muy importantes opciones que se ajustan perfectamente a su perfil."
+      },
+      "sessionCreationTime": "2026-01-21T03:55:55.330Z",
+      "chat": {
+        "chatId": "R6UOMZ1IR2P505RJNAUY",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593980295615"
+      },
+      "sessionId": "R6UOMZ1IR2P505RJNAUY_2026-01-21T03:55:55.330Z"
+    },
+    {
+      "id": "8A77FD1OCZFFHHS0KLQO",
+      "creationTime": "2026-01-21T20:31:30.529Z",
+      "from": "agent",
+      "agentId": "4CNtRN2Lgpfut1mxBXYiGbLUxGk1",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "¿Esta  usted disponible?, para poder avanzar con la asesoría.👨‍🎓 Si no esta disponible ¿En que franja horaria podemos coordinar una llamada?\n"
+      },
+      "sessionCreationTime": "2026-01-21T03:55:55.330Z",
+      "chat": {
+        "chatId": "R6UOMZ1IR2P505RJNAUY",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593980295615"
+      },
+      "sessionId": "R6UOMZ1IR2P505RJNAUY_2026-01-21T03:55:55.330Z"
+    },
+    {
+      "id": "54KX5LU3K27ND8JVXEF1",
+      "creationTime": "2026-01-21T20:36:46.427Z",
+      "from": "user",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Con todo gusto si es posible a las 6pm por favor"
+      },
+      "sessionCreationTime": "2026-01-21T03:55:55.330Z",
+      "chat": {
+        "chatId": "R6UOMZ1IR2P505RJNAUY",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593980295615"
+      },
+      "sessionId": "R6UOMZ1IR2P505RJNAUY_2026-01-21T03:55:55.330Z"
+    },
+    {
+      "id": "RKKAPAQOM35ZGJFYHYYF",
+      "creationTime": "2026-01-21T20:36:54.952Z",
+      "from": "user",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Quisiera recibir asesoría sobre el primer diplomado"
+      },
+      "sessionCreationTime": "2026-01-21T03:55:55.330Z",
+      "chat": {
+        "chatId": "R6UOMZ1IR2P505RJNAUY",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593980295615"
+      },
+      "sessionId": "R6UOMZ1IR2P505RJNAUY_2026-01-21T03:55:55.330Z"
+    },
+    {
+      "id": "FNNSUW4N7JJJMKH323IK",
+      "creationTime": "2026-01-21T20:37:38.713Z",
+      "from": "agent",
+      "agentId": "4CNtRN2Lgpfut1mxBXYiGbLUxGk1",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Con mucho gusto se agenda para las 6pm ."
+      },
+      "sessionCreationTime": "2026-01-21T03:55:55.330Z",
+      "chat": {
+        "chatId": "R6UOMZ1IR2P505RJNAUY",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593980295615"
+      },
+      "sessionId": "R6UOMZ1IR2P505RJNAUY_2026-01-21T03:55:55.330Z"
+    },
+    {
+      "id": "4RAOS8DGR5MZWN0CPIUX",
+      "creationTime": "2026-01-22T13:36:05.717Z",
+      "from": "agent",
+      "agentId": "4CNtRN2Lgpfut1mxBXYiGbLUxGk1",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Considerando el valor académico del programa, las herramientas prácticas que obtendrá y el beneficio del descuento vigente, ¿le gustaría asegurar su cupo en este momento o prefiere que lo apoye hoy mismo con el proceso de inscripción para no perder esta oportunidad?"
+      },
+      "sessionCreationTime": "2026-01-22T13:36:05.717Z",
+      "chat": {
+        "chatId": "R6UOMZ1IR2P505RJNAUY",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593980295615"
+      },
+      "sessionId": "R6UOMZ1IR2P505RJNAUY_2026-01-22T13:36:05.717Z"
+    },
+    {
+      "id": "Z3QKTXYWJE5XQD58UDFB",
+      "creationTime": "2026-01-22T13:36:42.143Z",
+      "from": "user",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Nadie me llamó"
+      },
+      "sessionCreationTime": "2026-01-22T13:36:05.717Z",
+      "chat": {
+        "chatId": "R6UOMZ1IR2P505RJNAUY",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593980295615"
+      },
+      "sessionId": "R6UOMZ1IR2P505RJNAUY_2026-01-22T13:36:05.717Z"
+    },
+    {
+      "id": "EU48A4E473DMEJC7Y4PM",
+      "creationTime": "2026-01-22T13:43:39.244Z",
+      "from": "agent",
+      "agentId": "4CNtRN2Lgpfut1mxBXYiGbLUxGk1",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Hola buen dia \nAyer le llame pero salia como un lugar sin señal ."
+      },
+      "sessionCreationTime": "2026-01-22T13:36:05.717Z",
+      "chat": {
+        "chatId": "R6UOMZ1IR2P505RJNAUY",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593980295615"
+      },
+      "sessionId": "R6UOMZ1IR2P505RJNAUY_2026-01-22T13:36:05.717Z"
+    },
+    {
+      "id": "NS7YL85R4EQ53HGSDIGH",
+      "creationTime": "2026-01-22T13:44:08.537Z",
+      "from": "agent",
+      "agentId": "4CNtRN2Lgpfut1mxBXYiGbLUxGk1",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "¡Desea que le gestione nuevamente la llamada el dia de hoy ?"
+      },
+      "sessionCreationTime": "2026-01-22T13:36:05.717Z",
+      "chat": {
+        "chatId": "R6UOMZ1IR2P505RJNAUY",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593980295615"
+      },
+      "sessionId": "R6UOMZ1IR2P505RJNAUY_2026-01-22T13:36:05.717Z"
+    },
+    {
+      "id": "UGT6PM2NTWUIRDGD06OC",
+      "creationTime": "2026-01-22T13:54:44.796Z",
+      "from": "user",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "https://uees.edu.ec/diplomados/diplomado-en-interrogatorios-y-contrainterrogatorios-en-casos-penales/"
+      },
+      "sessionCreationTime": "2026-01-22T13:36:05.717Z",
+      "chat": {
+        "chatId": "R6UOMZ1IR2P505RJNAUY",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593980295615"
+      },
+      "sessionId": "R6UOMZ1IR2P505RJNAUY_2026-01-22T13:36:05.717Z"
+    },
+    {
+      "id": "4GFHW2FNK8C4X4B2BXQ5",
+      "creationTime": "2026-01-22T13:55:17.561Z",
+      "from": "user",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Estoy revisando su página web\nQuería consultarle si tal vez van a lanzar más diplomados como este?"
+      },
+      "sessionCreationTime": "2026-01-22T13:36:05.717Z",
+      "chat": {
+        "chatId": "R6UOMZ1IR2P505RJNAUY",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593980295615"
+      },
+      "sessionId": "R6UOMZ1IR2P505RJNAUY_2026-01-22T13:36:05.717Z"
+    },
+    {
+      "id": "BB2S2BGBAWMV5MP5LR7I",
+      "creationTime": "2026-01-22T13:56:10.692Z",
+      "from": "user",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Porque honestamente estoy más interesado en aprender sobre derecho penal propiamente dicho \nNo sobre delitos cibernéticos"
+      },
+      "sessionCreationTime": "2026-01-22T13:36:05.717Z",
+      "chat": {
+        "chatId": "R6UOMZ1IR2P505RJNAUY",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593980295615"
+      },
+      "sessionId": "R6UOMZ1IR2P505RJNAUY_2026-01-22T13:36:05.717Z"
+    },
+    {
+      "id": "1WVZ3GIIQTKQNT3A77Q0",
+      "creationTime": "2026-01-22T13:56:36.481Z",
+      "from": "agent",
+      "agentId": "4CNtRN2Lgpfut1mxBXYiGbLUxGk1",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Con respecto al programa que consulta, le comento que por esta vía no estamos ofreciendo ese tipo de programas.\n\nPara recibir información más detallada sobre la postulación y admisión, puede comunicarse directamente con el equipo de la Universidad a través de los siguientes canales:\n\n📩 admisiones@uees.edu.ec\n📞 (04) 500 0950\n🌐 https://uees.edu.ec/\n\nEllos podrán brindarle toda la orientación necesaria sobre los programas disponibles y el proceso de inscripción."
+      },
+      "sessionCreationTime": "2026-01-22T13:36:05.717Z",
+      "chat": {
+        "chatId": "R6UOMZ1IR2P505RJNAUY",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593980295615"
+      },
+      "sessionId": "R6UOMZ1IR2P505RJNAUY_2026-01-22T13:36:05.717Z"
+    },
+    {
+      "id": "RAFNJVNZ3BLZC454WKWX",
+      "creationTime": "2026-01-22T13:57:50.357Z",
+      "from": "user",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Muy amable, gracias"
+      },
+      "sessionCreationTime": "2026-01-22T13:36:05.717Z",
+      "chat": {
+        "chatId": "R6UOMZ1IR2P505RJNAUY",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593980295615"
+      },
+      "sessionId": "R6UOMZ1IR2P505RJNAUY_2026-01-22T13:36:05.717Z"
+    },
+    {
+      "id": "OY4WGEWEZ8CZPXNECAKL",
+      "creationTime": "2026-01-22T13:58:12.035Z",
+      "from": "agent",
+      "agentId": "4CNtRN2Lgpfut1mxBXYiGbLUxGk1",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Muchas gracias por su tiempo. Acá estoy para apoyarle en lo que necesite, recuerde le hablo Mariuxi Martinez, asesora académica de la UEES. \n\nSomos top 1 en universidad online Iberoamérica\n"
+      },
+      "sessionCreationTime": "2026-01-22T13:36:05.717Z",
+      "chat": {
+        "chatId": "R6UOMZ1IR2P505RJNAUY",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593980295615"
+      },
+      "sessionId": "R6UOMZ1IR2P505RJNAUY_2026-01-22T13:36:05.717Z"
+    },
+    {
+      "id": "DFHKMXE2CF2NYWVKF2PL",
+      "creationTime": "2026-01-25T00:47:26.866Z",
+      "from": "user",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Buenas noches Una consulta este diplomado que valor tiene"
+      },
+      "sessionCreationTime": "2026-01-25T00:47:26.866Z",
+      "chat": {
+        "chatId": "R6UOMZ1IR2P505RJNAUY",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593980295615"
+      },
+      "sessionId": "R6UOMZ1IR2P505RJNAUY_2026-01-25T00:47:26.866Z"
+    },
+    {
+      "id": "TXCJ7QJDJLGOV8SES818",
+      "creationTime": "2026-01-25T00:47:28.498Z",
+      "from": "bot",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "👋 Bienvenido a la Universidad Espíritu Santo (UEES)"
+      },
+      "sessionCreationTime": "2026-01-25T00:47:26.866Z",
+      "chat": {
+        "chatId": "R6UOMZ1IR2P505RJNAUY",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593980295615"
+      },
+      "sessionId": "R6UOMZ1IR2P505RJNAUY_2026-01-25T00:47:26.866Z"
+    },
+    {
+      "id": "PTFQO2651KU7ZWB51XH0",
+      "creationTime": "2026-01-25T00:47:41.192Z",
+      "from": "user",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Buenas noches Una consulta este diplomado que valor tiene"
+      },
+      "sessionCreationTime": "2026-01-25T00:47:26.866Z",
+      "chat": {
+        "chatId": "R6UOMZ1IR2P505RJNAUY",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593980295615"
+      },
+      "sessionId": "R6UOMZ1IR2P505RJNAUY_2026-01-25T00:47:26.866Z"
+    },
+    {
+      "id": "MFCAJE8YYIJODFL1OG0H",
+      "creationTime": "2026-01-25T00:57:01.384Z",
+      "from": "agent",
+      "agentId": "4CNtRN2Lgpfut1mxBXYiGbLUxGk1",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Buenas noches Sr. Galarza"
+      },
+      "sessionCreationTime": "2026-01-25T00:47:26.866Z",
+      "chat": {
+        "chatId": "R6UOMZ1IR2P505RJNAUY",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593980295615"
+      },
+      "sessionId": "R6UOMZ1IR2P505RJNAUY_2026-01-25T00:47:26.866Z"
+    },
+    {
+      "id": "RZCUBEDZBPRQHFDI1O1N",
+      "creationTime": "2026-01-25T00:59:43.685Z",
+      "from": "agent",
+      "agentId": "4CNtRN2Lgpfut1mxBXYiGbLUxGk1",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "*DIPLOMADOS* \nUSD 1,200 precio normal. \n*Descuento del 20% : US 960*\nFinanciamiento si aplica con 3 cuotas de USD 320 , financiadas directamente por la universidad o con tarjeta de credito.\n"
+      },
+      "sessionCreationTime": "2026-01-25T00:47:26.866Z",
+      "chat": {
+        "chatId": "R6UOMZ1IR2P505RJNAUY",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593980295615"
+      },
+      "sessionId": "R6UOMZ1IR2P505RJNAUY_2026-01-25T00:47:26.866Z"
+    },
+    {
+      "id": "IHUSP6PHU572WHBEG6GY",
+      "creationTime": "2026-01-25T01:05:18.760Z",
+      "from": "agent",
+      "agentId": "4CNtRN2Lgpfut1mxBXYiGbLUxGk1",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "*¿Estos valores se encuentran acordes a su presupuesto?*\n"
+      },
+      "sessionCreationTime": "2026-01-25T00:47:26.866Z",
+      "chat": {
+        "chatId": "R6UOMZ1IR2P505RJNAUY",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593980295615"
+      },
+      "sessionId": "R6UOMZ1IR2P505RJNAUY_2026-01-25T00:47:26.866Z"
+    },
+    {
+      "id": "CQXFWUIF42VYL5WS7FPT",
+      "creationTime": "2026-01-25T01:18:21.448Z",
+      "from": "user",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Tenía un presupuesto de 500 dólares"
+      },
+      "sessionCreationTime": "2026-01-25T00:47:26.866Z",
+      "chat": {
+        "chatId": "R6UOMZ1IR2P505RJNAUY",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593980295615"
+      },
+      "sessionId": "R6UOMZ1IR2P505RJNAUY_2026-01-25T00:47:26.866Z"
+    },
+    {
+      "id": "0BA77W2Q8KZQ2AMXZ7G2",
+      "creationTime": "2026-01-25T01:32:46.049Z",
+      "from": "agent",
+      "agentId": "4CNtRN2Lgpfut1mxBXYiGbLUxGk1",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Puedo gestionarle una llamada , le parece bien mañana a las 12 del día . "
+      },
+      "sessionCreationTime": "2026-01-25T00:47:26.866Z",
+      "chat": {
+        "chatId": "R6UOMZ1IR2P505RJNAUY",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593980295615"
+      },
+      "sessionId": "R6UOMZ1IR2P505RJNAUY_2026-01-25T00:47:26.866Z"
+    },
+    {
+      "id": "JIX0YY8OYE8WKVTMAWBL",
+      "creationTime": "2026-01-25T01:33:08.630Z",
+      "from": "user",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Ok"
+      },
+      "sessionCreationTime": "2026-01-25T00:47:26.866Z",
+      "chat": {
+        "chatId": "R6UOMZ1IR2P505RJNAUY",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593980295615"
+      },
+      "sessionId": "R6UOMZ1IR2P505RJNAUY_2026-01-25T00:47:26.866Z"
+    },
+    {
+      "id": "ZEH1L6LA6P30GP1JWMP6",
+      "creationTime": "2026-01-25T01:34:16.572Z",
+      "from": "agent",
+      "agentId": "4CNtRN2Lgpfut1mxBXYiGbLUxGk1",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Hasta mañana Se. Galarza. \n"
+      },
+      "sessionCreationTime": "2026-01-25T00:47:26.866Z",
+      "chat": {
+        "chatId": "R6UOMZ1IR2P505RJNAUY",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593980295615"
+      },
+      "sessionId": "R6UOMZ1IR2P505RJNAUY_2026-01-25T00:47:26.866Z"
+    },
+    {
+      "id": "VBFXH7IRYJ45Z0YRJDQF",
+      "creationTime": "2026-01-23T14:41:39.291Z",
+      "from": "bot",
+      "content": {
+        "type": "text",
+        "text": "Template:\n\n¡Bienvenido a la UEES! ✨ Nos hace mucha ilusión saludarte.\n\nMantente atento a tu celular, que en unos minutos te llamaremos para contarte todo sobre el programa. 📞\n\n👉 Si prefieres que te escribamos, solo responde este mensaje y te atenderemos por WhatsApp\n",
+        "whatsAppTemplateName": "uees_envio_automatico2026"
+      },
+      "sessionCreationTime": "2026-01-23T14:41:39.279Z",
+      "chat": {
+        "chatId": "RYZOWQNDU1BN4UU3VO6T",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593961128137"
+      },
+      "sessionId": "RYZOWQNDU1BN4UU3VO6T_2026-01-23T14:41:39.279Z"
+    },
+    {
+      "id": "VV0H83LQD4Y1O8JSPI4F",
+      "creationTime": "2026-01-23T14:45:11.917Z",
+      "from": "user",
+      "content": {
+        "type": "text",
+        "text": "whatsapp"
+      },
+      "sessionCreationTime": "2026-01-23T14:41:39.279Z",
+      "chat": {
+        "chatId": "RYZOWQNDU1BN4UU3VO6T",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593961128137"
+      },
+      "sessionId": "RYZOWQNDU1BN4UU3VO6T_2026-01-23T14:41:39.279Z"
+    },
+    {
+      "id": "YRPH1U6QZLGCVAWIHPWL",
+      "creationTime": "2026-01-23T14:45:16.038Z",
+      "from": "bot",
+      "content": {
+        "type": "buttons",
+        "text": "Encontré varios temas al respecto. ¿Estás queriendo decir algo de esto?",
+        "buttons": [
+          "Hablar con un Asesor"
+        ]
+      },
+      "sessionCreationTime": "2026-01-23T14:41:39.279Z",
+      "chat": {
+        "chatId": "RYZOWQNDU1BN4UU3VO6T",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593961128137"
+      },
+      "sessionId": "RYZOWQNDU1BN4UU3VO6T_2026-01-23T14:41:39.279Z"
+    },
+    {
+      "id": "1VL6P8AGWIF02U8QBN7Z",
+      "creationTime": "2026-01-23T14:45:25.086Z",
+      "from": "user",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "button-click",
+        "selectedButton": "Hablar con un Asesor"
+      },
+      "sessionCreationTime": "2026-01-23T14:41:39.279Z",
+      "chat": {
+        "chatId": "RYZOWQNDU1BN4UU3VO6T",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593961128137"
+      },
+      "sessionId": "RYZOWQNDU1BN4UU3VO6T_2026-01-23T14:41:39.279Z"
+    },
+    {
+      "id": "X21VG5KZ4CFUNY0DV86K",
+      "creationTime": "2026-01-23T15:30:13.618Z",
+      "from": "agent",
+      "agentId": "4CNtRN2Lgpfut1mxBXYiGbLUxGk1",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Buen día \nLe saluda Mariuxi Martinez .\nAsesora Educativa de la Universidad Espíritu Santo (UEES).\n \nMe comunico por su interés en nuestros programas.\n\n Cuénteme *¿Cuál es su programa de interés?* *¿ Donde vio nuestra publicidad?*"
+      },
+      "sessionCreationTime": "2026-01-23T14:41:39.279Z",
+      "chat": {
+        "chatId": "RYZOWQNDU1BN4UU3VO6T",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593961128137"
+      },
+      "sessionId": "RYZOWQNDU1BN4UU3VO6T_2026-01-23T14:41:39.279Z"
+    },
+    {
+      "id": "CD5YSTJFSV4HCY6GGIJV",
+      "creationTime": "2026-01-23T15:53:46.905Z",
+      "from": "user",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Protección de datos"
+      },
+      "sessionCreationTime": "2026-01-23T14:41:39.279Z",
+      "chat": {
+        "chatId": "RYZOWQNDU1BN4UU3VO6T",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593961128137"
+      },
+      "sessionId": "RYZOWQNDU1BN4UU3VO6T_2026-01-23T14:41:39.279Z"
+    },
+    {
+      "id": "QVV5SQ0LVUH7ROAO0BC1",
+      "creationTime": "2026-01-23T15:55:24.703Z",
+      "from": "agent",
+      "agentId": "4CNtRN2Lgpfut1mxBXYiGbLUxGk1",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "BUEN DIA ¿Usted desea certificarse como delegado de proteccion de datos ?"
+      },
+      "sessionCreationTime": "2026-01-23T14:41:39.279Z",
+      "chat": {
+        "chatId": "RYZOWQNDU1BN4UU3VO6T",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593961128137"
+      },
+      "sessionId": "RYZOWQNDU1BN4UU3VO6T_2026-01-23T14:41:39.279Z"
+    },
+    {
+      "id": "4S1FPHLL6PHIKXKFCQTM",
+      "creationTime": "2026-01-23T20:58:09.629Z",
+      "from": "agent",
+      "agentId": "4CNtRN2Lgpfut1mxBXYiGbLUxGk1",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "¿Esta  usted disponible?, para poder avanzar con la asesoría.👨‍🎓 Si no esta disponible ¿En que franja horaria podemos coordinar una llamada?\n \n"
+      },
+      "sessionCreationTime": "2026-01-23T14:41:39.279Z",
+      "chat": {
+        "chatId": "RYZOWQNDU1BN4UU3VO6T",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593961128137"
+      },
+      "sessionId": "RYZOWQNDU1BN4UU3VO6T_2026-01-23T14:41:39.279Z"
+    },
+    {
+      "id": "WHD1EV8LYZOETEHB401E",
+      "creationTime": "2026-01-31T13:12:03.442Z",
+      "from": "bot",
+      "content": {
+        "type": "text",
+        "text": "Template:\n\n¡Bienvenido a la UEES! ✨ Nos hace mucha ilusión saludarte.\n\nMantente atento a tu celular, que en unos minutos te llamaremos para contarte todo sobre el programa. 📞\n\n👉 Si prefieres que te escribamos, solo responde este mensaje y te atenderemos por WhatsApp\n",
+        "whatsAppTemplateName": "uees_envio_automatico2026"
+      },
+      "sessionCreationTime": "2026-01-31T13:12:03.425Z",
+      "chat": {
+        "chatId": "8OP3US3ZM6WSVHP7A5W7",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593992491862"
+      },
+      "sessionId": "8OP3US3ZM6WSVHP7A5W7_2026-01-31T13:12:03.425Z"
+    },
+    {
+      "id": "UFK3XC5RFVQPGPP7H8BM",
+      "creationTime": "2026-01-31T13:16:15.519Z",
+      "from": "user",
+      "content": {
+        "type": "text",
+        "text": "Por este medio"
+      },
+      "sessionCreationTime": "2026-01-31T13:12:03.425Z",
+      "chat": {
+        "chatId": "8OP3US3ZM6WSVHP7A5W7",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593992491862"
+      },
+      "sessionId": "8OP3US3ZM6WSVHP7A5W7_2026-01-31T13:12:03.425Z"
+    },
+    {
+      "id": "4M16EEKHDD63LRZ17YET",
+      "creationTime": "2026-01-31T13:16:20.642Z",
+      "from": "bot",
+      "content": {
+        "type": "buttons",
+        "text": "Encontré varios temas al respecto. ¿Estás queriendo decir algo de esto?",
+        "buttons": [
+          "Hablar con un Asesor"
+        ]
+      },
+      "sessionCreationTime": "2026-01-31T13:12:03.425Z",
+      "chat": {
+        "chatId": "8OP3US3ZM6WSVHP7A5W7",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593992491862"
+      },
+      "sessionId": "8OP3US3ZM6WSVHP7A5W7_2026-01-31T13:12:03.425Z"
+    },
+    {
+      "id": "JA3IX2IEK45ADBKJG3P1",
+      "creationTime": "2026-01-31T13:17:04.244Z",
+      "from": "user",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "button-click",
+        "selectedButton": "Hablar con un Asesor"
+      },
+      "sessionCreationTime": "2026-01-31T13:12:03.425Z",
+      "chat": {
+        "chatId": "8OP3US3ZM6WSVHP7A5W7",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593992491862"
+      },
+      "sessionId": "8OP3US3ZM6WSVHP7A5W7_2026-01-31T13:12:03.425Z"
+    },
+    {
+      "id": "074LRREQ4RYYNH3DTSIR",
+      "creationTime": "2026-01-31T13:17:52.457Z",
+      "from": "agent",
+      "agentId": "SIS5ucZKrkNxBReBUAhmE0NmAlF3",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "*Buen día Sr. David*😀\nLe saluda Jennifer Taco, asesora educativa de la *Universidad Espíritu Santo (UEES)*.\n\nEs un gusto contactarle. Desde la Universidad #1 del Ecuador y una de las seis mejores de Latinoamérica según Times Higher Education 2026.\n\nCon gusto le brindo información sobre el Global Mind Program: *Derecho Penal y Seguridad en el Ciberespacio*\n\nPara una asesoría más personalizada *¿Cuál es su principal motivación para estudio de este programa?*"
+      },
+      "sessionCreationTime": "2026-01-31T13:12:03.425Z",
+      "chat": {
+        "chatId": "8OP3US3ZM6WSVHP7A5W7",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593992491862"
+      },
+      "sessionId": "8OP3US3ZM6WSVHP7A5W7_2026-01-31T13:12:03.425Z"
+    },
+    {
+      "id": "PUBJG71BPRCWHBE2U8JY",
+      "creationTime": "2026-01-31T13:19:57.743Z",
+      "from": "user",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Crecimiento profesional"
+      },
+      "sessionCreationTime": "2026-01-31T13:12:03.425Z",
+      "chat": {
+        "chatId": "8OP3US3ZM6WSVHP7A5W7",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593992491862"
+      },
+      "sessionId": "8OP3US3ZM6WSVHP7A5W7_2026-01-31T13:12:03.425Z"
+    },
+    {
+      "id": "B27ADU3YPCJ1GZDZ5PM4",
+      "creationTime": "2026-01-31T13:21:35.708Z",
+      "from": "agent",
+      "agentId": "SIS5ucZKrkNxBReBUAhmE0NmAlF3",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Excelente. \nNuestro programa lo forma para comprender el impacto de la tecnología en el Derecho y ser capaz de solucionar de manera ética conﬂictos en entornos digitales, incluyendo contratos inteligentes y startups. También lo prepara para aplicar la ley de protección  de datos, abordando aspectos técnicos de seguridad de la información, gestión de riesgos y crisis. Al ﬁnalizar, podrá ofrecer consultoría jurídica, desarrollar proyectos y actuar en litigios con una formación superior al perﬁl tradicional del Derecho."
+      },
+      "sessionCreationTime": "2026-01-31T13:12:03.425Z",
+      "chat": {
+        "chatId": "8OP3US3ZM6WSVHP7A5W7",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593992491862"
+      },
+      "sessionId": "8OP3US3ZM6WSVHP7A5W7_2026-01-31T13:12:03.425Z"
+    },
+    {
+      "id": "IQIM550BVZG6Q7ZA2WM1",
+      "creationTime": "2026-01-31T13:22:02.679Z",
+      "from": "agent",
+      "agentId": "SIS5ucZKrkNxBReBUAhmE0NmAlF3",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "¿Su rol profesional actual, está dentro del área del Derecho?"
+      },
+      "sessionCreationTime": "2026-01-31T13:12:03.425Z",
+      "chat": {
+        "chatId": "8OP3US3ZM6WSVHP7A5W7",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593992491862"
+      },
+      "sessionId": "8OP3US3ZM6WSVHP7A5W7_2026-01-31T13:12:03.425Z"
+    },
+    {
+      "id": "18JFSCSSAVHPXOMAUC8J",
+      "creationTime": "2026-01-31T13:25:55.537Z",
+      "from": "user",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Sí, soy Abogado."
+      },
+      "sessionCreationTime": "2026-01-31T13:12:03.425Z",
+      "chat": {
+        "chatId": "8OP3US3ZM6WSVHP7A5W7",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593992491862"
+      },
+      "sessionId": "8OP3US3ZM6WSVHP7A5W7_2026-01-31T13:12:03.425Z"
+    },
+    {
+      "id": "KN7P5MEV2DHM4M33JINY",
+      "creationTime": "2026-01-31T13:27:01.528Z",
+      "from": "agent",
+      "agentId": "SIS5ucZKrkNxBReBUAhmE0NmAlF3",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Perfecto. Este programa será un gran aporte para su desarrollo profesional, especialmente porque está diseñado con contenido exclusivo, actualizado y aplicable desde el primer módulo.\nSin duda, potenciará las competencias que desea fortalecer."
+      },
+      "sessionCreationTime": "2026-01-31T13:12:03.425Z",
+      "chat": {
+        "chatId": "8OP3US3ZM6WSVHP7A5W7",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593992491862"
+      },
+      "sessionId": "8OP3US3ZM6WSVHP7A5W7_2026-01-31T13:12:03.425Z"
+    },
+    {
+      "id": "FEDJC2LOJLB2H4P33N55",
+      "creationTime": "2026-01-31T13:27:15.634Z",
+      "from": "agent",
+      "agentId": "SIS5ucZKrkNxBReBUAhmE0NmAlF3",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "“*Derecho 4.0: Derecho Digital, Protección de Datos y Ciberseguridad*”\nEstá *compuesto por tres diplomados de alta categoría* y contenido exclusivo, gracias al aporte de *Mentes Globales Regionales e Internacionales*, con la participación especial de *Ann Cavoukian*, una de las *principales expertas en privacidad del mundo y creadora del modelo Privacy by Design (PbD)*. \n\n📚 *Duración*: 9 meses\n🎓 *Incluye cuatro certificaciones universitarias emitidas por la UEES.\n📎 Se adjunta el brochure correspondiente."
+      },
+      "sessionCreationTime": "2026-01-31T13:12:03.425Z",
+      "chat": {
+        "chatId": "8OP3US3ZM6WSVHP7A5W7",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593992491862"
+      },
+      "sessionId": "8OP3US3ZM6WSVHP7A5W7_2026-01-31T13:12:03.425Z"
+    },
+    {
+      "id": "WD833OGDSLMG4HBF4GKM",
+      "creationTime": "2026-01-31T13:27:33.523Z",
+      "from": "agent",
+      "agentId": "SIS5ucZKrkNxBReBUAhmE0NmAlF3",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "file",
+        "media": {
+          "url": "https://storage.googleapis.com/storage.botmaker.com/public/res/nodslabsas/agents/20260131-SIS5ucZKrkNxBReBUAhmE0NmAlF3-61BBR-RGVyZWNobyA0LjAgLSBEZXJlY2hvIERpZ2l0YWwsIFByb3RlY2Npb8yBbiBkZSBEYXRvcyB5IENpYmVyc2VndXJpZGFk.pdf"
+        }
+      },
+      "sessionCreationTime": "2026-01-31T13:12:03.425Z",
+      "chat": {
+        "chatId": "8OP3US3ZM6WSVHP7A5W7",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593992491862"
+      },
+      "sessionId": "8OP3US3ZM6WSVHP7A5W7_2026-01-31T13:12:03.425Z"
+    },
+    {
+      "id": "ZNNLPTU6VEQYUZA3AL5N",
+      "creationTime": "2026-01-31T13:27:46.378Z",
+      "from": "agent",
+      "agentId": "SIS5ucZKrkNxBReBUAhmE0NmAlF3",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "*Estoy segura de que encontrará opciones muy alineadas a lo que busca* \nPara poder guiarle mejor, ¿qué le pareció el contenido que revisó? ¿Cumple con lo que desea fortalecer en su formación?"
+      },
+      "sessionCreationTime": "2026-01-31T13:12:03.425Z",
+      "chat": {
+        "chatId": "8OP3US3ZM6WSVHP7A5W7",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593992491862"
+      },
+      "sessionId": "8OP3US3ZM6WSVHP7A5W7_2026-01-31T13:12:03.425Z"
+    },
+    {
+      "id": "X1YNRA2XYBVYNNU682AL",
+      "creationTime": "2026-01-31T13:28:59.368Z",
+      "from": "user",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Son 60 horas en total?"
+      },
+      "sessionCreationTime": "2026-01-31T13:12:03.425Z",
+      "chat": {
+        "chatId": "8OP3US3ZM6WSVHP7A5W7",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593992491862"
+      },
+      "sessionId": "8OP3US3ZM6WSVHP7A5W7_2026-01-31T13:12:03.425Z"
+    },
+    {
+      "id": "62M1MB5VU732VMXAIFGG",
+      "creationTime": "2026-01-31T13:29:02.405Z",
+      "from": "user",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Y el valor ?"
+      },
+      "sessionCreationTime": "2026-01-31T13:12:03.425Z",
+      "chat": {
+        "chatId": "8OP3US3ZM6WSVHP7A5W7",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593992491862"
+      },
+      "sessionId": "8OP3US3ZM6WSVHP7A5W7_2026-01-31T13:12:03.425Z"
+    },
+    {
+      "id": "IRPHIQXH1C3AIMT2UKPV",
+      "creationTime": "2026-01-31T13:30:26.850Z",
+      "from": "agent",
+      "agentId": "SIS5ucZKrkNxBReBUAhmE0NmAlF3",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Son un total de 80 horas académicas por cada Diplomado y 240 horas por el programa completo. "
+      },
+      "sessionCreationTime": "2026-01-31T13:12:03.425Z",
+      "chat": {
+        "chatId": "8OP3US3ZM6WSVHP7A5W7",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593992491862"
+      },
+      "sessionId": "8OP3US3ZM6WSVHP7A5W7_2026-01-31T13:12:03.425Z"
+    },
+    {
+      "id": "4V2KSB5SRXCKNVWU518U",
+      "creationTime": "2026-01-31T13:31:31.620Z",
+      "from": "agent",
+      "agentId": "SIS5ucZKrkNxBReBUAhmE0NmAlF3",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Iniciamos clases este 02 de febrero y actualmente contamos con un beneficio exclusivo para los últimos cupos.\nPuede acceder a un 30 % de descuento por pronto pago, lo que le permite ingresar al programa con un costo preferencial."
+      },
+      "sessionCreationTime": "2026-01-31T13:12:03.425Z",
+      "chat": {
+        "chatId": "8OP3US3ZM6WSVHP7A5W7",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593992491862"
+      },
+      "sessionId": "8OP3US3ZM6WSVHP7A5W7_2026-01-31T13:12:03.425Z"
+    },
+    {
+      "id": "AQWP7HMNF68U4GLRFBOS",
+      "creationTime": "2026-01-31T13:31:56.830Z",
+      "from": "agent",
+      "agentId": "SIS5ucZKrkNxBReBUAhmE0NmAlF3",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Puede acceder al programa que incluye *3 Diplomados especializados y 4 certificaciones universitarias de la UEES* 🎓\n\nSolo por *hoy* puede aprovechar un *30% de descuento*, quedando su inversión en *USD 2.187,50* (en lugar de USD 3.125).\n\nAdemás, puede acceder a *financiamiento directo hasta en 9 pagos mensuales* sin recargo de *USD 243,05*, realizando su *primer pago hoy* y el resto desde marzo. 💳\n\n¿Le gustaría que le indique los pasos para asegurar este cupo preferencial antes de que se agote? 😃"
+      },
+      "sessionCreationTime": "2026-01-31T13:12:03.425Z",
+      "chat": {
+        "chatId": "8OP3US3ZM6WSVHP7A5W7",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593992491862"
+      },
+      "sessionId": "8OP3US3ZM6WSVHP7A5W7_2026-01-31T13:12:03.425Z"
+    },
+    {
+      "id": "FK6FMPLFMCREML3JHQDI",
+      "creationTime": "2026-01-31T13:36:11.851Z",
+      "from": "user",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Y puedo acceder solo a un diplomado ?"
+      },
+      "sessionCreationTime": "2026-01-31T13:12:03.425Z",
+      "chat": {
+        "chatId": "8OP3US3ZM6WSVHP7A5W7",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593992491862"
+      },
+      "sessionId": "8OP3US3ZM6WSVHP7A5W7_2026-01-31T13:12:03.425Z"
+    },
+    {
+      "id": "XJZOH3N7J581PI1283NW",
+      "creationTime": "2026-01-31T13:37:09.792Z",
+      "from": "agent",
+      "agentId": "SIS5ucZKrkNxBReBUAhmE0NmAlF3",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Claro que sí, ¿Qué Diplomado le gustaría tomar? 😀"
+      },
+      "sessionCreationTime": "2026-01-31T13:12:03.425Z",
+      "chat": {
+        "chatId": "8OP3US3ZM6WSVHP7A5W7",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593992491862"
+      },
+      "sessionId": "8OP3US3ZM6WSVHP7A5W7_2026-01-31T13:12:03.425Z"
+    },
+    {
+      "id": "GGHX1BDYUSSK0ULXROJG",
+      "creationTime": "2026-01-31T13:42:32.433Z",
+      "from": "user",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Diplomado en Derecho penal y seguridad en el ciberespacio"
+      },
+      "sessionCreationTime": "2026-01-31T13:12:03.425Z",
+      "chat": {
+        "chatId": "8OP3US3ZM6WSVHP7A5W7",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593992491862"
+      },
+      "sessionId": "8OP3US3ZM6WSVHP7A5W7_2026-01-31T13:12:03.425Z"
+    },
+    {
+      "id": "XJ3D0WB451BQ614XQHVA",
+      "creationTime": "2026-01-31T13:46:15.929Z",
+      "from": "agent",
+      "agentId": "SIS5ucZKrkNxBReBUAhmE0NmAlF3",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Con gusto, le comparto el Diplomado a detalle:"
+      },
+      "sessionCreationTime": "2026-01-31T13:12:03.425Z",
+      "chat": {
+        "chatId": "8OP3US3ZM6WSVHP7A5W7",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593992491862"
+      },
+      "sessionId": "8OP3US3ZM6WSVHP7A5W7_2026-01-31T13:12:03.425Z"
+    },
+    {
+      "id": "R0OZSIYJGSZ2RPNJP8B2",
+      "creationTime": "2026-01-31T13:57:04.669Z",
+      "from": "agent",
+      "agentId": "SIS5ucZKrkNxBReBUAhmE0NmAlF3",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "*Diplomado en Derecho Penal y Seguridad en el Ciberespacio*\n\nEste diplomado aborda los desafíos legales y de seguridad en el entorno digital, con un enfoque en el Derecho Penal Informático y el ciberespacio, permitiendo al estudiante analizar los delitos derivados del uso de las nuevas tecnologías y proponer soluciones jurídicas frente a estos escenarios."
+      },
+      "sessionCreationTime": "2026-01-31T13:12:03.425Z",
+      "chat": {
+        "chatId": "8OP3US3ZM6WSVHP7A5W7",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593992491862"
+      },
+      "sessionId": "8OP3US3ZM6WSVHP7A5W7_2026-01-31T13:12:03.425Z"
+    },
+    {
+      "id": "UDCO6UZCVKWC2MGGI47X",
+      "creationTime": "2026-01-31T13:59:00.347Z",
+      "from": "agent",
+      "agentId": "SIS5ucZKrkNxBReBUAhmE0NmAlF3",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "*Módulo 1 ¿Qué es lo virtual? Entendiendo el ciberespacio*\nContenidos:\n✓ Lo virtual y la ruptura de las fronteras espacio-temporales\n✓ ¿Qué es el ciberespacio?\n✓ ¿Qué es la información?\n✓ ¿Qué es el hipertexto?\n✓ La virtualización del texto, la economía, el trabajo y los contratos\n✓ La inteligencia colectiva y el fenómeno de las noticias falsas"
+      },
+      "sessionCreationTime": "2026-01-31T13:12:03.425Z",
+      "chat": {
+        "chatId": "8OP3US3ZM6WSVHP7A5W7",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593992491862"
+      },
+      "sessionId": "8OP3US3ZM6WSVHP7A5W7_2026-01-31T13:12:03.425Z"
+    },
+    {
+      "id": "ZWA8DQNDHJXLZ7C2ELNV",
+      "creationTime": "2026-01-31T14:02:07.032Z",
+      "from": "agent",
+      "agentId": "SIS5ucZKrkNxBReBUAhmE0NmAlF3",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "*Módulo 2: Derecho Penal Informático*\nContenidos:\n✓ Ciberdelitos: clasificación y sujetos\n✓ Prueba de materialidad y conducta lesiva atípica\n✓ Exposición pornográfica no consentida\n✓ Sextorsión informática\n✓ Rastreo de IP\n✓ Ciberacoso y ciberacecho\n✓ Noticias falsas y deepfakes\n✓ Falsedad ideológica\n✓ Delitos contra el honor\n✓ Darknets y deep web\n✓ Blockchain, criptoactivos y blanqueo de capitales\n✓ Fraude en internet"
+      },
+      "sessionCreationTime": "2026-01-31T13:12:03.425Z",
+      "chat": {
+        "chatId": "8OP3US3ZM6WSVHP7A5W7",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593992491862"
+      },
+      "sessionId": "8OP3US3ZM6WSVHP7A5W7_2026-01-31T13:12:03.425Z"
+    },
+    {
+      "id": "6BHNPUMZ2ARGZUJQO0EP",
+      "creationTime": "2026-01-31T14:02:27.871Z",
+      "from": "agent",
+      "agentId": "SIS5ucZKrkNxBReBUAhmE0NmAlF3",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "*Módulo 3: Gestión de seguridad de la información: prevención, contención y continuidad*\nContenidos:\n✓ Buenas prácticas para la prevención de incidentes de seguridad de la información\n✓ Identificación de incidentes de seguridad de la información\n✓ Medidas de gestión de incidentes de seguridad de la información\n✓ Informe de incidentes de seguridad de la información\n✓ Plan de continuidad de negocio y recuperación ante desastres\n✓ Casos prácticos"
+      },
+      "sessionCreationTime": "2026-01-31T13:12:03.425Z",
+      "chat": {
+        "chatId": "8OP3US3ZM6WSVHP7A5W7",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593992491862"
+      },
+      "sessionId": "8OP3US3ZM6WSVHP7A5W7_2026-01-31T13:12:03.425Z"
+    },
+    {
+      "id": "BT3JUUNOS8ZBV6ZYLHOW",
+      "creationTime": "2026-01-31T14:02:47.949Z",
+      "from": "agent",
+      "agentId": "SIS5ucZKrkNxBReBUAhmE0NmAlF3",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "*Módulo 4: Blockchain y los smart contracts*\nContenidos:\n✓ Concepto de blockchain\n✓ Tokens\n✓ Diseño de contratos inteligentes\n✓ Ejecución automatizada\n✓ Repercusiones legales del uso de contratos inteligentes"
+      },
+      "sessionCreationTime": "2026-01-31T13:12:03.425Z",
+      "chat": {
+        "chatId": "8OP3US3ZM6WSVHP7A5W7",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593992491862"
+      },
+      "sessionId": "8OP3US3ZM6WSVHP7A5W7_2026-01-31T13:12:03.425Z"
+    },
+    {
+      "id": "6NTHE6LI2SIDS04P32LR",
+      "creationTime": "2026-01-31T14:03:26.947Z",
+      "from": "agent",
+      "agentId": "SIS5ucZKrkNxBReBUAhmE0NmAlF3",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "¿Qué le parece el contenido del programa? tiene alguna duda, o prefiere avanzar hacia el detalle de la inversión. "
+      },
+      "sessionCreationTime": "2026-01-31T13:12:03.425Z",
+      "chat": {
+        "chatId": "8OP3US3ZM6WSVHP7A5W7",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593992491862"
+      },
+      "sessionId": "8OP3US3ZM6WSVHP7A5W7_2026-01-31T13:12:03.425Z"
+    },
+    {
+      "id": "D3JSQ0SVITUNQMKG14SH",
+      "creationTime": "2026-01-31T14:47:53.461Z",
+      "from": "agent",
+      "agentId": "SIS5ucZKrkNxBReBUAhmE0NmAlF3",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Por *pronto pago*, puede acceder a un *30% de descuento*, quedando el valor en *USD 840* (costo regular: USD 1.200).\nAdemás, ofrecemos financiamiento en *3 pagos mensuales sin recargo USD 280* y su pago se puede realizar con *tarjeta de crédito o débito*.\n\n¿Desea que le cuente los pasos a seguir para acceder a este descuento? 😊"
+      },
+      "sessionCreationTime": "2026-01-31T13:12:03.425Z",
+      "chat": {
+        "chatId": "8OP3US3ZM6WSVHP7A5W7",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593992491862"
+      },
+      "sessionId": "8OP3US3ZM6WSVHP7A5W7_2026-01-31T13:12:03.425Z"
+    },
+    {
+      "id": "6KNO5EEL6ASZVVFH5X3V",
+      "creationTime": "2026-02-02T15:41:55.239Z",
+      "from": "bot",
+      "content": {
+        "type": "text",
+        "text": "Template:\n\n¡Bienvenido a la UEES! ✨ Nos hace mucha ilusión saludarte.\n\nMantente atento a tu celular, que en unos minutos te llamaremos para contarte todo sobre el programa. 📞\n\n👉 Si prefieres que te escribamos, solo responde este mensaje y te atenderemos por WhatsApp\n",
+        "whatsAppTemplateName": "uees_envio_automatico2026"
+      },
+      "sessionCreationTime": "2026-02-02T15:41:55.161Z",
+      "chat": {
+        "chatId": "4PP6BWZZYFKQFKJGISHH",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593968868409"
+      },
+      "sessionId": "4PP6BWZZYFKQFKJGISHH_2026-02-02T15:41:55.161Z"
+    },
+    {
+      "id": "U3RGSTYD0FW3G1N5LB6Y",
+      "creationTime": "2026-02-02T15:53:02.973Z",
+      "from": "user",
+      "content": {
+        "type": "text",
+        "text": "Si 👏"
+      },
+      "sessionCreationTime": "2026-02-02T15:41:55.161Z",
+      "chat": {
+        "chatId": "4PP6BWZZYFKQFKJGISHH",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593968868409"
+      },
+      "sessionId": "4PP6BWZZYFKQFKJGISHH_2026-02-02T15:41:55.161Z"
+    },
+    {
+      "id": "ZY61PU37SWUBPM6TEYHT",
+      "creationTime": "2026-02-02T15:53:09.335Z",
+      "from": "bot",
+      "content": {
+        "type": "buttons",
+        "text": "Encontré varios temas al respecto. ¿Estás queriendo decir algo de esto?",
+        "buttons": [
+          "Hablar con un Asesor"
+        ]
+      },
+      "sessionCreationTime": "2026-02-02T15:41:55.161Z",
+      "chat": {
+        "chatId": "4PP6BWZZYFKQFKJGISHH",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593968868409"
+      },
+      "sessionId": "4PP6BWZZYFKQFKJGISHH_2026-02-02T15:41:55.161Z"
+    },
+    {
+      "id": "OLZSSOSTUYA6AEEUAQ77",
+      "creationTime": "2026-02-02T16:07:57.274Z",
+      "from": "bot",
+      "content": {
+        "type": "text",
+        "text": "Template:\n\n¡Bienvenido a la UEES! ✨ Nos hace mucha ilusión saludarte.\n\nMantente atento a tu celular, que en unos minutos te llamaremos para contarte todo sobre el programa. 📞\n\n👉 Si prefieres que te escribamos, solo responde este mensaje y te atenderemos por WhatsApp\n",
+        "whatsAppTemplateName": "uees_envio_automatico2026"
+      },
+      "sessionCreationTime": "2026-02-02T16:07:57.261Z",
+      "chat": {
+        "chatId": "QL87U5AOBF3E0223LT3I",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593999666815"
+      },
+      "sessionId": "QL87U5AOBF3E0223LT3I_2026-02-02T16:07:57.261Z"
+    },
+    {
+      "id": "IAGJ2C67N8QTJYP323B8",
+      "creationTime": "2026-02-02T16:09:09.561Z",
+      "from": "user",
+      "content": {
+        "type": "text",
+        "text": "Hola chicos, please escríbanme"
+      },
+      "sessionCreationTime": "2026-02-02T16:07:57.261Z",
+      "chat": {
+        "chatId": "QL87U5AOBF3E0223LT3I",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593999666815"
+      },
+      "sessionId": "QL87U5AOBF3E0223LT3I_2026-02-02T16:07:57.261Z"
+    },
+    {
+      "id": "UKTLWL4Y17MIIGHRSS3U",
+      "creationTime": "2026-02-02T16:09:13.729Z",
+      "from": "bot",
+      "content": {
+        "type": "buttons",
+        "text": "Encontré varios temas al respecto. ¿Estás queriendo decir algo de esto?",
+        "buttons": [
+          "Hablar con un Asesor"
+        ]
+      },
+      "sessionCreationTime": "2026-02-02T16:07:57.261Z",
+      "chat": {
+        "chatId": "QL87U5AOBF3E0223LT3I",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593999666815"
+      },
+      "sessionId": "QL87U5AOBF3E0223LT3I_2026-02-02T16:07:57.261Z"
+    },
+    {
+      "id": "FQ3T7CPS2B45HVII2Q7O",
+      "creationTime": "2026-02-02T16:36:44.245Z",
+      "from": "agent",
+      "agentId": "SIS5ucZKrkNxBReBUAhmE0NmAlF3",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "*Buen día.*😀\nLe saluda Jennifer Taco, asesora educativa de la *Universidad Espíritu Santo (UEES)*.\n\nEs un gusto contactarle. Desde la Universidad #1 del Ecuador y una de las seis mejores de Latinoamérica según Times Higher Education 2026.\n\nCon gusto le brindo información sobre el Diplomado: *Derecho Penal y Seguridad en el Ciberespacio*."
+      },
+      "sessionCreationTime": "2026-02-02T16:07:57.261Z",
+      "chat": {
+        "chatId": "QL87U5AOBF3E0223LT3I",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593999666815"
+      },
+      "sessionId": "QL87U5AOBF3E0223LT3I_2026-02-02T16:07:57.261Z"
+    },
+    {
+      "id": "NY7KXYAHJGVQ6LO57SCH",
+      "creationTime": "2026-02-02T16:36:48.846Z",
+      "from": "agent",
+      "agentId": "SIS5ucZKrkNxBReBUAhmE0NmAlF3",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Para poder brindarle una asesoría más precisa y alineada a sus objetivos, ¿podría indicarme brevemente su perfil profesional y qué es lo que busca fortalecer o lograr con este tipo de formación?"
+      },
+      "sessionCreationTime": "2026-02-02T16:07:57.261Z",
+      "chat": {
+        "chatId": "QL87U5AOBF3E0223LT3I",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593999666815"
+      },
+      "sessionId": "QL87U5AOBF3E0223LT3I_2026-02-02T16:07:57.261Z"
+    },
+    {
+      "id": "TFXVBEWQ7HWP45TABF8W",
+      "creationTime": "2026-02-02T21:59:02.754Z",
+      "from": "bot",
+      "content": {
+        "type": "text",
+        "text": "Template:\n\n¡Bienvenido a la UEES! ✨ Nos hace mucha ilusión saludarte.\n\nMantente atento a tu celular, que en unos minutos te llamaremos para contarte todo sobre el programa. 📞\n\n👉 Si prefieres que te escribamos, solo responde este mensaje y te atenderemos por WhatsApp\n",
+        "whatsAppTemplateName": "uees_envio_automatico2026"
+      },
+      "sessionCreationTime": "2026-02-02T21:59:02.696Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-02T21:59:02.696Z"
+    },
+    {
+      "id": "UZ8E1OU88FA712464DCR",
+      "creationTime": "2026-02-02T21:59:37.674Z",
+      "from": "user",
+      "content": {
+        "type": "text",
+        "text": "Por WhatsApp por favor"
+      },
+      "sessionCreationTime": "2026-02-02T21:59:02.696Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-02T21:59:02.696Z"
+    },
+    {
+      "id": "18REDSYNOGW75QXV232C",
+      "creationTime": "2026-02-02T21:59:41.579Z",
+      "from": "bot",
+      "content": {
+        "type": "buttons",
+        "text": "Encontré varios temas al respecto. ¿Estás queriendo decir algo de esto?",
+        "buttons": [
+          "Hablar con un Asesor"
+        ]
+      },
+      "sessionCreationTime": "2026-02-02T21:59:02.696Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-02T21:59:02.696Z"
+    },
+    {
+      "id": "M0V0EU1L5FJFR7I172QQ",
+      "creationTime": "2026-02-02T22:12:08.921Z",
+      "from": "user",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "button-click",
+        "selectedButton": "Hablar con un Asesor"
+      },
+      "sessionCreationTime": "2026-02-02T21:59:02.696Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-02T21:59:02.696Z"
+    },
+    {
+      "id": "IZFACKOLJYMBX6ASUHP1",
+      "creationTime": "2026-02-02T22:23:38.985Z",
+      "from": "agent",
+      "agentId": "6Yl7ECAhf9N6ZDMkuwihjm8xyWl1",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Saludos, soy Christopher Portilla Asesor Educativo de la Universidad Espíritu Santo. Es un gusto atenderte🤗. \nDesea el Diplomado de *Derecho Penal y Seguridad en el Ciberespacio*. ¿Correcto?. "
+      },
+      "sessionCreationTime": "2026-02-02T21:59:02.696Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-02T21:59:02.696Z"
+    },
+    {
+      "id": "EVBCQX2MMY3LGRU154ZL",
+      "creationTime": "2026-02-02T22:23:57.758Z",
+      "from": "user",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Hola, si"
+      },
+      "sessionCreationTime": "2026-02-02T21:59:02.696Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-02T21:59:02.696Z"
+    },
+    {
+      "id": "Y0PUO3YOLNWAYZ5HMXV7",
+      "creationTime": "2026-02-02T22:24:10.474Z",
+      "from": "agent",
+      "agentId": "6Yl7ECAhf9N6ZDMkuwihjm8xyWl1",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Claro es la mejor oferta en formación continua diseñado por *Mentes brillantes*, es de *Alto Nivel y de aplicación desde la semana 1,online*, pero también cuéntenos un poco más. ¿Qué le llamo a usted más la atención? ¿O donde lo desea aplicarlo?.  \n"
+      },
+      "sessionCreationTime": "2026-02-02T21:59:02.696Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-02T21:59:02.696Z"
+    },
+    {
+      "id": "LCZJKDTRDIGY624C4EIP",
+      "creationTime": "2026-02-02T22:24:43.271Z",
+      "from": "user",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Me interesó sobre seguridad en el ciberespacio, siento que es un tema nuevo que vale la pena aprender"
+      },
+      "sessionCreationTime": "2026-02-02T21:59:02.696Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-02T21:59:02.696Z"
+    },
+    {
+      "id": "X1R6HY7IH2SVTPXT1KWV",
+      "creationTime": "2026-02-02T22:24:47.795Z",
+      "from": "user",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Recién me gradué de abogada"
+      },
+      "sessionCreationTime": "2026-02-02T21:59:02.696Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-02T21:59:02.696Z"
+    },
+    {
+      "id": "X0HVCEU8DTVELNNM8AIE",
+      "creationTime": "2026-02-02T22:24:54.357Z",
+      "from": "user",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Y quisiera probar algo nuevo no lo de siempre"
+      },
+      "sessionCreationTime": "2026-02-02T21:59:02.696Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-02T21:59:02.696Z"
+    },
+    {
+      "id": "2XMWE8DG4I54876S5Q4D",
+      "creationTime": "2026-02-02T22:25:03.786Z",
+      "from": "user",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Me puedes comentar sobre la malla ?"
+      },
+      "sessionCreationTime": "2026-02-02T21:59:02.696Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-02T21:59:02.696Z"
+    },
+    {
+      "id": "GOD1AMRRLFF5XYWTD0QP",
+      "creationTime": "2026-02-02T22:25:19.545Z",
+      "from": "agent",
+      "agentId": "6Yl7ECAhf9N6ZDMkuwihjm8xyWl1",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Muy bien le felicito que tenga en mente su desarrollo, claro, las formaciones en *Global Minds Programs*, son  #1 en el Ecuador, al ser diseñadas por expertos internacionales y su enfoque práctico, así puede llevar su gestión a otro nivel. Le envió para que pueda revisar: \n"
+      },
+      "sessionCreationTime": "2026-02-02T21:59:02.696Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-02T21:59:02.696Z"
+    },
+    {
+      "id": "DCJM8OGF7GBQZUT11VLN",
+      "creationTime": "2026-02-02T22:25:56.780Z",
+      "from": "agent",
+      "agentId": "6Yl7ECAhf9N6ZDMkuwihjm8xyWl1",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Es formación de Alto Nivel de 3 meses con un diplomado especializado, es 100% virtual con clases de hasta 2 horas los martes a las 7 pm. 😄\n "
+      },
+      "sessionCreationTime": "2026-02-02T21:59:02.696Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-02T21:59:02.696Z"
+    },
+    {
+      "id": "WMC8UV12UBIJIY763BZA",
+      "creationTime": "2026-02-02T22:26:25.333Z",
+      "from": "agent",
+      "agentId": "6Yl7ECAhf9N6ZDMkuwihjm8xyWl1",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "*Derecho Penal y Seguridad en el Ciberespacio*\n\nEste diplomado aborda los desafíos legales y de seguridad en el entorno digital, con un enfoque en el derecho penal informático y el ciberespacio."
+      },
+      "sessionCreationTime": "2026-02-02T21:59:02.696Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-02T21:59:02.696Z"
+    },
+    {
+      "id": "VYIF5J67VAUO7W44N0TA",
+      "creationTime": "2026-02-02T22:26:50.800Z",
+      "from": "agent",
+      "agentId": "6Yl7ECAhf9N6ZDMkuwihjm8xyWl1",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Tiene 4 módulos, le comparto cada uno, dura 3 semanas: "
+      },
+      "sessionCreationTime": "2026-02-02T21:59:02.696Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-02T21:59:02.696Z"
+    },
+    {
+      "id": "K3XU1O5764J816Z1HNLU",
+      "creationTime": "2026-02-02T22:27:09.153Z",
+      "from": "agent",
+      "agentId": "6Yl7ECAhf9N6ZDMkuwihjm8xyWl1",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "1 *Derecho penal informático*\n\nEn esta disciplina, se hace hincapié en el derecho penal informático. De esta manera, el estudiante analiza la legislación vigente y los posibles delitos cometidos mediante dispositivos tecnológicos e internet. Al finalizar, el estudiante es capaz de identificar y proponer soluciones a problemas de la teoría criminológica relacionados con los tipos penales ya existentes en la legislación vigente y los nuevos tipos de delitos derivados de las nuevas tecnologías."
+      },
+      "sessionCreationTime": "2026-02-02T21:59:02.696Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-02T21:59:02.696Z"
+    },
+    {
+      "id": "V5LSJUNA6Z5K2VN45UNK",
+      "creationTime": "2026-02-02T22:27:33.406Z",
+      "from": "agent",
+      "agentId": "6Yl7ECAhf9N6ZDMkuwihjm8xyWl1",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "2 *¿Qué es lo virtual? Entendiendo el ciberespacio?*\n\nEsta asignatura tiene como principal objetivo la evaluación del ciberespacio, abordando los elementos que caracterizan y distinguen lo real, lo virtual y lo digital en el contexto de la transformación digital. Al finalizar, el estudiante será capaz de comprender los efectos jurídicos de Internet, la relativización de las barreras de tiempo y espacio, así como fenómenos como la digitalización, el hipertexto y la virtualización de la economía y del ser."
+      },
+      "sessionCreationTime": "2026-02-02T21:59:02.696Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-02T21:59:02.696Z"
+    },
+    {
+      "id": "TOFC8W025WVI6QPLY2WA",
+      "creationTime": "2026-02-02T22:27:52.168Z",
+      "from": "agent",
+      "agentId": "6Yl7ECAhf9N6ZDMkuwihjm8xyWl1",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "3 *Gestión de seguridad de la información: prevención, contención y continuidad*\n\nEn este curso, los estudiantes evaluarán las medidas técnicas necesarias para gestionar incidentes de seguridad de la información, prevenir nuevos incidentes, contener daños y establecer planes de comunicación y continuidad del negocio. Al finalizar, los estudiantes serán capaces de gestionar incidentes de seguridad de la información."
+      },
+      "sessionCreationTime": "2026-02-02T21:59:02.696Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-02T21:59:02.696Z"
+    },
+    {
+      "id": "Q17RYAIGTQS3WL8ZUU75",
+      "creationTime": "2026-02-02T22:28:08.809Z",
+      "from": "agent",
+      "agentId": "6Yl7ECAhf9N6ZDMkuwihjm8xyWl1",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "4 *Blockchain y los smart contracts*\n\nEn esta asignatura, el estudiante analiza la definición y el funcionamiento de la tecnología blockchain y su aplicación específica en diversos instrumentos contractuales. A partir de ello, se abordan los problemas jurídicos relacionados con: (I) su concepción; (II) la ejecución automatizada; (III) la ejecución forzada en sede judicial; y (IV) la posibilidad de impedir la producción de sus efectos a través del sistema judicial, en el contexto de los contratos inteligentes. Al finalizar, el estudiante será capaz de evaluar la viabilidad del uso de smart contracts para la regulación de relaciones contractuales."
+      },
+      "sessionCreationTime": "2026-02-02T21:59:02.696Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-02T21:59:02.696Z"
+    },
+    {
+      "id": "08AJ1TIITRPVD0Z0EFYG",
+      "creationTime": "2026-02-02T22:28:37.280Z",
+      "from": "agent",
+      "agentId": "6Yl7ECAhf9N6ZDMkuwihjm8xyWl1",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "¿Si son los temas que buscaba?, para avanzar con los valores. 🤗"
+      },
+      "sessionCreationTime": "2026-02-02T21:59:02.696Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-02T21:59:02.696Z"
+    },
+    {
+      "id": "WLLZYQPVUWYMZFXC1S0U",
+      "creationTime": "2026-02-02T22:36:23.117Z",
+      "from": "user",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Si me interesa"
+      },
+      "sessionCreationTime": "2026-02-02T21:59:02.696Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-02T21:59:02.696Z"
+    },
+    {
+      "id": "XE7VP4J2WSXBYT5K6O7J",
+      "creationTime": "2026-02-02T22:39:18.516Z",
+      "from": "agent",
+      "agentId": "6Yl7ECAhf9N6ZDMkuwihjm8xyWl1",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "El valor de inversión esta acorde a lo que la formación le permitirá desarrollar y el peso en su perfil profesional con el respaldo de la mejor Universidad del Ecuador y #1 en Iberoamérica. En *$1200 o 3 pagos de $400* ¿Buscaba desarrollarlo al contado o mensuales con nosotros?.\n\n"
+      },
+      "sessionCreationTime": "2026-02-02T21:59:02.696Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-02T21:59:02.696Z"
+    },
+    {
+      "id": "GQCZ5ZJEW74N6CRSW6PQ",
+      "creationTime": "2026-02-02T22:40:04.965Z",
+      "from": "user",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Mensuales porque actualmente no estoy trabajando, estoy haciendo prácticas de mi segunda carrera"
+      },
+      "sessionCreationTime": "2026-02-02T21:59:02.696Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-02T21:59:02.696Z"
+    },
+    {
+      "id": "UXJPTYVD6XUMAHK7SPWO",
+      "creationTime": "2026-02-02T22:40:17.148Z",
+      "from": "user",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Se puede diferir a 6 meses?"
+      },
+      "sessionCreationTime": "2026-02-02T21:59:02.696Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-02T21:59:02.696Z"
+    },
+    {
+      "id": "VUI2A2IUKO7245JRJD2X",
+      "creationTime": "2026-02-02T22:42:32.386Z",
+      "from": "agent",
+      "agentId": "6Yl7ECAhf9N6ZDMkuwihjm8xyWl1",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Puede aprovechar al momento, inscripciones por pago temprano. Inicia este Diplomado el *27/04*. Puede acceder con el 40% por pago anticipado. \n\nLe queda en *$720 o 3 pagos de $240*. \n\n*Se le puede ayudar para que pague una cuota de *$240 ahora para el descuento de pago temprano, se acepta TC o TD, y desde Mayo las demás mensualidades*. \n\n¿Le interesa esta opción?. \n"
+      },
+      "sessionCreationTime": "2026-02-02T21:59:02.696Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-02T21:59:02.696Z"
+    },
+    {
+      "id": "6IURSGVH6C7CZYLV6H8R",
+      "creationTime": "2026-02-02T22:44:18.265Z",
+      "from": "user",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Si"
+      },
+      "sessionCreationTime": "2026-02-02T21:59:02.696Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-02T21:59:02.696Z"
+    },
+    {
+      "id": "GFJIPOGIP5KVQ8ABG33T",
+      "creationTime": "2026-02-02T22:44:19.894Z",
+      "from": "user",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Perfecto"
+      },
+      "sessionCreationTime": "2026-02-02T21:59:02.696Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-02T21:59:02.696Z"
+    },
+    {
+      "id": "QAQVQJ84DXG1L5E7H6MF",
+      "creationTime": "2026-02-02T22:45:07.448Z",
+      "from": "agent",
+      "agentId": "6Yl7ECAhf9N6ZDMkuwihjm8xyWl1",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Lo solicito, ayúdeme con su cédula y nombres completos para asignarle un código por favor. 🤗"
+      },
+      "sessionCreationTime": "2026-02-02T21:59:02.696Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-02T21:59:02.696Z"
+    },
+    {
+      "id": "OMVKUZ7HIOUUEE3QC2H8",
+      "creationTime": "2026-02-02T22:45:32.168Z",
+      "from": "user",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "1719704627"
+      },
+      "sessionCreationTime": "2026-02-02T21:59:02.696Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-02T21:59:02.696Z"
+    },
+    {
+      "id": "53OJGRQUJZ4R5MBF0EV4",
+      "creationTime": "2026-02-02T22:45:39.544Z",
+      "from": "user",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "María Emilia Sánchez Alemán"
+      },
+      "sessionCreationTime": "2026-02-02T21:59:02.696Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-02T21:59:02.696Z"
+    },
+    {
+      "id": "ATW1LV50ZW8CX0UZSXRX",
+      "creationTime": "2026-02-02T22:47:16.042Z",
+      "from": "agent",
+      "agentId": "6Yl7ECAhf9N6ZDMkuwihjm8xyWl1",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Por favor, le envió el link para el pago mientras se le asigna el código un momento por favor.  "
+      },
+      "sessionCreationTime": "2026-02-02T21:59:02.696Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-02T21:59:02.696Z"
+    },
+    {
+      "id": "X44MXI4ESHPZ6YHL5CM3",
+      "creationTime": "2026-02-02T22:47:37.228Z",
+      "from": "agent",
+      "agentId": "6Yl7ECAhf9N6ZDMkuwihjm8xyWl1",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Link: \n\nhttps://premium.uees.edu.ec/area-de-estudio/derecho-y-compliance/diplomado/#derecho-penal-y-seguridad-en-el-ciberespacio"
+      },
+      "sessionCreationTime": "2026-02-02T21:59:02.696Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-02T21:59:02.696Z"
+    },
+    {
+      "id": "OX0VFTRT5UBZ67YIRSK1",
+      "creationTime": "2026-02-02T22:48:14.862Z",
+      "from": "agent",
+      "agentId": "6Yl7ECAhf9N6ZDMkuwihjm8xyWl1",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Por favor, ingrese y baje hasta el final para que encuentre el Diplomado. "
+      },
+      "sessionCreationTime": "2026-02-02T21:59:02.696Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-02T21:59:02.696Z"
+    },
+    {
+      "id": "3E2UZITWYJT023MVBS1T",
+      "creationTime": "2026-02-02T22:48:17.149Z",
+      "from": "agent",
+      "agentId": "6Yl7ECAhf9N6ZDMkuwihjm8xyWl1",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "image",
+        "media": {
+          "url": "https://storage.googleapis.com/storage.botmaker.com/public/res/nodslabsas/agents/20260202-6Yl7ECAhf9N6ZDMkuwihjm8xyWl1-7BZMK-aW1hZ2U=.png"
+        }
+      },
+      "sessionCreationTime": "2026-02-02T21:59:02.696Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-02T21:59:02.696Z"
+    },
+    {
+      "id": "LT6UAM4EPFBJPCZE287Y",
+      "creationTime": "2026-02-02T22:48:43.789Z",
+      "from": "agent",
+      "agentId": "6Yl7ECAhf9N6ZDMkuwihjm8xyWl1",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "image",
+        "media": {
+          "url": "https://storage.googleapis.com/storage.botmaker.com/public/res/nodslabsas/agents/20260202-6Yl7ECAhf9N6ZDMkuwihjm8xyWl1-V2W8A-aW1hZ2U=.png"
+        }
+      },
+      "sessionCreationTime": "2026-02-02T21:59:02.696Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-02T21:59:02.696Z"
+    },
+    {
+      "id": "N28ORJMZ68VWCSWW5JXC",
+      "creationTime": "2026-02-02T22:48:55.770Z",
+      "from": "agent",
+      "agentId": "6Yl7ECAhf9N6ZDMkuwihjm8xyWl1",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Ingresa el código después, en la parte superior. "
+      },
+      "sessionCreationTime": "2026-02-02T21:59:02.696Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-02T21:59:02.696Z"
+    },
+    {
+      "id": "QP1W1YFQYK3B4YVULK55",
+      "creationTime": "2026-02-02T22:49:06.563Z",
+      "from": "agent",
+      "agentId": "6Yl7ECAhf9N6ZDMkuwihjm8xyWl1",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Se le asigna el siguiente código: \n\n"
+      },
+      "sessionCreationTime": "2026-02-02T21:59:02.696Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-02T21:59:02.696Z"
+    },
+    {
+      "id": "FN1AJFW2MQIMUIFVBF05",
+      "creationTime": "2026-02-02T22:49:09.565Z",
+      "from": "agent",
+      "agentId": "6Yl7ECAhf9N6ZDMkuwihjm8xyWl1",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "*GDPPEB35*"
+      },
+      "sessionCreationTime": "2026-02-02T21:59:02.696Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-02T21:59:02.696Z"
+    },
+    {
+      "id": "HJUCY8K33LCXMWZPMU6J",
+      "creationTime": "2026-02-02T22:49:32.856Z",
+      "from": "agent",
+      "agentId": "6Yl7ECAhf9N6ZDMkuwihjm8xyWl1",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "La activación del código es de 12 horas. 🤝"
+      },
+      "sessionCreationTime": "2026-02-02T21:59:02.696Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-02T21:59:02.696Z"
+    },
+    {
+      "id": "C2AJDN5G0TOLJM5NM4VJ",
+      "creationTime": "2026-02-02T22:53:22.437Z",
+      "from": "user",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "__unsupported__"
+      },
+      "sessionCreationTime": "2026-02-02T21:59:02.696Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-02T21:59:02.696Z"
+    },
+    {
+      "id": "FW5KBQZPPGIOQVR6ZZ7G",
+      "creationTime": "2026-02-02T22:53:24.683Z",
+      "from": "user",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "image",
+        "media": {
+          "url": "https://storage.googleapis.com/storage.botmaker.com/public/res/nodslabsas/users/e777/0652/2fc5/163c/4fac/367d/86cc/cd0c/e77706522fc5163c4fac367d86cccd0c.jpeg"
+        }
+      },
+      "sessionCreationTime": "2026-02-02T21:59:02.696Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-02T21:59:02.696Z"
+    },
+    {
+      "id": "EB2M1XOUR8FB4KIKOMGQ",
+      "creationTime": "2026-02-02T22:53:25.774Z",
+      "from": "user",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "image",
+        "media": {
+          "url": "https://storage.googleapis.com/storage.botmaker.com/public/res/nodslabsas/users/5e06/77b2/2ab9/f006/7b82/9886/da8f/8b8b/5e0677b22ab9f0067b829886da8f8b8b.jpeg"
+        }
+      },
+      "sessionCreationTime": "2026-02-02T21:59:02.696Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-02T21:59:02.696Z"
+    },
+    {
+      "id": "N3AYS5TG5B26CZTX7IE8",
+      "creationTime": "2026-02-02T22:53:26.710Z",
+      "from": "user",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Ya está"
+      },
+      "sessionCreationTime": "2026-02-02T21:59:02.696Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-02T21:59:02.696Z"
+    },
+    {
+      "id": "OU8EMCHPRZBLXDUH4J24",
+      "creationTime": "2026-02-02T22:55:28.800Z",
+      "from": "agent",
+      "agentId": "6Yl7ECAhf9N6ZDMkuwihjm8xyWl1",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Perfecto, ayúdeme por favor con su CV o link de LinkedIn para registrarle en su perfil de estudiante. 🤗 ¿Lo tiene o aún no tal vez?. "
+      },
+      "sessionCreationTime": "2026-02-02T21:59:02.696Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-02T21:59:02.696Z"
+    },
+    {
+      "id": "3I4GV10JAS1P2PEVZTLV",
+      "creationTime": "2026-02-02T22:56:00.696Z",
+      "from": "user",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "https://www.linkedin.com/in/mar%C3%ADa-emilia-s%C3%A1nchez-alem%C3%A1n-29136123b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+      },
+      "sessionCreationTime": "2026-02-02T21:59:02.696Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-02T21:59:02.696Z"
+    },
+    {
+      "id": "1088XV7PQBIZXNLY28P7",
+      "creationTime": "2026-02-02T22:56:22.619Z",
+      "from": "agent",
+      "agentId": "6Yl7ECAhf9N6ZDMkuwihjm8xyWl1",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "🎉 ¡Felicitaciones por tu inscripción en la UEES!\nNos alegra mucho saber que has dado este importante paso en tu formación. Iniciar un programa en la Universidad Espíritu Santo es una excelente decisión que, sin duda, ampliará tus oportunidades académicas y profesionales.\n\nTe deseamos muchos éxitos en esta nueva etapa y que aproveches al máximo todo lo que la UEES tiene para ofrecerte. 🌟📚"
+      },
+      "sessionCreationTime": "2026-02-02T21:59:02.696Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-02T21:59:02.696Z"
+    },
+    {
+      "id": "QL34WV6V5ZW6J704TZSP",
+      "creationTime": "2026-02-02T22:56:48.297Z",
+      "from": "agent",
+      "agentId": "6Yl7ECAhf9N6ZDMkuwihjm8xyWl1",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "A su correo le llegarán las instrucciones unas semanas antes del ingreso, su siguiente pago es en Mayo. "
+      },
+      "sessionCreationTime": "2026-02-02T21:59:02.696Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-02T21:59:02.696Z"
+    },
+    {
+      "id": "I65DAZ4EZKNZOOZXNB52",
+      "creationTime": "2026-02-02T22:56:55.367Z",
+      "from": "user",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Hola inicia el 27 de abril verdad?"
+      },
+      "sessionCreationTime": "2026-02-02T21:59:02.696Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-02T21:59:02.696Z"
+    },
+    {
+      "id": "MPDX1TQBLNTEKOJQY6DF",
+      "creationTime": "2026-02-02T22:57:00.175Z",
+      "from": "user",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Gracias"
+      },
+      "sessionCreationTime": "2026-02-02T21:59:02.696Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-02T21:59:02.696Z"
+    },
+    {
+      "id": "3BGYXB8ZG81CYYYNYEXM",
+      "creationTime": "2026-02-02T22:57:23.645Z",
+      "from": "agent",
+      "agentId": "6Yl7ECAhf9N6ZDMkuwihjm8xyWl1",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Si correcto, el 27 🤗."
+      },
+      "sessionCreationTime": "2026-02-02T21:59:02.696Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-02T21:59:02.696Z"
+    },
+    {
+      "id": "KLMPQMVWJVMF2481U6YA",
+      "creationTime": "2026-02-02T22:58:17.526Z",
+      "from": "user",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Gracias !!"
+      },
+      "sessionCreationTime": "2026-02-02T21:59:02.696Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-02T21:59:02.696Z"
+    },
+    {
+      "id": "QKXC3COH0VLKG7QDWDGC",
+      "creationTime": "2026-02-02T22:58:21.513Z",
+      "from": "user",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Estaré pendiente a mi correo"
+      },
+      "sessionCreationTime": "2026-02-02T21:59:02.696Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-02T21:59:02.696Z"
+    },
+    {
+      "id": "5Q1HZDE7XCJYLWGVGT2Q",
+      "creationTime": "2026-02-02T23:05:47.710Z",
+      "from": "agent",
+      "agentId": "6Yl7ECAhf9N6ZDMkuwihjm8xyWl1",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Cualquier cosa, quedamos al pendiente por este medio de igual forma. 🤝"
+      },
+      "sessionCreationTime": "2026-02-02T21:59:02.696Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-02T21:59:02.696Z"
+    },
+    {
+      "id": "6PGOVMTYWCTWQ0Q0GAJQ",
+      "creationTime": "2026-02-03T21:01:04.762Z",
+      "from": "agent",
+      "agentId": "tCqQvsaNRiMDen8aZXqionhdSDA2",
+      "queueId": "uees-permanencia",
+      "content": {
+        "type": "text",
+        "text": "Template:\n \nHola, Emilia.\n \nFaltan solo unos días para que venza el plazo para el envío de tu documentación, indispensable para el registro correcto de tu certificado final del programa.\n⏳ El tiempo está corriendo.\n \nEnvío de documento en la plataforma\n1. Accede a tu plataforma;\n2. Haz clic en “Vida Académica”;\n3. Ingresa a “Documentos de inscripción”;\n4. Sube el documento pendiente."
+      },
+      "sessionCreationTime": "2026-02-03T21:01:04.658Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-03T21:01:04.658Z"
+    },
+    {
+      "id": "HQA0AFQC3U44NR604ZK6",
+      "creationTime": "2026-02-03T21:02:55.651Z",
+      "from": "user",
+      "queueId": "uees-permanencia",
+      "content": {
+        "type": "text",
+        "text": "Hola"
+      },
+      "sessionCreationTime": "2026-02-03T21:01:04.658Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-03T21:01:04.658Z"
+    },
+    {
+      "id": "WUXQGLMPFT4RCDM21HUE",
+      "creationTime": "2026-02-03T21:03:01.457Z",
+      "from": "user",
+      "queueId": "uees-permanencia",
+      "content": {
+        "type": "image",
+        "media": {
+          "url": "https://storage.googleapis.com/storage.botmaker.com/public/res/nodslabsas/users/557f/db74/2a8a/f9ad/eefc/42d6/6490/d7a7/557fdb742a8af9adeefc42d66490d7a7.jpeg"
+        }
+      },
+      "sessionCreationTime": "2026-02-03T21:01:04.658Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-03T21:01:04.658Z"
+    },
+    {
+      "id": "CJ7BCI7LGD5CW3OJ3FEK",
+      "creationTime": "2026-02-03T21:03:17.906Z",
+      "from": "user",
+      "queueId": "uees-permanencia",
+      "content": {
+        "type": "text",
+        "text": "Creo que lo que pasa es que registraron la cédula de mi papá porque el fue el que pagó"
+      },
+      "sessionCreationTime": "2026-02-03T21:01:04.658Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-03T21:01:04.658Z"
+    },
+    {
+      "id": "BT1CAJI111UIIP85DL5A",
+      "creationTime": "2026-02-03T21:03:38.228Z",
+      "from": "user",
+      "queueId": "uees-permanencia",
+      "content": {
+        "type": "text",
+        "text": "Enviamos un correo mencionando que por favor cambien eso"
+      },
+      "sessionCreationTime": "2026-02-03T21:01:04.658Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-03T21:01:04.658Z"
+    },
+    {
+      "id": "N01HT84YHML44FZFEQHN",
+      "creationTime": "2026-02-03T21:05:44.607Z",
+      "from": "agent",
+      "agentId": "tCqQvsaNRiMDen8aZXqionhdSDA2",
+      "queueId": "uees-permanencia",
+      "content": {
+        "type": "text",
+        "text": "Buenas tardes estimada Emilia, le saluda Melanie López del área de servicio al estudiante. La cedula que tengo registrada es la siguiente 1719704627. ¿Es correcta?"
+      },
+      "sessionCreationTime": "2026-02-03T21:01:04.658Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-03T21:01:04.658Z"
+    },
+    {
+      "id": "JJLLZZQCYY1Y544PR4WJ",
+      "creationTime": "2026-02-03T21:07:39.368Z",
+      "from": "user",
+      "queueId": "uees-permanencia",
+      "content": {
+        "type": "text",
+        "text": "Si esa es mi cédula"
+      },
+      "sessionCreationTime": "2026-02-03T21:01:04.658Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-03T21:01:04.658Z"
+    },
+    {
+      "id": "M2VY34AYB6KX8RX2WPX4",
+      "creationTime": "2026-02-03T21:16:22.608Z",
+      "from": "agent",
+      "agentId": "tCqQvsaNRiMDen8aZXqionhdSDA2",
+      "queueId": "uees-permanencia",
+      "content": {
+        "type": "text",
+        "text": "Esa es la que tenemos registrada estimada Emilia, las credenciales le llegan a su correo dentro de 24 o 48 horas, después de que realizo el pago."
+      },
+      "sessionCreationTime": "2026-02-03T21:01:04.658Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-03T21:01:04.658Z"
+    },
+    {
+      "id": "6NQT20GZ3W1MV0CDHUU4",
+      "creationTime": "2026-02-03T21:16:57.371Z",
+      "from": "user",
+      "queueId": "uees-permanencia",
+      "content": {
+        "type": "text",
+        "text": "Bueno gracias"
+      },
+      "sessionCreationTime": "2026-02-03T21:01:04.658Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-03T21:01:04.658Z"
+    },
+    {
+      "id": "DI007V05JIMI0KIYUP5I",
+      "creationTime": "2026-02-03T21:17:11.185Z",
+      "from": "agent",
+      "agentId": "tCqQvsaNRiMDen8aZXqionhdSDA2",
+      "queueId": "uees-permanencia",
+      "content": {
+        "type": "text",
+        "text": "✅"
+      },
+      "sessionCreationTime": "2026-02-03T21:01:04.658Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-03T21:01:04.658Z"
+    },
+    {
+      "id": "MGSBG4BJLVQ5FN8GA6ZV",
+      "creationTime": "2026-02-03T21:17:17.197Z",
+      "from": "user",
+      "queueId": "uees-permanencia",
+      "content": {
+        "type": "text",
+        "text": "Es que lo que pasa es que me llegó un correo con lo de la plataforma pero llegó al correo de mi papá"
+      },
+      "sessionCreationTime": "2026-02-03T21:01:04.658Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-03T21:01:04.658Z"
+    },
+    {
+      "id": "6NXLO6U6E0BOVL1CK3ID",
+      "creationTime": "2026-02-03T21:17:20.837Z",
+      "from": "user",
+      "queueId": "uees-permanencia",
+      "content": {
+        "type": "text",
+        "text": "No al mío"
+      },
+      "sessionCreationTime": "2026-02-03T21:01:04.658Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-03T21:01:04.658Z"
+    },
+    {
+      "id": "6JJ4SSNUV4PGPAI1ZH4I",
+      "creationTime": "2026-02-03T21:18:35.595Z",
+      "from": "agent",
+      "agentId": "tCqQvsaNRiMDen8aZXqionhdSDA2",
+      "queueId": "uees-permanencia",
+      "content": {
+        "type": "text",
+        "text": "Este es el correo que tenemos registrado mariesanchez1305@gmail.com "
+      },
+      "sessionCreationTime": "2026-02-03T21:01:04.658Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-03T21:01:04.658Z"
+    },
+    {
+      "id": "AP3GSEV6EFLTS50Z05JQ",
+      "creationTime": "2026-02-03T21:19:39.668Z",
+      "from": "user",
+      "queueId": "uees-permanencia",
+      "content": {
+        "type": "text",
+        "text": "Si ese es el mío"
+      },
+      "sessionCreationTime": "2026-02-03T21:01:04.658Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-03T21:01:04.658Z"
+    },
+    {
+      "id": "W8L8TNGJ5MVJIUTYHSTS",
+      "creationTime": "2026-02-03T21:19:44.231Z",
+      "from": "agent",
+      "agentId": "tCqQvsaNRiMDen8aZXqionhdSDA2",
+      "queueId": "uees-permanencia",
+      "content": {
+        "type": "text",
+        "text": "¿El correo que le llego es el notificación de pago o que contenido tenia?"
+      },
+      "sessionCreationTime": "2026-02-03T21:01:04.658Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-03T21:01:04.658Z"
+    },
+    {
+      "id": "WO7TCCK8FGMLBX625DDE",
+      "creationTime": "2026-02-03T21:21:04.113Z",
+      "from": "user",
+      "queueId": "uees-permanencia",
+      "content": {
+        "type": "image",
+        "media": {
+          "url": "https://storage.googleapis.com/storage.botmaker.com/public/res/nodslabsas/users/e415/611b/3498/9995/20a0/532b/b6f6/dbfb/e415611b3498999520a0532bb6f6dbfb.jpeg"
+        }
+      },
+      "sessionCreationTime": "2026-02-03T21:01:04.658Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-03T21:01:04.658Z"
+    },
+    {
+      "id": "HNYHH3UKPCQ2VLB6JG4E",
+      "creationTime": "2026-02-03T21:22:33.621Z",
+      "from": "agent",
+      "agentId": "tCqQvsaNRiMDen8aZXqionhdSDA2",
+      "queueId": "uees-permanencia",
+      "content": {
+        "type": "text",
+        "text": "Correcto, en este caso, intente ingresar con su numero de cedula a la plataforma, por favor."
+      },
+      "sessionCreationTime": "2026-02-03T21:01:04.658Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-03T21:01:04.658Z"
+    },
+    {
+      "id": "DWQCJEAW38X0OFC36PQW",
+      "creationTime": "2026-02-03T21:23:16.237Z",
+      "from": "user",
+      "queueId": "uees-permanencia",
+      "content": {
+        "type": "image",
+        "media": {
+          "url": "https://storage.googleapis.com/storage.botmaker.com/public/res/nodslabsas/users/174c/1d66/67a0/a9e9/b44e/a45e/d736/cadd/174c1d6667a0a9e9b44ea45ed736cadd.jpeg"
+        }
+      },
+      "sessionCreationTime": "2026-02-03T21:01:04.658Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-03T21:01:04.658Z"
+    },
+    {
+      "id": "JXFOSIMOPP0BFY81S4LP",
+      "creationTime": "2026-02-03T21:23:17.311Z",
+      "from": "user",
+      "queueId": "uees-permanencia",
+      "content": {
+        "type": "text",
+        "text": "No me sirve"
+      },
+      "sessionCreationTime": "2026-02-03T21:01:04.658Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-03T21:01:04.658Z"
+    },
+    {
+      "id": "5O422ZNAE23SRKLAQZAV",
+      "creationTime": "2026-02-03T21:23:56.998Z",
+      "from": "agent",
+      "agentId": "tCqQvsaNRiMDen8aZXqionhdSDA2",
+      "queueId": "uees-permanencia",
+      "content": {
+        "type": "text",
+        "text": "Le damos clic en recordar contraseña y ubica el correo de su papá."
+      },
+      "sessionCreationTime": "2026-02-03T21:01:04.658Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-03T21:01:04.658Z"
+    },
+    {
+      "id": "2IF0KBYTYC8HLZV736VL",
+      "creationTime": "2026-02-03T22:18:54.027Z",
+      "from": "user",
+      "queueId": "uees-permanencia",
+      "content": {
+        "type": "image",
+        "media": {
+          "caption": "Sale que el usuario es la cédula de mi papá",
+          "url": "https://storage.googleapis.com/storage.botmaker.com/public/res/nodslabsas/users/27ac/e3db/3890/e3fd/a682/914f/5574/5add/27ace3db3890e3fda682914f55745add.jpeg"
+        }
+      },
+      "sessionCreationTime": "2026-02-03T21:01:04.658Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-03T21:01:04.658Z"
+    },
+    {
+      "id": "1RSYX8EFLLM5V8SMR7DZ",
+      "creationTime": "2026-02-03T22:19:12.516Z",
+      "from": "user",
+      "queueId": "uees-permanencia",
+      "content": {
+        "type": "text",
+        "text": "Como arreglo eso?"
+      },
+      "sessionCreationTime": "2026-02-03T21:01:04.658Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-03T21:01:04.658Z"
+    },
+    {
+      "id": "V2QWIMMF3FDTIY1W4XHO",
+      "creationTime": "2026-02-03T22:22:45.698Z",
+      "from": "user",
+      "queueId": "uees-permanencia",
+      "content": {
+        "type": "text",
+        "text": "Sale como que fuera mi papá el que va a estudiar"
+      },
+      "sessionCreationTime": "2026-02-03T21:01:04.658Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-03T21:01:04.658Z"
+    },
+    {
+      "id": "O8FDJQQPLNKBRO7EO2ZJ",
+      "creationTime": "2026-02-03T22:22:48.384Z",
+      "from": "user",
+      "queueId": "uees-permanencia",
+      "content": {
+        "type": "image",
+        "media": {
+          "caption": "Mira",
+          "url": "https://storage.googleapis.com/storage.botmaker.com/public/res/nodslabsas/users/3d6a/a9b0/926b/790a/23f5/483f/5eac/e88f/3d6aa9b0926b790a23f5483f5eace88f.jpeg"
+        }
+      },
+      "sessionCreationTime": "2026-02-03T21:01:04.658Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-03T21:01:04.658Z"
+    },
+    {
+      "id": "5IX12VD8Q6RDHUHXCAPW",
+      "creationTime": "2026-02-03T22:23:00.711Z",
+      "from": "user",
+      "queueId": "uees-permanencia",
+      "content": {
+        "type": "text",
+        "text": "E incluso les di mi LinkedIn con mi nombre"
+      },
+      "sessionCreationTime": "2026-02-03T21:01:04.658Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-03T21:01:04.658Z"
+    },
+    {
+      "id": "OC5TPEZ5T2KAHAS557WL",
+      "creationTime": "2026-02-03T22:25:20.085Z",
+      "from": "agent",
+      "agentId": "tCqQvsaNRiMDen8aZXqionhdSDA2",
+      "queueId": "uees-permanencia",
+      "content": {
+        "type": "text",
+        "text": "Listo estimada Emilia, voy a escalar su caso, para que le realicen el cambio."
+      },
+      "sessionCreationTime": "2026-02-03T21:01:04.658Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-03T21:01:04.658Z"
+    },
+    {
+      "id": "6JU3UMTTUHBV811DWEPP",
+      "creationTime": "2026-02-03T22:25:27.080Z",
+      "from": "user",
+      "queueId": "uees-permanencia",
+      "content": {
+        "type": "text",
+        "text": "Gracias"
+      },
+      "sessionCreationTime": "2026-02-03T21:01:04.658Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-03T21:01:04.658Z"
+    },
+    {
+      "id": "SQ7AOTQ8MC46WHPOZE80",
+      "creationTime": "2026-02-03T22:25:32.632Z",
+      "from": "agent",
+      "agentId": "tCqQvsaNRiMDen8aZXqionhdSDA2",
+      "queueId": "uees-permanencia",
+      "content": {
+        "type": "text",
+        "text": "✅"
+      },
+      "sessionCreationTime": "2026-02-03T21:01:04.658Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-03T21:01:04.658Z"
+    },
+    {
+      "id": "GTEYEZUW3CMMPEO1515B",
+      "creationTime": "2026-02-04T17:44:06.935Z",
+      "from": "agent",
+      "agentId": "tCqQvsaNRiMDen8aZXqionhdSDA2",
+      "queueId": "uees-permanencia",
+      "content": {
+        "type": "text",
+        "text": "Estimada Emilia\nLe informamos que el cambio solicitado ya fue realizado correctamente en la plataforma.\nSin embargo, el ingreso deberá seguir realizándolo con los datos del papá, ya que por temas de facturación es necesario que ese correo electrónico se mantenga registrado en el sistema. No se preocupe, ya que el certificado saldrá emitido a su nombre sin ningún inconveniente.\nAnte cualquier duda adicional, quedamos atentos para ayudarle."
+      },
+      "sessionCreationTime": "2026-02-03T21:01:04.658Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-03T21:01:04.658Z"
+    },
+    {
+      "id": "6M4P5D4RO3H3XQHUDE3N",
+      "creationTime": "2026-02-04T17:46:05.665Z",
+      "from": "user",
+      "queueId": "uees-permanencia",
+      "content": {
+        "type": "text",
+        "text": "Está bien gracias"
+      },
+      "sessionCreationTime": "2026-02-03T21:01:04.658Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-03T21:01:04.658Z"
+    },
+    {
+      "id": "SPER3ZVFJBFK2O74OQOZ",
+      "creationTime": "2026-02-04T17:48:42.662Z",
+      "from": "agent",
+      "agentId": "tCqQvsaNRiMDen8aZXqionhdSDA2",
+      "queueId": "uees-permanencia",
+      "content": {
+        "type": "text",
+        "text": "✅"
+      },
+      "sessionCreationTime": "2026-02-03T21:01:04.658Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-03T21:01:04.658Z"
+    },
+    {
+      "id": "2LCHQLWFO4WY7JACFMR1",
+      "creationTime": "2026-02-04T18:04:03.883Z",
+      "from": "agent",
+      "agentId": "tCqQvsaNRiMDen8aZXqionhdSDA2",
+      "queueId": "uees-permanencia",
+      "content": {
+        "type": "text",
+        "text": "Template:\n \nHola, Emilia.\n \nFaltan solo unos días para que venza el plazo para el envío de tu documentación, indispensable para el registro correcto de tu certificado final del programa.\n⏳ El tiempo está corriendo.\n \nEnvío de documento en la plataforma\n1. Accede a tu plataforma;\n2. Haz clic en “Vida Académica”;\n3. Ingresa a “Documentos de inscripción”;\n4. Sube el documento pendiente."
+      },
+      "sessionCreationTime": "2026-02-03T21:01:04.658Z",
+      "chat": {
+        "chatId": "6H3K4EVS6OMW4BVUAXGO",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593958752306"
+      },
+      "sessionId": "6H3K4EVS6OMW4BVUAXGO_2026-02-03T21:01:04.658Z"
+    },
+    {
+      "id": "D4IE33V15DE6L1LQ4TL0",
+      "creationTime": "2026-02-03T19:16:25.373Z",
+      "from": "bot",
+      "content": {
+        "type": "text",
+        "text": "Template:\n\n¡Bienvenido a la UEES! ✨ Nos hace mucha ilusión saludarte.\n\nMantente atento a tu celular, que en unos minutos te llamaremos para contarte todo sobre el programa. 📞\n\n👉 Si prefieres que te escribamos, solo responde este mensaje y te atenderemos por WhatsApp\n",
+        "whatsAppTemplateName": "uees_envio_automatico2026"
+      },
+      "sessionCreationTime": "2026-02-03T19:16:25.360Z",
+      "chat": {
+        "chatId": "Y132EGVP6DZMP33CTQWX",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593991494560"
+      },
+      "sessionId": "Y132EGVP6DZMP33CTQWX_2026-02-03T19:16:25.360Z"
+    },
+    {
+      "id": "GJX2IQHXVJRAY1ICBTNB",
+      "creationTime": "2026-02-03T19:16:49.037Z",
+      "from": "user",
+      "content": {
+        "type": "text",
+        "text": "Cursos de derecho penal"
+      },
+      "sessionCreationTime": "2026-02-03T19:16:25.360Z",
+      "chat": {
+        "chatId": "Y132EGVP6DZMP33CTQWX",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593991494560"
+      },
+      "sessionId": "Y132EGVP6DZMP33CTQWX_2026-02-03T19:16:25.360Z"
+    },
+    {
+      "id": "C5ZITKPENA32KAX8AZ2H",
+      "creationTime": "2026-02-03T19:33:53.752Z",
+      "from": "agent",
+      "agentId": "SIS5ucZKrkNxBReBUAhmE0NmAlF3",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "*Buen día Sr. Jordán*😀\nLe saluda Jennifer Taco, asesora educativa de la *Universidad Espíritu Santo (UEES)*.\n\nEs un gusto contactarle. Desde la Universidad #1 del Ecuador y una de las seis mejores de Latinoamérica según Times Higher Education 2026.\n\nCon gusto le brindo información sobre el Diplomado: *Derecho Penal y Seguridad en el Ciberespacio*."
+      },
+      "sessionCreationTime": "2026-02-03T19:16:25.360Z",
+      "chat": {
+        "chatId": "Y132EGVP6DZMP33CTQWX",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593991494560"
+      },
+      "sessionId": "Y132EGVP6DZMP33CTQWX_2026-02-03T19:16:25.360Z"
+    },
+    {
+      "id": "CB1JC0C8S56FX4LTFC27",
+      "creationTime": "2026-02-03T19:34:00.427Z",
+      "from": "agent",
+      "agentId": "SIS5ucZKrkNxBReBUAhmE0NmAlF3",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Para poder brindarle una asesoría más precisa y alineada a sus objetivos, ¿podría indicarme brevemente su perfil profesional y qué es lo que busca fortalecer o lograr con este tipo de formación?"
+      },
+      "sessionCreationTime": "2026-02-03T19:16:25.360Z",
+      "chat": {
+        "chatId": "Y132EGVP6DZMP33CTQWX",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593991494560"
+      },
+      "sessionId": "Y132EGVP6DZMP33CTQWX_2026-02-03T19:16:25.360Z"
+    },
+    {
+      "id": "W7BU4D7C5P1QBHKCEZB3",
+      "creationTime": "2026-02-03T20:18:17.304Z",
+      "from": "user",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Soy agente de control municipal con bases  en coip coescop y Cootad y técnico de SSO"
+      },
+      "sessionCreationTime": "2026-02-03T19:16:25.360Z",
+      "chat": {
+        "chatId": "Y132EGVP6DZMP33CTQWX",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593991494560"
+      },
+      "sessionId": "Y132EGVP6DZMP33CTQWX_2026-02-03T19:16:25.360Z"
+    },
+    {
+      "id": "CI5JSZIRS8ITLD03PUFF",
+      "creationTime": "2026-02-03T20:25:01.208Z",
+      "from": "agent",
+      "agentId": "SIS5ucZKrkNxBReBUAhmE0NmAlF3",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Muy bien. \nNuestro programa le enseñará el impacto de la tecnología en el Derecho y a solucionar de manera ética conﬂictos en entornos digitales, incluyendo contratos inteligentes y startups. También está preparado para aplicar la ley de protección  de datos, abordando aspectos técnicos de seguridad de la información, gestión de riesgos y crisis."
+      },
+      "sessionCreationTime": "2026-02-03T19:16:25.360Z",
+      "chat": {
+        "chatId": "Y132EGVP6DZMP33CTQWX",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593991494560"
+      },
+      "sessionId": "Y132EGVP6DZMP33CTQWX_2026-02-03T19:16:25.360Z"
+    },
+    {
+      "id": "RV1XSFX3V0Y2YUMALW7K",
+      "creationTime": "2026-02-03T20:25:15.003Z",
+      "from": "agent",
+      "agentId": "SIS5ucZKrkNxBReBUAhmE0NmAlF3",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "*Adjunto el brochure*:"
+      },
+      "sessionCreationTime": "2026-02-03T19:16:25.360Z",
+      "chat": {
+        "chatId": "Y132EGVP6DZMP33CTQWX",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593991494560"
+      },
+      "sessionId": "Y132EGVP6DZMP33CTQWX_2026-02-03T19:16:25.360Z"
+    },
+    {
+      "id": "DVYZWDCCKJEC320T54P0",
+      "creationTime": "2026-02-03T20:25:25.601Z",
+      "from": "agent",
+      "agentId": "SIS5ucZKrkNxBReBUAhmE0NmAlF3",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "file",
+        "media": {
+          "url": "https://storage.googleapis.com/storage.botmaker.com/public/res/nodslabsas/agents/20260203-SIS5ucZKrkNxBReBUAhmE0NmAlF3-HF5FN-RGVyZWNobyA0LjAgLSBEZXJlY2hvIERpZ2l0YWwsIFByb3RlY2Npb8yBbiBkZSBEYXRvcyB5IENpYmVyc2VndXJpZGFk.pdf"
+        }
+      },
+      "sessionCreationTime": "2026-02-03T19:16:25.360Z",
+      "chat": {
+        "chatId": "Y132EGVP6DZMP33CTQWX",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593991494560"
+      },
+      "sessionId": "Y132EGVP6DZMP33CTQWX_2026-02-03T19:16:25.360Z"
+    },
+    {
+      "id": "PBKWYFANDLJEJIU2LH1M",
+      "creationTime": "2026-02-03T20:25:33.687Z",
+      "from": "agent",
+      "agentId": "SIS5ucZKrkNxBReBUAhmE0NmAlF3",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "*Estoy segura de que encontrará opciones muy alineadas a lo que busca* \nPara poder guiarle mejor, ¿qué le pareció el contenido que revisó? ¿Cumple con lo que desea fortalecer en su formación?"
+      },
+      "sessionCreationTime": "2026-02-03T19:16:25.360Z",
+      "chat": {
+        "chatId": "Y132EGVP6DZMP33CTQWX",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593991494560"
+      },
+      "sessionId": "Y132EGVP6DZMP33CTQWX_2026-02-03T19:16:25.360Z"
+    },
+    {
+      "id": "5Q6YNWUC6EWP7D47T73B",
+      "creationTime": "2026-02-04T05:45:45.435Z",
+      "from": "bot",
+      "content": {
+        "type": "text",
+        "text": "Template:\n\n¡Bienvenido a la UEES! ✨ Nos hace mucha ilusión saludarte.\n\nMantente atento a tu celular, que en unos minutos te llamaremos para contarte todo sobre el programa. 📞\n\n👉 Si prefieres que te escribamos, solo responde este mensaje y te atenderemos por WhatsApp\n",
+        "whatsAppTemplateName": "uees_envio_automatico2026"
+      },
+      "sessionCreationTime": "2026-02-04T05:45:45.421Z",
+      "chat": {
+        "chatId": "RFRX1UD0NZLB8D6LH7V8",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593968409232"
+      },
+      "sessionId": "RFRX1UD0NZLB8D6LH7V8_2026-02-04T05:45:45.421Z"
+    },
+    {
+      "id": "3UGYO66X7BESMKE1HIJW",
+      "creationTime": "2026-02-04T15:08:23.589Z",
+      "from": "agent",
+      "agentId": "4CNtRN2Lgpfut1mxBXYiGbLUxGk1",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Template:\n\n¡Hola! 🚀\nEstás muy cerca de formar parte de los Global Mind Programs de la Universidad Espíritu Santo, reconocida como la #1 de Ecuador. 🇪🇨\n\nLas clases comienzan en pocos días y aún quedan muy pocos lugares.\n\n¿Desea que le ayude a asegurar tu cupo ahora o prefiere que le comparta los medios de pago disponibles?\n",
+        "whatsAppTemplateName": "uee138_opventa"
+      },
+      "sessionCreationTime": "2026-02-04T05:45:45.421Z",
+      "chat": {
+        "chatId": "RFRX1UD0NZLB8D6LH7V8",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593968409232"
+      },
+      "sessionId": "RFRX1UD0NZLB8D6LH7V8_2026-02-04T05:45:45.421Z"
+    },
+    {
+      "id": "ZAHYEF8LAB0ITE4EICQV",
+      "creationTime": "2026-02-04T15:11:39.468Z",
+      "from": "user",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Hola"
+      },
+      "sessionCreationTime": "2026-02-04T05:45:45.421Z",
+      "chat": {
+        "chatId": "RFRX1UD0NZLB8D6LH7V8",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593968409232"
+      },
+      "sessionId": "RFRX1UD0NZLB8D6LH7V8_2026-02-04T05:45:45.421Z"
+    },
+    {
+      "id": "5IZO4CM4JO6VJYBYQXP3",
+      "creationTime": "2026-02-04T15:33:46.264Z",
+      "from": "agent",
+      "agentId": "4CNtRN2Lgpfut1mxBXYiGbLUxGk1",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Buen día *Williams Herrera*\nLe saluda Mariuxi Martinez .\nAsesora Educativa de la *Universidad Espíritu Santo (UEES)*.\nMe comunico con usted en atención a su interés en uno de nuestros programas. DIPLOMADO - Derecho Penal y Seguridad en el Ciberespacio*.\nSerá un gusto acompañarle en este proceso. Para brindarle una mejor asesoría.\n*¿Cuál es su objetivo al cursar el programa Global Minds?*\n"
+      },
+      "sessionCreationTime": "2026-02-04T05:45:45.421Z",
+      "chat": {
+        "chatId": "RFRX1UD0NZLB8D6LH7V8",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593968409232"
+      },
+      "sessionId": "RFRX1UD0NZLB8D6LH7V8_2026-02-04T05:45:45.421Z"
+    },
+    {
+      "id": "8274TJFCIT18YKP1CUF6",
+      "creationTime": "2026-02-04T15:35:47.425Z",
+      "from": "user",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Mejorar y ampliar mi aserto de conocimientos"
+      },
+      "sessionCreationTime": "2026-02-04T05:45:45.421Z",
+      "chat": {
+        "chatId": "RFRX1UD0NZLB8D6LH7V8",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593968409232"
+      },
+      "sessionId": "RFRX1UD0NZLB8D6LH7V8_2026-02-04T05:45:45.421Z"
+    },
+    {
+      "id": "KYQ7Q5HQ0LOZK1JCSE5E",
+      "creationTime": "2026-02-04T15:38:31.239Z",
+      "from": "agent",
+      "agentId": "4CNtRN2Lgpfut1mxBXYiGbLUxGk1",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Si su objetivo es mejorar y ampliar su acervo de conocimientos, el Diplomado en Derecho Penal y Seguridad en el Ciberespacio – UEES es una excelente opción para fortalecer su ejercicio profesional frente a los nuevos delitos digitales.\n\n⚖️ ¿Qué le aporta este diplomado?\n✔️ Actualización en ciberdelitos y derecho penal informático\n✔️ Análisis de evidencia digital y seguridad en el ciberespacio\n✔️ Marco legal aplicado a entornos tecnológicos\n✔️ Enfoque práctico para la litigación y asesoría legal\n✔️ Certificación universitaria con respaldo UEES\n\n📚 Modalidad 100 % online, flexible y compatible con su práctica jurídica."
+      },
+      "sessionCreationTime": "2026-02-04T05:45:45.421Z",
+      "chat": {
+        "chatId": "RFRX1UD0NZLB8D6LH7V8",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593968409232"
+      },
+      "sessionId": "RFRX1UD0NZLB8D6LH7V8_2026-02-04T05:45:45.421Z"
+    },
+    {
+      "id": "RT1EPANQWQ31CG52TCIK",
+      "creationTime": "2026-02-04T15:38:37.837Z",
+      "from": "agent",
+      "agentId": "4CNtRN2Lgpfut1mxBXYiGbLUxGk1",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "file",
+        "media": {
+          "url": "https://storage.googleapis.com/storage.botmaker.com/public/res/nodslabsas/agents/20260204-4CNtRN2Lgpfut1mxBXYiGbLUxGk1-DPKL1-RGVyZWNoby00LjAtRGVyZWNoby1EaWdpdGFsLVByb3RlY2Npb24tZGUtRGF0b3MteS1DaWJlcnNlZ3VyaWRhZC0=.pdf"
+        }
+      },
+      "sessionCreationTime": "2026-02-04T05:45:45.421Z",
+      "chat": {
+        "chatId": "RFRX1UD0NZLB8D6LH7V8",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593968409232"
+      },
+      "sessionId": "RFRX1UD0NZLB8D6LH7V8_2026-02-04T05:45:45.421Z"
+    },
+    {
+      "id": "SFMFQQHEIDRJQKGCT5RV",
+      "creationTime": "2026-02-04T15:41:32.689Z",
+      "from": "agent",
+      "agentId": "4CNtRN2Lgpfut1mxBXYiGbLUxGk1",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Le gusto el brochure , *EXCELENTE VERDAD* ¿considera que este programa responde a sus expectativas y se alinea con sus objetivos profesionales, para que podamos avanzar con el siguiente paso del proceso?\n\n"
+      },
+      "sessionCreationTime": "2026-02-04T05:45:45.421Z",
+      "chat": {
+        "chatId": "RFRX1UD0NZLB8D6LH7V8",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593968409232"
+      },
+      "sessionId": "RFRX1UD0NZLB8D6LH7V8_2026-02-04T05:45:45.421Z"
+    },
+    {
+      "id": "WT1SL7X6OBY1ON2V2UYA",
+      "creationTime": "2026-02-04T15:53:06.805Z",
+      "from": "user",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Cuál es el valor del programa ?"
+      },
+      "sessionCreationTime": "2026-02-04T05:45:45.421Z",
+      "chat": {
+        "chatId": "RFRX1UD0NZLB8D6LH7V8",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593968409232"
+      },
+      "sessionId": "RFRX1UD0NZLB8D6LH7V8_2026-02-04T05:45:45.421Z"
+    },
+    {
+      "id": "7G4NEH3C4YISU5LQK43L",
+      "creationTime": "2026-02-04T15:53:11.686Z",
+      "from": "user",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Y cuáles son los requisitos ?"
+      },
+      "sessionCreationTime": "2026-02-04T05:45:45.421Z",
+      "chat": {
+        "chatId": "RFRX1UD0NZLB8D6LH7V8",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593968409232"
+      },
+      "sessionId": "RFRX1UD0NZLB8D6LH7V8_2026-02-04T05:45:45.421Z"
+    },
+    {
+      "id": "U751E7FK5ZH3R2K0JCJL",
+      "creationTime": "2026-02-04T15:55:07.227Z",
+      "from": "agent",
+      "agentId": "4CNtRN2Lgpfut1mxBXYiGbLUxGk1",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Tenemos 2 inicios este mes, uno que se puede matricular hasta hoy y tiene un descuento increible."
+      },
+      "sessionCreationTime": "2026-02-04T05:45:45.421Z",
+      "chat": {
+        "chatId": "RFRX1UD0NZLB8D6LH7V8",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593968409232"
+      },
+      "sessionId": "RFRX1UD0NZLB8D6LH7V8_2026-02-04T05:45:45.421Z"
+    },
+    {
+      "id": "LH4TNO6ANDJJG053R16Z",
+      "creationTime": "2026-02-04T15:55:15.109Z",
+      "from": "agent",
+      "agentId": "4CNtRN2Lgpfut1mxBXYiGbLUxGk1",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Precio regular: 3.125 USD al contado, o 9 cuotas de 347 USD, financiadas directamente por la universidad y sin intereses.\n*Descuento ESPECIAL 40%*\nCon este beneficio, la inversión queda en:\nAl contado: 1.875,00 USD\n*En 9 cuotas: 208,33 USD* por mes (sin intereses), financiadas directamente por la universidad o con tarjeta de credito.\n"
+      },
+      "sessionCreationTime": "2026-02-04T05:45:45.421Z",
+      "chat": {
+        "chatId": "RFRX1UD0NZLB8D6LH7V8",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593968409232"
+      },
+      "sessionId": "RFRX1UD0NZLB8D6LH7V8_2026-02-04T05:45:45.421Z"
+    },
+    {
+      "id": "Q1PZK6AF4FZI15I050MO",
+      "creationTime": "2026-02-04T15:56:01.083Z",
+      "from": "agent",
+      "agentId": "4CNtRN2Lgpfut1mxBXYiGbLUxGk1",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Y otro con inicio el 23 de febrero del 2026.\nEl programa incluye las *4 certificaciones otorgadas por el GMP*.\n\nPrecio regular: 3.125 USD al contado, o 9 cuotas de 347 USD, financiadas directamente por la universidad y sin intereses.\nEl programa incluye las *4 certificaciones otorgadas por el GMP*.\n*Descuento especial  20%* *Le daré este beneficio especial como bienvenida .*\nCon este beneficio, la inversión queda en:\nAl contado: 2.500 USD\nEn 9 cuotas: 277,77 USD por mes  financiadas directamente por la universidad\nNo generan intereses o tarjeta de crédito.\n"
+      },
+      "sessionCreationTime": "2026-02-04T05:45:45.421Z",
+      "chat": {
+        "chatId": "RFRX1UD0NZLB8D6LH7V8",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593968409232"
+      },
+      "sessionId": "RFRX1UD0NZLB8D6LH7V8_2026-02-04T05:45:45.421Z"
+    },
+    {
+      "id": "L8K0IYIT6NS8OH7FP5KQ",
+      "creationTime": "2026-02-04T15:56:45.710Z",
+      "from": "agent",
+      "agentId": "4CNtRN2Lgpfut1mxBXYiGbLUxGk1",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "\nPara inscribirse por favor envíeme los siguientes datos:\nNombre completo  \nNúmero de cédula\nFecha de nacimiento\nCorreo electrónico\n"
+      },
+      "sessionCreationTime": "2026-02-04T05:45:45.421Z",
+      "chat": {
+        "chatId": "RFRX1UD0NZLB8D6LH7V8",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593968409232"
+      },
+      "sessionId": "RFRX1UD0NZLB8D6LH7V8_2026-02-04T05:45:45.421Z"
+    },
+    {
+      "id": "NVBKGV0QSZ6IMVFS5V5B",
+      "creationTime": "2026-02-04T15:57:03.879Z",
+      "from": "agent",
+      "agentId": "4CNtRN2Lgpfut1mxBXYiGbLUxGk1",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "Por cual de los dos inicios se decidió ?"
+      },
+      "sessionCreationTime": "2026-02-04T05:45:45.421Z",
+      "chat": {
+        "chatId": "RFRX1UD0NZLB8D6LH7V8",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593968409232"
+      },
+      "sessionId": "RFRX1UD0NZLB8D6LH7V8_2026-02-04T05:45:45.421Z"
+    },
+    {
+      "id": "ASK55QMB84RFH76ZSL47",
+      "creationTime": "2026-02-04T21:14:57.925Z",
+      "from": "agent",
+      "agentId": "4CNtRN2Lgpfut1mxBXYiGbLUxGk1",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "text",
+        "text": "¿Esta  usted disponible?, para poder avanzar con la asesoría.👨‍🎓 Si no esta disponible ¿En que franja horaria podemos coordinar una llamada?\n"
+      },
+      "sessionCreationTime": "2026-02-04T05:45:45.421Z",
+      "chat": {
+        "chatId": "RFRX1UD0NZLB8D6LH7V8",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593968409232"
+      },
+      "sessionId": "RFRX1UD0NZLB8D6LH7V8_2026-02-04T05:45:45.421Z"
+    },
+    {
+      "id": "MDLZTIZHSDTAXW2VCKZL",
+      "creationTime": "2026-02-06T15:02:05.633Z",
+      "from": "bot",
+      "content": {
+        "type": "text",
+        "text": "Template:\n\n¡Bienvenido a la UEES! ✨ Nos hace mucha ilusión saludarte.\n\nMantente atento a tu celular, que en unos minutos te llamaremos para contarte todo sobre el programa. 📞\n\n👉 Si prefieres que te escribamos, solo responde este mensaje y te atenderemos por WhatsApp\n",
+        "whatsAppTemplateName": "uees_envio_automatico2026"
+      },
+      "sessionCreationTime": "2026-02-06T15:02:05.571Z",
+      "chat": {
+        "chatId": "FUJXXNCVVEA0HR3PDRCC",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593963620051"
+      },
+      "sessionId": "FUJXXNCVVEA0HR3PDRCC_2026-02-06T15:02:05.571Z"
+    },
+    {
+      "id": "ZHRIRUHUVDN50HOF6AI2",
+      "creationTime": "2026-02-06T17:25:37.840Z",
+      "from": "agent",
+      "agentId": "SIS5ucZKrkNxBReBUAhmE0NmAlF3",
+      "queueId": "uees-admisiones",
+      "content": {
+        "type": "buttons",
+        "text": "Template:\nUEES\n¡Bienvenido a UEES! 🎓✨\n\nYa recibimos tu solicitud. Contamos con programas académicos diseñados para tu futuro y beneficios exclusivos si inicias el proceso de inscripción este mes.\n\nPara avanzar ahora, responde a este mensaje y un asesor educativo se comunicará contigo por este medio.\n",
+        "buttons": [
+          "Estoy interesado"
+        ],
+        "whatsAppTemplateName": "uees_envio_automatico2"
+      },
+      "sessionCreationTime": "2026-02-06T15:02:05.571Z",
+      "chat": {
+        "chatId": "FUJXXNCVVEA0HR3PDRCC",
+        "channelId": "nodslabsas-whatsapp-593998348706",
+        "contactId": "593963620051"
+      },
+      "sessionId": "FUJXXNCVVEA0HR3PDRCC_2026-02-06T15:02:05.571Z"
+    }
+  ],
+  "totalItems": 206,
+  "exportedAt": "2026-02-12T15:03:30.907834+00:00",
+  "contacts": [
+    "593984770357",
+    "593969620829",
+    "593997486939",
+    "593980295615",
+    "593961128137",
+    "593992491862",
+    "593968868409",
+    "593999666815",
+    "593958752306",
+    "593991494560",
+    "593968409232",
+    "593963620051"
+  ],
+  "totalContacts": 12,
+  "successfulContacts": 12,
+  "failedContacts": []
+}

@@ -1,0 +1,37 @@
+--- Processing bulk_export_nodslabsas-whatsapp-593998348706_2026-02-12.json with NEW SCORING LOGIC ---
+Running process_data...
+
+FOUND PHONE RESULT: 593997090163
+CLASSIFICATION RESULT (Computed Now):
+  Clasificacion: SQL
+  Razon: Regla prioritaria: Motivación profesional clara + Intención de pago
+  Score Total: 65
+  Score Motivacion: 20
+  Score Pago: 20
+  Score Comportamiento: 25
+  Señales: ["Consulta formas de pago: 'desde cuando comienza'", 'Respuesta rápida: < 8 horas (0.0h)', 'Ghosting parcial (último mensaje del agente sin respuesta)', '⭐ REGLA PRIORITARIA: Motivación + Pago = SQL', "Motivación profesional fuerte: 'necesito'", "Objeción suave: 'la consideraré'", 'Seguimiento activo (múltiples mensajes)']
+  Estado: Activa
+--- Processing bulk_export_nodslabsas-whatsapp-593998348706_2026-02-12 (1).json with NEW SCORING LOGIC ---
+Running process_data...
+
+FOUND PHONE RESULT: 593958752306
+CLASSIFICATION RESULT (Computed Now):
+  Clasificacion: SQL
+  Razon: Regla prioritaria: Motivación profesional clara + Intención de pago
+  Score Total: 70
+  Score Motivacion: 15
+  Score Pago: 30
+  Score Comportamiento: 25
+  Señales: ["Intención de pago: 'ya está'", 'Respuesta rápida: < 8 horas (0.0h)', "Motivación profesional moderada: 'me interesa'", 'Ghosting parcial (último mensaje del agente sin respuesta)', '⭐ REGLA PRIORITARIA: Motivación + Pago = SQL', 'Seguimiento activo (múltiples mensajes)']
+  Estado: Cerrada por usuario
+
+FOUND PHONE RESULT: 593968409232
+CLASSIFICATION RESULT (Computed Now):
+  Clasificacion: SQL
+  Razon: Regla prioritaria: Motivación profesional clara + Intención de pago
+  Score Total: 60
+  Score Motivacion: 25
+  Score Pago: 20
+  Score Comportamiento: 15
+  Señales: ["Motivación profesional fuerte: 'mejorar'", 'Respuesta moderada: 8-24 horas (9.4h)', "Consulta formas de pago: 'requisitos'", 'Ghosting parcial (último mensaje del agente sin respuesta)', '⭐ REGLA PRIORITARIA: Motivación + Pago = SQL', 'Seguimiento activo (múltiples mensajes)']
+  Estado: Activa

@@ -22,7 +22,7 @@ basado en el sistema de scoring definido.
 """)
 
 uploaded_file = st.file_uploader("Cargar archivo de Chat Logs (JSON/DOCX)", type=["json", "docx"])
-neotel_file = st.file_uploader("Cargar base Neotel (Excel) - Opcional", type=["xls", "xlsx"])
+neotel_file = st.file_uploader("Cargar base CRM (Excel) - Opcional", type=["xls", "xlsx"])
 
 if uploaded_file is not None:
     try:
@@ -49,9 +49,9 @@ if uploaded_file is not None:
             if neotel_file is not None:
                 try:
                     neotel_df = pd.read_excel(neotel_file)
-                    st.success(f"Base Neotel cargada correctamente. {len(neotel_df)} registros.")
+                    st.success(f"Base CRM cargada correctamente. {len(neotel_df)} registros.")
                 except Exception as e:
-                    st.error(f"Error al leer el archivo Excel de Neotel: {e}")
+                    st.error(f"Error al leer el archivo Excel de CRM: {e}")
 
             if st.button("Procesar Leads"):
                 with st.spinner("Procesando conversaciones..."):
