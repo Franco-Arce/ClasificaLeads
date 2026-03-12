@@ -110,6 +110,7 @@ if uploaded_file is not None:
                         'score_motivacion', 'score_pago', 'score_comportamiento',
                         'razon_principal', 'señales_clave', 'estado_conversacion',
                         'duracion_chat', 'mensajes_usuario',
+                        'sesiones_detectadas', 'dias_mayor_pausa', 'duracion_ultima_sesion',
                         'utm_source', 'utm_medium', 'utm_origen', 'programa_interes'
                     ]
                     
@@ -157,8 +158,17 @@ if uploaded_file is not None:
                             "razon_principal": "Razón",
                             "señales_clave": "Señales Detectadas",
                             "estado_conversacion": "Estado",
-                            "duracion_chat": "Duración",
+                            "duracion_chat": "Duración Total",
                             "mensajes_usuario": "Msgs Usuario",
+                            "sesiones_detectadas": st.column_config.NumberColumn(
+                                "Sesiones",
+                                help="Número de sesiones detectadas (pausa ≥ 30 días = nueva sesión)"
+                            ),
+                            "dias_mayor_pausa": st.column_config.NumberColumn(
+                                "Mayor Pausa (días)",
+                                help="Días de la pausa más larga entre sesiones"
+                            ),
+                            "duracion_ultima_sesion": "Duración Última Sesión",
                             "utm_source": "UTM Source",
                             "utm_medium": "UTM Medium",
                             "utm_origen": "UTM Origen",

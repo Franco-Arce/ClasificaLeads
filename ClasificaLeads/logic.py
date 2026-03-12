@@ -139,11 +139,47 @@ def group_and_sort(items):
         chat_id = item.get('chat', {}).get('chatId')
         if chat_id:
             grouped[chat_id].append(item)
-    
+
     for chat_id in grouped:
         grouped[chat_id].sort(key=lambda x: x.get('creationTime', ''))
-        
+
     return grouped
+
+
+def split_into_sessions(messages, gap_days=30):
+    """
+    Divide los mensajes en sesiones de conversación basándose en pausas de tiempo.
+    Una pausa >= gap_days días entre mensajes consecutivos marca el inicio de una nueva sesión.
+
+    Retorna lista de sesiones (cada sesión es una lista de mensajes), en orden cronológico.
+    También retorna info sobre las pausas detectadas.
+    """
+    if not messages:
+        return [], []
+
+    sorted_msgs = sorted(messages, key=lambda x: x.get('creationTime', ''))
+    sessions = []
+    pauses = []  # (días de pausa, índice de sesión donde empieza)
+    current_session = [sorted_msgs[0]]
+
+    for msg in sorted_msgs[1:]:
+        prev_time_str = current_session[-1].get('creationTime', '').replace('Z', '+00:00')
+        curr_time_str = msg.get('creationTime', '').replace('Z', '+00:00')
+        try:
+            prev_dt = datetime.fromisoformat(prev_time_str)
+            curr_dt = datetime.fromisoformat(curr_time_str)
+            gap = (curr_dt - prev_dt).days
+            if gap >= gap_days:
+                sessions.append(current_session)
+                pauses.append(gap)
+                current_session = [msg]
+            else:
+                current_session.append(msg)
+        except Exception:
+            current_session.append(msg)
+
+    sessions.append(current_session)
+    return sessions, pauses
 
 
 # ============================================================================
@@ -645,26 +681,66 @@ def get_message_text(msg):
     return ""
 
 
+def _format_duration(delta):
+    """Helper: formatea un timedelta como 'X días, HH:MM:SS' o 'HH:MM:SS'."""
+    days = delta.days
+    hours = delta.seconds // 3600
+    minutes = (delta.seconds % 3600) // 60
+    seconds = delta.seconds % 60
+    if days > 0:
+        return f"{days} días, {hours:02}:{minutes:02}:{seconds:02}"
+    return f"{hours:02}:{minutes:02}:{seconds:02}"
+
+
 def analyze_conversation(chat_id, messages):
     """
     Analiza una conversación para clasificar el lead usando el nuevo sistema de scoring.
-    
+
     Sistema:
     - NO CONTACTADO: Score = 0 (reglas excluyentes)
     - MQL: Score 1-49
     - SQL: Score 50-100
-    
+
     Regla prioritaria: Motivación profesional + Intención de pago = SQL
+
+    Sesiones: si hay una pausa >= 30 días, se considera que el lead volvió a
+    contactarse. El scoring se basa únicamente en la última sesión.
     """
-    # Identificar mensajes del usuario
-    user_messages = [m for m in messages if m.get('from') == 'user']
-    
     # Extraer teléfono
     telefono = ""
     if messages:
         telefono = messages[0].get('chat', {}).get('contactId', "")
-    
-    # Si no hay mensajes del usuario, es NO CONTACTADO (ghosting = score 0 = NO CONTACTADO)
+
+    # --- DETECCIÓN DE SESIONES ---
+    sessions, pauses = split_into_sessions(messages, gap_days=30)
+    num_sessions = len(sessions)
+
+    # Mensajes a usar para scoring: solo la última sesión si hay reactivación
+    scoring_messages = sessions[-1] if sessions else messages
+    reactivated = num_sessions > 1
+    max_pause_days = max(pauses) if pauses else 0
+
+    # --- CALCULAR DURACIÓN TOTAL Y DE ÚLTIMA SESIÓN ---
+    duracion_chat = "0:00:00"
+    duracion_ultima_sesion = None
+    try:
+        sorted_all = sorted(messages, key=lambda x: x.get('creationTime', ''))
+        start_dt = datetime.fromisoformat(sorted_all[0].get('creationTime', '').replace('Z', '+00:00'))
+        end_dt = datetime.fromisoformat(sorted_all[-1].get('creationTime', '').replace('Z', '+00:00'))
+        duracion_chat = _format_duration(end_dt - start_dt)
+
+        if reactivated:
+            sess_sorted = sorted(scoring_messages, key=lambda x: x.get('creationTime', ''))
+            sess_start = datetime.fromisoformat(sess_sorted[0].get('creationTime', '').replace('Z', '+00:00'))
+            sess_end = datetime.fromisoformat(sess_sorted[-1].get('creationTime', '').replace('Z', '+00:00'))
+            duracion_ultima_sesion = _format_duration(sess_end - sess_start)
+    except Exception:
+        pass
+
+    # Identificar mensajes del usuario (de la sesión activa)
+    user_messages = [m for m in scoring_messages if m.get('from') == 'user']
+
+    # Si no hay mensajes del usuario en la sesión activa, NO CONTACTADO
     if not user_messages:
         return {
             "chat_id": chat_id,
@@ -676,11 +752,14 @@ def analyze_conversation(chat_id, messages):
             "score_comportamiento": 0,
             "razon_principal": "Lead sin respuesta (Ghosting) - Score 0",
             "señales_clave": ["Solo habló el bot/agente", "Sin respuesta del usuario"],
-            "estado_conversacion": "Sin respuesta"
+            "estado_conversacion": "Sin respuesta",
+            "duracion_chat": duracion_chat,
+            "mensajes_usuario": 0,
+            "sesiones_detectadas": num_sessions,
         }
-    
-    # 1. VERIFICAR NO CONTACTADO (Regla excluyente)
-    is_spam, spam_reason = check_spam(messages, user_messages)
+
+    # 1. VERIFICAR NO CONTACTADO (solo sobre la sesión activa)
+    is_spam, spam_reason = check_spam(scoring_messages, user_messages)
     if is_spam:
         return {
             "chat_id": chat_id,
@@ -692,37 +771,40 @@ def analyze_conversation(chat_id, messages):
             "score_comportamiento": 0,
             "razon_principal": spam_reason,
             "señales_clave": ["No Contactado detectado"],
-            "estado_conversacion": "Descartado"
+            "estado_conversacion": "Descartado",
+            "duracion_chat": duracion_chat,
+            "mensajes_usuario": len(user_messages),
+            "sesiones_detectadas": num_sessions,
         }
-    
-    # 2. CALCULAR SCORES
+
+    # 2. CALCULAR SCORES (sobre la sesión activa)
     all_signals = []
-    
-    # Score de motivación (hasta 40 puntos)
-    motivation_score, motivation_signals, has_professional_motivation = calculate_motivation_score(messages, user_messages)
+
+    if reactivated:
+        all_signals.append(
+            f"🔄 Conversación reactivada tras {max_pause_days} días de pausa "
+            f"({num_sessions} sesiones detectadas)"
+        )
+
+    motivation_score, motivation_signals, has_professional_motivation = calculate_motivation_score(scoring_messages, user_messages)
     all_signals.extend(motivation_signals)
-    
-    # Score de intención de pago (hasta 30 puntos)
-    payment_score, payment_signals, has_payment_intent = calculate_payment_score(messages, user_messages)
+
+    payment_score, payment_signals, has_payment_intent = calculate_payment_score(scoring_messages, user_messages)
     all_signals.extend(payment_signals)
-    
-    # Score de comportamiento (hasta 30 puntos)
-    behavior_score, behavior_signals = calculate_behavior_score(messages, user_messages)
+
+    behavior_score, behavior_signals = calculate_behavior_score(scoring_messages, user_messages)
     all_signals.extend(behavior_signals)
-    
+
     # 3. CALCULAR SCORE TOTAL
     total_score = motivation_score + payment_score + behavior_score
-    
-    # Asegurar que el score esté entre 1 y 100 (no 0, porque 0 = NO CONTACTADO)
     total_score = max(1, min(total_score, 100))
-    
+
     # 4. APLICAR REGLA PRIORITARIA
-    # Si tiene motivación profesional clara (+25) Y intención de pago (+30 o +20), es SQL
     priority_rule_applied = False
     if has_professional_motivation and has_payment_intent:
         priority_rule_applied = True
         all_signals.append("⭐ REGLA PRIORITARIA: Motivación + Pago = SQL")
-    
+
     # 5. DETERMINAR CLASIFICACIÓN
     if priority_rule_applied:
         classification = "SQL"
@@ -733,40 +815,14 @@ def analyze_conversation(chat_id, messages):
     else:
         classification = "MQL"
         reason = f"Score moderado ({total_score}/100) - Nurturing/Maduración"
-    
+
     # 6. DETERMINAR ESTADO DE CONVERSACIÓN
     estado = "Activa"
     last_user_text = get_message_text(user_messages[-1]).lower() if user_messages else ""
     if "gracias" in last_user_text or "adios" in last_user_text or "adiós" in last_user_text:
         estado = "Cerrada por usuario"
-    
-    # 7. CALCULAR DURACIÓN
-    duracion_chat = "0:00:00"
-    if messages:
-        try:
-            sorted_msgs = sorted(messages, key=lambda x: x.get('creationTime', ''))
-            start_time_str = sorted_msgs[0].get('creationTime', '').replace('Z', '+00:00')
-            end_time_str = sorted_msgs[-1].get('creationTime', '').replace('Z', '+00:00')
-            
-            if start_time_str and end_time_str:
-                start_dt = datetime.fromisoformat(start_time_str)
-                end_dt = datetime.fromisoformat(end_time_str)
-                duration = end_dt - start_dt
-                
-                days = duration.days
-                seconds_in_day = duration.seconds
-                hours = seconds_in_day // 3600
-                minutes = (seconds_in_day % 3600) // 60
-                seconds = seconds_in_day % 60
-                
-                if days > 0:
-                    duracion_chat = f"{days} días, {hours:02}:{minutes:02}:{seconds:02}"
-                else:
-                    duracion_chat = f"{hours:02}:{minutes:02}:{seconds:02}"
-        except Exception as e:
-            pass
-    
-    return {
+
+    result = {
         "chat_id": chat_id,
         "telefono": telefono,
         "clasificacion": classification,
@@ -778,8 +834,15 @@ def analyze_conversation(chat_id, messages):
         "señales_clave": list(set(all_signals)),
         "estado_conversacion": estado,
         "duracion_chat": duracion_chat,
-        "mensajes_usuario": len(user_messages)
+        "mensajes_usuario": len(user_messages),
+        "sesiones_detectadas": num_sessions,
     }
+
+    if reactivated:
+        result["dias_mayor_pausa"] = max_pause_days
+        result["duracion_ultima_sesion"] = duracion_ultima_sesion
+
+    return result
 
 
 def process_data(json_data, neotel_df=None):
